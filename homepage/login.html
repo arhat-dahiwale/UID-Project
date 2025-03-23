@@ -39,7 +39,7 @@
 
         /* Submit button styling */
         .login-form a {
-            background-color: #28a745;
+            background-color: red;
             color: white;
             border: none;
             padding: 10px 10px;
@@ -52,16 +52,17 @@
 
         /* Hover effect on button */
         .login-form a:hover {
-            background-color: #218838;
+            background-color: darkred;
         }
     </style>
     <script src="script.js"></script>
 </head>
 <body>
     <form class="login-form">
-        <h2>Login</h2>
+        <h2>Please Sign In</h2>
         <input type="text" placeholder="User Name" id="login-username" required>
         <input type="password" placeholder="Password" id="login-password" required>
+        <br><br>
         <a href="main.html" onclick="login()">Sign in</a>
         <a href="register.html">Sign up</a>
     </form>
