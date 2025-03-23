@@ -12,6 +12,7 @@ body {
     background-color: darkred;
     padding: 15px 20px;
     color: white;
+    height: 12vh;
 }
 
 /* Logo */
@@ -22,9 +23,10 @@ body {
 
 /* Search Box */
 .search-box input {
-    padding: 12px 12px 12px 12px;
+    padding: 8px 8px 8px 8px;
     border: none;
     border-radius: 4px;
+    width: 300px;
 }
 
 /* Navigation Links */
@@ -60,7 +62,7 @@ body, html {
 .hero {
     width: 100%;
     height: 85vh;
-    background: url('background_images/movie1.jpg') no-repeat center/cover;
+   /* background: url('background_images/movie1.jpg') no-repeat center/cover;*/
     animation: changeBackground 10s infinite linear;
     position: relative;
     display: flex;
@@ -112,12 +114,40 @@ body, html {
 .hero1 {
     width: 100%;
     height: 85vh;
-    background: url('background_images/collage1.jpg') no-repeat center/cover;
+    /*background: url('background_images/collage1.jpg') no-repeat center/cover;*/
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+.overlay1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content1 {
+    position: absolute;
+    color: white;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-content1 h1 {
+    font-size: 2.5rem;
+}
+
+.hero-content1 p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
 }
 
 /* Background Animation */
@@ -126,4 +156,134 @@ body, html {
     33% { background: url('background_images/movie2.jpg') no-repeat center/cover; }
     66% { background: url('background_images/movie3.jpg') no-repeat center/cover; }
     100% { background: url('background_images/movie1.jpg') no-repeat center/cover; }
+}
+
+/* Carousel inside hero1 section */
+.carousel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; 
+}
+
+.carousel img {
+    width: 100%;
+    height: 500px; 
+    object-fit: cover;
+    border-radius: 10px;}
+
+.trending {
+    padding: 40px;
+    margin: auto;
+    background-color: white;
+    text-align:justify;
+}
+.trending h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5em;
+}
+.trending p {
+    font-family: 'Georgia', serif;
+    font-size: 1.2em;
+}
+
+.about {
+    padding: 40px;
+    margin: auto;
+    background-color: white;
+    text-align:center;
+}
+  
+.about h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5em;
+}
+  
+.about p {
+    font-family: 'Georgia', serif;
+    font-size: 1.2em;
+    margin: auto;
+    text-align: center;
+}
+
+#contact {
+    padding: 50px;
+    background: white;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: red;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+button:hover {
+    background: darkred;
+}
+
+.footer {
+    background-color: darkred;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.footer-logo {
+    text-align: center;
+    margin-top: 20px;
+}
+.footer-bottom {
+    background-color: #540202;
+    padding: 10px;
+    font-size: 12px;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    background-color: #540202;
+}
+.footer-links div {
+    margin: 10px 20px;
+    text-align: center;
+}
+.legal-links {
+    margin-top: 10px;
 }
