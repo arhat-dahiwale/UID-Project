@@ -9,23 +9,24 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="logo">CineSphere</div>
-
-        <div class="search-box">
-            <input type="text" placeholder="Search for movies, genres, or actors...">
-        </div>
-
+        <div class = "navleft">
+        <div class="logo">
+            <a href ="#">CineSphere </a></div>
         <!-- Navigation Links -->
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#contact">Contact Us</a></li>
         </ul>
+    </div>
+        <div class="search-box">
+            <input type="text" placeholder="Search for movies, genres, or actors...">
+        </div>
     </nav>
     <div class="hero">
         <div class="overlay"></div>
         <div class="hero-content">
-            <h1>CineSphere – Your Ultimate Movie Guide</h1>
+            <h1 id = "Logohero">CineSphere</h1>
+            <h1>Your Ultimate Movie Guide</h1>
             <p>Explore trending movies, watch trailers, and find where to watch your favorites—all in one place.</p>
             <a href="login.html" target="_blank">Login</a>
             <a href="register.html" target="_blank">Register</a>
@@ -35,6 +36,31 @@
         <h2 style="text-align:justify;"> Trending Now </h2>
         <br>
         <p> Content </p>
+        <!--Carousel(the moving thingy)-->
+        
+        <div class="carousel-container">
+            <div class="carousel">
+              <div class="movie-item">
+                <img src="background_images/Iron_man.jpg" alt="Movie 1">
+              </div>
+              <div class="movie-item">
+                <img src="background_images/Iron_man.jpg" alt="Movie 2">
+              </div>
+              <div class="movie-item">
+                <img src="background_images/Iron_man.jpg" alt="Movie 3">
+              </div>
+              <div class="movie-item">
+                <img src="background_images/iron_man.jpg" alt="Movie 4">
+              </div>
+              <div class="movie-item">
+                <img src="movie5.jpg" alt="Movie 5">
+              </div>
+              <div class="movie-item">
+                <img src="movie6.jpg" alt="Movie 6">
+              </div>
+            </div>
+          </div>
+
     </div>
     <section class="about" id = "about" style="width: 100%; margin: auto;">
         <h2 style="text-align: center;">About Us</h2>
