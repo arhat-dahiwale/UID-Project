@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Funnel+Display:wght@300..800&display=swap');
 /* General Styles */
+
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:black;
 }
 
 /* Navbar */
@@ -9,66 +13,111 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: darkred;
+    background-color: #F8F2DE;
     padding: 15px 20px;
     color: white;
     height: 12vh;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 3px 3px 20px black;
 }
 
 /* Logo */
 .logo {
-    font-size: 24px;
+    font-size:3.5rem;
     font-weight: bold;
+    font-family:"Birthstone", cursive;    
 }
 
+.logo a{
+    text-decoration: none;
+    color:#E5383B;
+    display:inline-block;
+    transition-duration:300ms;
+}
+
+.logo a:hover{
+    color:#A31D1D;
+    transform: scale(1.05,1.05);
+    transition-duration: 300ms;
+    
+    
+}
 /* Search Box */
 .search-box input {
-    padding: 8px 8px 8px 8px;
+    margin:auto;
+    padding: auto;
     border: none;
-    border-radius: 4px;
-    width: 300px;
+    border-radius: 50px;
+    width: 20vmax;
+    transition-duration:300ms;
+    background-color:#ECDCBF;
 }
 
+.search-box input:hover {
+    width:30vmax;
+    transition-duration:300ms;
+}
+
+.search-box input:focus{
+    width:30vmax;
+}
+
+
+.navleft{
+    display:inline-flex;
+    align-items:center;
+}
 /* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    padding:0;
+    margin:0 0 0 20px;
+
 }
 
 .nav-links li {
     display: inline;
+    padding:0 20px 0 20px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: white;
-    font-size: 16px;
+    color: #232423;
+    font-size:1.3rem;
     transition: 0.3s;
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:bold;
+    font-style: normal;
+    
 }
 
 .nav-links a:hover {
-    color: #ffcc00;
+    color: #E5383B
 }
 
 body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden; 
 }
 
 /* Hero Section */
 .hero {
+    
     width: 100%;
-    height: 85vh;
+    height: 70vh;
    /* background: url('background_images/movie1.jpg') no-repeat center/cover;*/
-    animation: changeBackground 10s infinite linear;
+    animation: changeBackground 10s infinite ease-in-out;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow:hidden;
 }
 
 .overlay {
@@ -80,7 +129,15 @@ body, html {
     background: rgba(0, 0, 0, 0.6);
 }
 
+#Logohero{
+    font-size: 6rem;
+    font-family:"Birthstone", cursive;  
+    font-optical-sizing: auto;
+    font-style: normal;
+    margin:10px 0;
+}
 .hero-content {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: relative;
     color: white;
     z-index: 1;
@@ -96,19 +153,21 @@ body, html {
 }
 
 .hero-content a {
-    background-color: red;
+    background-color: #E5383B;
     color: white;
     padding: 10px 20px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border: none;
     cursor: pointer;
     margin: 5px;
     font-size: 1rem;
-    display: inline-block; text-decoration: none; border-radius: 5px;
-
+    display: inline-block; text-decoration: none; border-radius: 50px;
+    transition-duration:200ms;
 }
 
 .hero-content a:hover {
-    background: darkred;
+    background: #A31D1D;
+    transition-duration:200ms;
 }
 
 .hero1 {
@@ -120,6 +179,7 @@ body, html {
     align-items: center;
     justify-content: center;
     text-align: center;
+    
 }
 .overlay1 {
     position: absolute;
@@ -152,13 +212,62 @@ body, html {
 
 /* Background Animation */
 @keyframes changeBackground {
-    0% { background: url('background_images/movie1.jpg') no-repeat center/cover; }
-    33% { background: url('background_images/movie2.jpg') no-repeat center/cover; }
-    66% { background: url('background_images/movie3.jpg') no-repeat center/cover; }
-    100% { background: url('background_images/movie1.jpg') no-repeat center/cover; }
+    0% { background: url('background_images/Iron_man.jpg') no-repeat center/cover fixed; }
+    33% { background: url('background_images/the_batman_2022.jpg') no-repeat center/cover fixed; }
+    66% { background: url('background_images/ford_vs_ferrari.jpg') no-repeat center/cover fixed; }
+    100% { background: url('background_images/Rush.jpg') no-repeat center/cover fixed; }
 }
 
+/* Carousel for landing page*/
+.carousel-container {
+    width: 100%; /* Or a fixed width */
+    overflow: hidden; /* Hide content that overflows the container */
+    position: relative; /* For potential navigation buttons later */
+}
+  
+.carousel {
+    display: flex; /* Arrange movie items in a row */
+    flex-direction: row; /* Ensure items are horizontal */
+    transition: transform 0.3s ease-in-out; /* Optional: For smooth scrolling if you implement manual controls */
+}
+  
+.movie-item {
+    flex: 0 0 auto; /* Don't grow or shrink, take up defined width */
+    width: 150px; /* Adjust as needed for your poster size */
+    margin-right: 10px; /* Space between movie items */
+  }
+  
+.movie-item:last-child {
+    margin-right: 0; /* Remove margin from the last item */
+}
+  
+.movie-item img {
+    display: block; /* Remove extra space below the image */
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: Rounded corners */
+    cursor: pointer; /* Indicate it's clickable */
+}
+/* Add this to your CSS */
+.carousel-wrapper { /* New container for animation */
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel {
+    display: flex;
+    flex-direction: row;
+    /* Remove transition here if using keyframes for animation */
+    animation: scrollCarousel 20s linear infinite; /* Adjust duration and timing */
+  }
+  
+  @keyframes scrollCarousel {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); } /* Scroll to the end */
+  }
 /* Carousel inside hero1 section */
+
+
 .carousel {
     position: absolute;
     top: 0;
@@ -167,13 +276,13 @@ body, html {
     height: 100%;
     z-index: 0; 
 }
-
+/*
 .carousel img {
     width: 100%;
     height: 500px; 
     object-fit: cover;
     border-radius: 10px;}
-
+*/
 .trending {
     padding: 40px;
     margin: auto;
