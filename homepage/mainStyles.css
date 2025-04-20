@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Funnel+Display:wght@300..800&display=swap');
+/* General Styles */
+
+body {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:black;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F8F2DE;
+    padding: 15px 20px;
+    color: white;
+    height: 12vh;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 3px 3px 20px black;
+}
+
+/* Logo */
+.logo {
+    font-size:3.5rem;
+    font-weight: bold;
+    font-family:"Birthstone", cursive;    
+}
+
+.logo a{
+    text-decoration: none;
+    color:#E5383B;
+    display:inline-block;
+    transition-duration:300ms;
+}
+
+.logo a:hover{
+    color:#A31D1D;
+    transform: scale(1.05,1.05);
+    transition-duration: 300ms;
+    
+    
+}
+/* Search Box */
+.search-box input {
+    margin:auto;
+    padding: auto;
+    border: none;
+    border-radius: 50px;
+    width: 20vmax;
+    transition-duration:300ms;
+    background-color:#ECDCBF;
+}
+
+.search-box input:hover {
+    width:30vmax;
+    transition-duration:300ms;
+}
+
+.search-box input:focus{
+    width:30vmax;
+}
+
+
+.navleft{
+    display:inline-flex;
+    align-items:center;
+}
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    padding:0;
+    margin:0 0 0 20px;
+
+}
+
+.nav-links li {
+    display: inline;
+    padding:0 20px 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #232423;
+    font-size:1.3rem;
+    transition: 0.3s;
+    font-family: "Funnel Display", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:bold;
+    font-style: normal;
+    
+}
+
+.nav-links a:hover {
+    color: #E5383B
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; 
+}
+
+header {
+    margin:auto;
+    z-index: 999;
+    margin-bottom: 3.5%;
+}
+
+.carousel{
+    height: 100vh;
+    margin-top: -50px;
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+}
+.carousel .list .item{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0 0 0 0;
+}
+.carousel .list .item video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel .list .item .content{
+    position: absolute;
+    top: 20%;
+    
+    max-width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30%;
+    box-sizing: border-box;
+    color: #fff;
+    text-shadow: 0 5px 10px #0004;
+}
+.carousel .list .item .author{
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.carousel .list .item .title,
+.carousel .list .item .topic{
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+.carousel .list .item .topic{
+    color: #f1683a;
+}
+.carousel .list .item .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 130px);
+    grid-template-rows: 40px;
+    gap: 5px;
+    margin-top: 20px;
+}
+.carousel .list .item .buttons button{
+    border: none;
+    background-color: #eee;
+    letter-spacing: 3px;
+    font-family: Poppins;
+    font-weight: 500;
+}
+.carousel .list .item .buttons button:nth-child(2){
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #eee;
+}
+/* thumbail */
+.thumbnail{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: max-content;
+    z-index: 100;
+    display: flex;
+    gap: 20px;
+}
+.thumbnail .item{
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0;
+    position: relative;
+}
+.thumbnail .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.thumbnail .item .content{
+    color: #fff;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title{
+    font-weight: 500;
+}
+.thumbnail .item .content .description{
+    font-weight: 300;
+}
+/* arrows */
+
+
+.carousel .arrows {
+    position: absolute;
+    bottom: 30px;            
+    left: 30%;               
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    gap: 10px;
+}
+
+/* optional: slightly enlarge the hit‑area or restyle the buttons */
+.carousel .arrows button {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+}
+
+/* kyu 
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 52%;
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+} */
+
+
+.arrows button{
+    
+    border-radius: 50%;
+    background-color: #eee4;
+    border: none;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+}
+.arrows button:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+/* animation */
+.carousel .list .item:nth-child(1){
+    z-index: 1;
+}
+
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.8s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+/* running time */
+
+.carousel .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    animation: runningTime 30s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+
+/*.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+    
+}*/
+
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+}
+
+.category {
+    background-color:#F8F2DE;
+    text-align: center;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+.category .categoryHeading{
+    font-family:"Birthstone", cursive;
+    font-size: 2.5rem; 
+    margin: 0;          
+    display: inline-block; 
+    padding: 0.5rem 1rem;
+}
+
+/* RAAWWWWWWWWWWWW */
+.banner{
+    width: 100%;
+    height: 1000px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background-color: #000;
+    background-image: url('./posters/backgroundOfavs.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+.banner .slider{
+    position: absolute;
+    width: 250px;
+    height: 300px;
+    top: 10%;
+    left: calc(50% - 100px);
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation: autoRun 20s linear infinite;
+    z-index: 2;
+}
+@keyframes autoRun{
+    from{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+    }to{
+        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+    }
+}
+
+.banner .slider .itemOfBanner{
+    position: absolute;
+    inset: 0 0 0 0;
+    transform: 
+        rotateY(calc( (var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+        translateZ(550px);
+}
+.banner .slider .itemOfBanner img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
