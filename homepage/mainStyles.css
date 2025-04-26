@@ -221,7 +221,7 @@ header {
     gap: 10px;
 }
 
-/* optional: slightly enlarge the hit‑area or restyle the buttons */
+
 .carousel .arrows button {
     width: 45px;
     height: 45px;
@@ -435,6 +435,7 @@ header {
 
 /* RAAWWWWWWWWWWWW */
 .banner{
+    
     width: 100%;
     height: 1000px;
     text-align: center;
@@ -446,22 +447,24 @@ header {
     background-position: center center;
     background-size: cover;
 }
+
 .banner .slider{
+    
     position: absolute;
-    width: 250px;
+    width: 240px;
     height: 300px;
-    top: 10%;
+    top: 25%;
     left: calc(50% - 100px);
     transform-style: preserve-3d;
-    transform: perspective(1000px);
+    transform: perspective(1250px);
     animation: autoRun 20s linear infinite;
     z-index: 2;
 }
 @keyframes autoRun{
     from{
-        transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+        transform: perspective(1250px) rotateY(0deg);
     }to{
-        transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+        transform: perspective(1250px) rotateY(360deg);
     }
 }
 
