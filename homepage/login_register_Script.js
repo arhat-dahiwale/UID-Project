@@ -10,13 +10,21 @@ function login(event) {
     const email = emailInput.value;
     const password = passwordInput.value;
 
+    const usernameRegex = /^[a-zA-Z0-9_ ]{3,15}$/; // Allows letters, numbers, underscores, and spaces
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email validation regex
-
-    let isValid = true; // flag
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/;
 
     if (username && email && password) {
-        if (!emailRegex.test(email)) {
-            message.textContent = "Please check the email credentials.";
+        if (!usernameRegex.test(username)) {
+            message.style.color = "red";
+            message.textContent = "Please enter valid username credential.";
+        }
+        else if (!emailRegex.test(email)) {
+            message.textContent = "Please enter valid email credential.";
+        }
+        else if (!passwordRegex.test(password)) {
+            message.style.color = "red";
+            message.textContent = "Please enter valid password credential.";
         }
         else {
             message.style.color = "green";
@@ -49,16 +57,27 @@ function register(event) {
     const password = passwordInput.value;
     const confirmPassword = confirmPasswordInput.value;
 
+    const usernameRegex = /^[a-zA-Z0-9_ ]{3,15}$/; // Allows letters, numbers, underscores, and spaces
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email validation regex
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/;
+
 
     if (username && email && password && confirmPassword) {
         if (password !== confirmPassword) {
             message.style.color = "red";
             message.textContent = "Passwords do not match!";
         }
+        else if (!usernameRegex.test(username)) {
+            message.style.color = "red";
+            message.textContent = "Please enter valid username credential.";
+        }
         else if (!emailRegex.test(email)) {
             message.style.color = "red";
-            message.textContent = "Please check the email credentials.";
+            message.textContent = "Please enter valid email credential.";
+        }
+        else if (!passwordRegex.test(password)) {
+            message.style.color = "red";
+            message.textContent = "Please enter valid password credential.";
         }
         else {
             message.style.color = "green";
