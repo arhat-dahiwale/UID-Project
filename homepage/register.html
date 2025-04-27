@@ -3,69 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineSphere – Your Ultimate Movie Discovery Hub</title>
-    <style>
-        /* Set background color */
-        body {
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        /* Form container */
-        .register-form {
-            background: white;
-            padding: 45px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
-
-        /* Input fields and textarea styling */
-        .register-form input, 
-        .register-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        /* Submit button styling */
-        .register-form a {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 10px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 25%;
-            display: inline-block; text-decoration: none; 
-        }
-
-        /* Hover effect on button */
-        .register-form a:hover {
-            background-color: darkred;
-        }
-    </style>
-    <script src="script.js"></script>
+    <title> CineSphere </title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./login_register_Styles.css">
+    <script src="login_register_Script.js"></script>
 </head>
 <body>
-    <form class="register-form">
-        <h2>Sign Up</h2>
-        <input type="text" placeholder="User Name" id="register-username" required>
-        <input type="password" placeholder="Password" id="register-password" required>
-        <input type="password" placeholder="Confirm Password" id="confirm-password" required>
-        <br><br>
-        <a href="main.html" onclick="register()">Sign Up</a>
-        <a href="login.html">Sign in</a>
+
+
+   <div class="container">
+
+    <div class="image">
+        <img src="background_images/registerpage.jpg" alt = "Register Image">
+    </div>
+
+   <div class="form-box login">
+    <form action="">
+        <h1>Register</h1>
+        <div class="input-box">
+            <input type="text" id = "register-username" placeholder="Username" required>
+            <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+            <input type="email" id = "register-email" placeholder="Email" required>
+            <i class='bx bxl-gmail' ></i>
+        </div>
+        <div class="input-box">
+            <input type="password" id = "register-password" placeholder="Password" required>
+            <i class='bx bxs-lock-alt' ></i>
+        </div>
+        <div class="input-box">
+            <input type="password" id = "confirm-password" placeholder="Re-enter Password" required>
+            <i class='bx bxs-lock-alt' ></i>
+        </div>
+       
+        
+
+        <p id = "toggleText" style="color: red"> </p>
+        <button onclick ="register(event)" type="submit" class="btn">Register</button>
+
+        
+        <p class="login-link">
+            Already have an account?
+            <a href="login.html">Sign in</a>
+        </p>
+          
+       
     </form>
+   </div>
+   </div>
+
+   
 </body>
 </html>
+
+
