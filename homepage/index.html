@@ -4,30 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineSphere – Your Ultimate Movie Discovery Hub</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="indexStyles.css">
     <script src="script.js"></script>
+    <script src = "indexScript.js"></script>
 </head>
 <body>
     <nav class="navbar">
         <div class = "navleft">
         <div class="logo">
-            <a href ="#">CineSphere </a></div>
+            <a href = "#">
+                <img src = "Logo/cinesphere-high-resolution-logo-transparent.png" alt = "cinesphere-high-resolution-logo-transparent">
+            </a>
+        </div>
         <!-- Navigation Links -->
         <ul class="nav-links">
-            <li><a href="#about">About Us</a></li>
+            <li><a href="#about">About Us </a></li>
             <li><a href="#contact">Contact Us</a></li>
         </ul>
+
     </div>
-        <div class="search-box">
-            <input type="text" placeholder="Search for movies, genres, or actors...">
+    <div style = "display:flex;" >
+        <div class="search-box" style="display:flex; margin:0px 10px 0px 0px;">
+                <img src = "Logo/Search_logo_light_mode.svg"style = "margin: 0px 5px 0px 0px;">    
+            <input type="search" placeholder="Search for movies, genres, or actors...">
         </div>
+        <!--Profile Icon-->
+        <div class="action" style = "align-items: center;">
+            <div class="profile" onclick="menuToggle()">
+              <img src="https://i.pinimg.com/474x/b3/0c/39/b30c392c43b465ff22d8f084c06bbee1.jpg" alt="Profile Image">
+            </div>
+            <div class="menu">
+              <h3>User Name <br><span>Student</span></h3>
+              <ul>
+                <li><img src="images/user.png" alt="User Icon"><a href="#">My profile</a></li>
+                <li><img src="images/edit.png" alt="Edit Icon"><a href="#">Edit profile</a></li>
+                <li><img src="images/star.png" alt="Your rating"><a href="#"> Your rating</a></li>
+                <li><img src="images/bookmark.png" alt="Your watchlist"><a href="#">Your watchlist</a></li>
+                <li><img src="images/settings.png" alt="Settings Icon"><a href="#">Settings</a></li>
+                <li><img src="images/question.png" alt="Help Icon"><a href="#">Help</a></li>
+                <li><img src="images/log-out.png" alt="Logout Icon"><a href="#">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+
     </nav>
     <div class="hero">
-        <div class="overlay"></div>
+        <!--Background images to be transitioned-->
+        <div class="overlay" style="background-image: url('background_images/Iron_man.jpg');background-attachment: scroll;"></div>
+        <div class="overlay" style="background-image: url('background_images/the_batman_2022.jpg');background-attachment: scroll;"></div>
+        <div class="overlay" style="background-image: url('background_images/interstellar-wide.jpg');background-attachment: scroll;"></div>
+        <!--Add more images maybe-->
         <div class="hero-content">
-            <h1 id = "Logohero">CineSphere</h1>
-            <h1>Your Ultimate Movie Guide</h1>
-            <p>Explore trending movies, watch trailers, and find where to watch your favorites—all in one place.</p>
+
+            <img src = "Logo/cinesphere-transparent-no-red-bg.png" alt = "cinesphere-high-resolution-logo-transparent">
+            <h2>Your Ultimate Movie Guide</h2><!--Explore trending movies, watch trailers, and find where to watch your favorites—all in one place.-->
+            <p>Explore, Find, Watch </p>
             <a href="login.html" target="_blank">Login</a>
             <a href="register.html" target="_blank">Register</a>
         </div>
@@ -36,31 +69,8 @@
         <h2 style="text-align:justify;"> Trending Now </h2>
         <br>
         <p> Content </p>
-        <!--Carousel(the moving thingy)-->
         
-        <div class="carousel-container">
-            <div class="carousel">
-              <div class="movie-item">
-                <img src="background_images/Iron_man.jpg" alt="Movie 1">
-              </div>
-              <div class="movie-item">
-                <img src="background_images/Iron_man.jpg" alt="Movie 2">
-              </div>
-              <div class="movie-item">
-                <img src="background_images/Iron_man.jpg" alt="Movie 3">
-              </div>
-              <div class="movie-item">
-                <img src="background_images/iron_man.jpg" alt="Movie 4">
-              </div>
-              <div class="movie-item">
-                <img src="movie5.jpg" alt="Movie 5">
-              </div>
-              <div class="movie-item">
-                <img src="movie6.jpg" alt="Movie 6">
-              </div>
-            </div>
-          </div>
-
+        
     </div>
     <section class="about" id = "about" style="width: 100%; margin: auto;">
         <h2 style="text-align: center;">About Us</h2>
