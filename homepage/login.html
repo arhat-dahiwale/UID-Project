@@ -3,68 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineSphere – Your Ultimate Movie Discovery Hub</title>
-    <style>
-        /* Set background color */
-        body {
-            background-color: #f4f4f4;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        /* Form container */
-        .login-form {
-            background: white;
-            padding: 45px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
-
-        /* Input fields and textarea styling */
-        .login-form input, 
-        .login-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        /* Submit button styling */
-        .login-form a {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 10px 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            width: 25%;
-            display: inline-block; text-decoration: none; 
-        }
-
-        /* Hover effect on button */
-        .login-form a:hover {
-            background-color: darkred;
-        }
-    </style>
-    <script src="script.js"></script>
+    <title> CineSphere </title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./login_register_Styles.css">
+    <script src="login_register_Script.js"></script>
 </head>
 <body>
-    <form class="login-form">
-        <h2>Please Sign In</h2>
-        <input type="text" placeholder="User Name" id="login-username" required>
-        <input type="password" placeholder="Password" id="login-password" required>
-        <br><br>
-        <a href="main.html" onclick="login()">Sign in</a>
-        <a href="register.html">Sign up</a>
+
+
+   <div class="container">
+
+    <div class="image">
+        <img src="background_images/loginpage.jpg" alt = "Login Image">
+    </div>
+
+   <div class="form-box login">
+    <form action="">
+        <h1>Login</h1>
+        <div class="input-box">
+            <input type="text" id = "login-username" placeholder="Username" title="Username must be 3-15 characters, and can only include letters, numbers, underscores, and spaces." required>
+            <i class='bx bxs-user'></i>
+        </div>
+        <div class="input-box">
+            <input type="email" id = "login-email" placeholder="Email" title="Enter a valid email address (e.g., example@mail.com)." required>
+            <i class='bx bxl-gmail' ></i>
+        </div>
+        <div class="input-box">
+            <input type="password" id = "login-password" placeholder="Password" title="Password must be at least 8 characters long, with uppercase, lowercase, number, and special character." required>
+            <i class='bx bxs-lock-alt' ></i>
+        </div>
+       
+        
+
+        <p id = "toggleText" style="color: red"> </p>
+        <button onclick="login(event)" type="submit" class="btn">Login</button>
+
+        
+        
+        <p class="login-link">
+            or  
+            <a href="https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&ifkv=AXH0vVtDp4v3qN_nSX1rFoANQRPlTgnURPUxUWPDBzuVWjfKdwkwjS4PDxmDNjEuc0sgMv931SzJ7A&passive=1209600&flowName=GlifWebSignIn&flowEntry=ServiceLogin&dsh=S-1624018628%3A1745609383821271">Login with Google</a>
+        </p>
+
+        <p class="login-link">
+            New User?
+            <a href="register.html">Create a New Account</a>
+        </p>
     </form>
+   </div>
+   </div>
+
+   
 </body>
 </html>
+
+
