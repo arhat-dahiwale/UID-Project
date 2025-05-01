@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSphere</title>
+    <link rel="stylesheet" href="mainStyles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+        <div class="logo">CineSphere</div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Search for movies, genres, or actors...">
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+    </header>
+    
+    <!-- carousel -->
+    <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <video autoplay muted loop id="myVideo1">
+                    <source src="trailers/trailer1.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                  </video>
+                <div class="content">
+                    <div class="author">MARVEL'S</div>
+                    <div class="title">AVENGERS</div>
+                    <div class="topic">ENDGAME</div>
+                    <div class="des">
+                        <!-- lorem 50 -->
+                        On your left. 
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <button>4.9 ⭐</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <video autoplay muted loop id="myVideo2">
+                    <source src="trailers/trailer2.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                  </video>
+                <div class="content">
+                    <div class="author">LUCASFILMS'S</div>
+                    <div class="title">STAR WARS</div>
+                    <div class="topic">MANDALORIAN</div>
+                    <div class="des">
+                        May the Force be with you.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <button>4.5 ⭐</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <video autoplay muted loop id="myVideo3">
+                    <source src="trailers/trailer3.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                  </video>
+                <div class="content">
+                    <div class="author">WARNER BROS'S</div>
+                    <div class="title">INFAMOUS</div>
+                    <div class="topic">INCEPTION</div>
+                    <div class="des">
+                        Throw your brain cells into a complete disarray.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <button>4.9 ⭐</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <video autoplay muted loop id="myVideo4">
+                    <source src="trailers/trailer4.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                  </video>
+                <div class="content">
+                    <div class="author">ROWLING'S</div>
+                    <div class="title">HARRY</div>
+                    <div class="topic">POTTER</div>
+                    <div class="des">
+                        Not the Hari Puttar you wanted.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <button>4.1 ⭐</button>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <video autoplay muted loop id="myVideo5">
+                    <source src="trailers/trailer5.mp4" type="video/mp4">
+                    Your browser does not support HTML5 video.
+                  </video>
+                <div class="content">
+                    <div class="author">FITZGERALD'S</div>
+                    <div class="title">THE GREAT</div>
+                    <div class="topic">GATSBY</div>
+                    <div class="des">
+                        Watch how a War Hero turns into a simp.
+                    </div>
+                    <div class="buttons">
+                        <button>SEE MORE</button>
+                        <button>4.7 ⭐</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="posters/poster1.png">
+                <div class="content">
+                    <div class="title">
+                        Endgame
+                    </div>
+                    <div class="description">
+                        Box Office Buster
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="posters/poster2.png">
+                <div class="content">
+                    <div class="title">
+                        The Mandalorian
+                    </div>
+                    <div class="description">
+                        Sci-Fi Special
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="posters/poster3.png">
+                <div class="content">
+                    <div class="title">
+                        Inception
+                    </div>
+                    <div class="description">
+                        Mind Mayhem
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="posters/poster4.png">
+                <div class="content">
+                    <div class="title">
+                        Harry Potter
+                    </div>
+                    <div class="description">
+                        Fantasy Favourite
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="posters/poster5.png">
+                <div class="content">
+                    <div class="title">
+                        Great Gatsby
+                    </div>
+                    <div class="description">
+                        Looming Love
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+
+    <div class="category">
+        <h2 class="categoryHeading">  All Time Favourite of the Generations ! </h2>
+    </div>
+
+    <div class="banner">
+        
+        <div class="slider" style="--quantity: 10">
+            <div class="itemOfBanner" data-link="favmovie1.html" style="--position: 1"><img src="posters/poster1.png" alt=""></div>
+            <div class="itemOfBanner" data-link="favmovie2.html" style="--position: 2"><img src="posters/poster2.png" alt=""></div>
+            <div class="itemOfBanner" data-link="favmovie3.html" style="--position: 3"><img src="posters/poster3.png" alt=""></div>
+            <div class="itemOfBanner" data-link="favmovie4.html" style="--position: 4"><img src="posters/poster4.png" alt=""></div>
+            <div class="itemOfBanner" data-link="favmovie5.html" style="--position: 5"><img src="posters/poster5.png" alt=""></div>
+            <div class="itemOfBanner" data-link="favmovie6.html" style="--position: 6"><img src="posters/poster6.png" alt=""></div>
+            <div class="itemOfBanner" data-link="favmovie7.html" style="--position: 7"><img src="posters/poster7.png" alt=""></div>
+            <div class="itemOfBanner" data-link="favmovie8.html" style="--position: 8"><img src="posters/poster8.png" alt=""></div>
+            <div class="itemOfBanner" data-link="favmovie9.html" style="--position: 9"><img src="posters/poster9.png" alt=""></div>
+            <div class="itemOfBanner" data-link="favmovie10.html" style="--position: 10"><img src="posters/poster10.png" alt=""></div>
+        </div>
+    </div>
+
+     
+    
+    <script src="mainScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
