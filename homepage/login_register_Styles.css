@@ -15,46 +15,39 @@ body{
     align-items: center;
     min-height: 100vh;
     background:linear-gradient(90deg,#e2e2e2,#c9d6ff);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .container{
   position: relative;
   background-color: #adb5bd;
-  height: 550px;
-  width: 850px;
+  height: 500px;
+  width: 400px;
   border-radius: 30px;
-  box-shadow: 0,0,30px,rgba(0,0,0, .2);
-}
-.image {
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 49%;
-    overflow: hidden;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
+  box-shadow: 0 0 30px rgba(0,0,0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 
-}
-
-.image img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
 }
 
 .form-box{
     position: absolute;
     right: 0;
     height:100%;
-    width: 50%;
-    background-color: #adb5bd;
+    width: 100%;
+    background: transparent; /* Keep transparent to use container's background */
     display: flex;
     align-items: center;
     text-align: center;
     color: #333;
+    padding: 40px;
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 
 }
 .form{
@@ -68,9 +61,10 @@ width: 100%;
 .input-box{
     position: relative;
     margin: 30px 0;
+    width: 100%;
 }
 .input-box input{
-    width: 340px;
+    width: 100%;
     height: 40px;
     border-radius: 7px;
     padding:13px 50px 13px 20px ;
