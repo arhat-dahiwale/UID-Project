@@ -17,20 +17,20 @@ let timeAutoNext = 30000;
 let runTimeOut;
 let runNextAuto = setTimeout(() => {
     nextDom.click();
-}, timeAutoNext);
+},  timeAutoNext);
 
 // Arrow controls
-nextDom.addEventListener('click', () => showSlider('next'));
-prevDom.addEventListener('click', () => showSlider('prev'));
+        nextDom.addEventListener('click', () => showSlider('next'));
+        prevDom.addEventListener('click', () => showSlider('prev'));
 
 // Trigger progress‑bar animation on page load
-window.addEventListener('load', () => {
+        window.addEventListener('load', () => {
     // Reset any existing classes for clean start
-    carouselDom.classList.remove('next', 'prev');
+        carouselDom.classList.remove('next', 'prev');
     void carouselDom.offsetWidth; // force reflow
     carouselDom.classList.add('next');
 
-    clearTimeout(runTimeOut);
+        clearTimeout(runTimeOut);
     runTimeOut = setTimeout(() => {
         carouselDom.classList.remove('next', 'prev');
     }, timeRunning);
@@ -76,3 +76,28 @@ document.querySelectorAll('.itemOfBanner').forEach(item => {
       if (dest) window.location.href = dest;
     });
 });
+
+document.getElementById('nextOfThe2D').onclick = function(){
+        const widthItem = document.querySelector('.item').offsetWidth;
+        document.getElementById('formList').scrollLeft += widthItem;
+};
+document.getElementById('prevOfThe2D').onclick = function(){
+        const widthItem = document.querySelector('.item').offsetWidth;
+        document.getElementById('formList').scrollLeft -= widthItem;
+};
+
+
+document.getElementById('nextOfThe2DHorror').onclick = function(){
+        const widthItem = document.querySelector('.item').offsetWidth;
+        document.getElementById('formList2').scrollLeft += widthItem;
+};
+
+        document.getElementById('prevOfThe2DHorror').onclick = function(){
+        const widthItem = document.querySelector('.item').offsetWidth;
+        document.getElementById('formList2').scrollLeft -= widthItem;
+};
+    
+    function menuToggle() {
+        const toggleMenu = document.querySelector('.menu');
+        toggleMenu.classList.toggle('active');
+      }    
