@@ -296,7 +296,7 @@ body, html {
 }
 */
 
-.trending {
+/*.trending {
     padding: 40px;
     margin: auto;
     background-color: #F8F2DE;
@@ -309,6 +309,115 @@ body, html {
 .trending p {
     font-family: 'Georgia', serif;
     font-size: 1.2em;
+}*/
+
+.trending {
+    background-color: #F8F2DE;
+    padding: 20px 0;
+    font-family: "Funnel Display", sans-serif;
+}
+
+
+.trending-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-family: "Funnel Display", sans-serif;
+}
+
+.trending-header h2 {
+    font-family: "Funnel Display", sans-serif;
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+
+.direction{
+    text-align: right;
+    
+}
+.direction button{
+    font-family: cursive;
+    font-weight: bold;
+    background-color: red;
+    border:none;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    transition: 0.5s;
+    margin:0 10px;
+}
+.direction button:hover{
+    background-color: black;
+    color: red;
+}
+.item{
+    border-radius: 15px;
+    width:300px;
+    height:500px;
+    background-image: linear-gradient(to top, #101214, #000000);
+    overflow: hidden;
+    transition: 0.5s;
+    margin:10px;
+    scroll-snap-align: start;
+}
+.item .avatar{
+    display: block;
+    margin:10px auto 10px;
+    width:auto;
+    height:300px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 15px #a73535;
+}
+.item .content{
+    padding:0 30px;
+    font-family: "Funnel Display", sans-serif;
+    color: red;
+}
+.item .content table td{
+    padding:10px 0;
+    border-bottom: 1px solid #AEC0CE;
+}
+.item .content table td:nth-child(2){
+    text-align: right;
+}
+.item .nameGroup{
+    text-align: center;
+    border-bottom:none!important;
+}
+#list{
+    display: flex;
+    width:max-content;
+}
+#formList{
+    width:1280px;
+    max-width: 100%;
+    overflow: auto;
+    margin:auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: both;
+}
+#formList::-webkit-scrollbar{
+    display: none;
+}
+@media screen and (max-width: 1024px){
+    .item{
+        width: calc(33.3vw - 20px);
+    }
+    .direction{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px){
+    .item{
+        width: calc(50vw - 20px);
+    }
+    .direction{
+        display: none;
+    }
 }
 
 .about {
