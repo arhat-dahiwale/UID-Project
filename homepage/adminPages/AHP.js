@@ -106,6 +106,6 @@ function topFunction() {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
-    });
-}     
-document.getElementById("totop").addEventListener("click", topFunction());
+ });
+ }     
+document.getElementById("totop").addEventListener("click", topFunction());      
