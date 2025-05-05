@@ -39,10 +39,56 @@ item.innerHTML = `
                       <tr><td>Title</td><td>${movie.title}</td></tr>
                       <tr><td>Rating</td><td>${movie.vote_average}</td></tr>
                       <tr><td>Lang</td><td>${movie.original_language.toUpperCase()}</td></tr>
-                      <tr><td colspan="2" class="nameGroup" style="color: gold;">Premium</td></tr>
+                      <tr><td colspan="2" class="nameGroup" style="color: #D4AC0D;">Premium</td></tr>
                     </table>
                   </div>
                 `;
                 list.appendChild(item);
             });
         }
+
+        
+        
+document.addEventListener("DOMContentLoaded", () => {
+  fetch(API_URL)
+    .then(response => response.json())
+    .then(data => populateBanners(data.results))
+    .catch(err => console.error("API fetch error:", err));
+});
+
+function populateBanners(movies) {
+  const bannerlist = document.getElementById('bannerlist');
+  bannerlist.innerHTML = '';
+
+  const validMovies = movies.filter(movie => movie.backdrop_path);
+
+  validMovies.forEach(movie => {
+    const overlay = document.createElement('div');
+    overlay.className = 'overlay';
+    overlay.style.backgroundImage = `url('https://image.tmdb.org/t/p/w1280${movie.backdrop_path}')`;
+    bannerlist.appendChild(overlay);
+    overlay.innerHTML=`<div class="hero-content">
+
+            <img src = "Logo/cinesphere-high-resolution-logo-nobg_updated.png" alt = "cinesphere-high-resolution-logo-transparent">
+            <h2>Your Ultimate Movie Guide</h2><!--Explore trending movies, watch trailers, and find where to watch your favorites—all in one place.-->
+            <p>Explore, Find, Watch </p>
+            <a href="login.html" target="_blank">Login</a>
+            <a href="register.html" target="_blank">Register</a>
+        </div>`;
+  });
+
+  if (validMovies.length > 1) startBannerSlideshow();
+}
+
+function startBannerSlideshow() {
+  const banners = document.querySelectorAll('#bannerlist .overlay');
+  let current = 0;
+
+  banners[current].classList.add('active');
+
+  setInterval(() => {
+    banners[current].classList.remove('active');
+    current = (current + 1) % banners.length;
+    banners[current].classList.add('active');
+  }, 4000); // 5-second interval
+}
