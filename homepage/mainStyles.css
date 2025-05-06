@@ -705,11 +705,12 @@ body, html {
     text-align: center;
     border-bottom:none!important;
 }
-#list{
+
+#list_Disney{
     display: flex;
     width:max-content;
 }
-#formList{
+#formList_Disney{
     width:1280px;
     max-width: 100%;
     overflow: auto;
@@ -717,11 +718,15 @@ body, html {
     scroll-behavior: smooth;
     scroll-snap-type: both;
 }
-#formList::-webkit-scrollbar{
+#formList_Disney::-webkit-scrollbar{
     display: none;
 }
 
-#formList2{
+#list_Anime{
+    display: flex;
+    width:max-content;
+}
+#formList_Anime{
     width:1280px;
     max-width: 100%;
     overflow: auto;
@@ -729,11 +734,73 @@ body, html {
     scroll-behavior: smooth;
     scroll-snap-type: both;
 }
-#formList2::-webkit-scrollbar{
+#formList_Anime::-webkit-scrollbar{
     display: none;
 }
 
+#list_Action{
+    display: flex;
+    width:max-content;
+}
+#formList_Action{
+    width:1280px;
+    max-width: 100%;
+    overflow: auto;
+    margin:auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: both;
+}
+#formList_Action::-webkit-scrollbar{
+    display: none;
+}
 
+#list_Horror{
+    display: flex;
+    width:max-content;
+}
+#formList_Horror{
+    width:1280px;
+    max-width: 100%;
+    overflow: auto;
+    margin:auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: both;
+}
+#formList_Horror::-webkit-scrollbar{
+    display: none;
+}
+
+#list_Sitcom{
+    display: flex;
+    width:max-content;
+}
+#formList_Sitcom{
+    width:1280px;
+    max-width: 100%;
+    overflow: auto;
+    margin:auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: both;
+}
+#formList_Sitcom::-webkit-scrollbar{
+    display: none;
+}
+
+#list_Documentary{
+    display: flex;
+    width:max-content;
+}
+#formList_Documentary{
+    width:1280px;
+    max-width: 100%;
+    overflow: auto;
+    margin:auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: both;
+}
+#formList_Documentary::-webkit-scrollbar{
+    display: none;
+}
 
 @media screen and (max-width: 1024px){
     .item{
@@ -819,3 +886,83 @@ body, html {
 .legal-links {
     margin-top: 10px;
 }
+
+.modal {
+    position: fixed;
+    top: 0; left: 0; width:100%; height:100%;
+    background: rgba(0,0,0,0.6);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 2000;
+  }
+  .modal.hidden { display: none; }
+  .modal-content {
+    background: #EEEEEE; padding: 40px; border-radius: 20px; width: 90%; max-width: 400px;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute; top: 10px; right: 20px; cursor: pointer; font-size: 1.8rem;
+  }
+  .modal-content input, .modal-content label {
+    display: block; width: 100%; margin: 8px 0;
+    font-family: 'Poppins';
+    font-size: large;
+  }
+  .modal-content button {
+    margin-top: 12px; padding: 13px 12px; width: 90px; border-radius: 45px; background-color: #D84040; border-style: none;
+    
+  }
+
+  .pop-out-checkbox {
+    height : 20px;
+  }
+
+  /* dropdown panel */
+.search-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);    /* just below the input */
+    left: 0;
+    width: 100%;              /* matches whatever width the input has */
+    max-height: 300px;        /* scroll if too tall */
+    overflow-y: auto;
+    background: #EEEEEE;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1500;
+  }
+  
+  /* hide when no results / not active */
+  .search-dropdown.hidden {
+    display: none;
+  }
+  
+  .search-dropdown li {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .search-dropdown li:hover {
+    background: #D84040;
+  }
+  
+  .search-dropdown li img {
+    width: 40px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 4px;
+  }
+  
+  .search-dropdown li .title {
+    color: black;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
