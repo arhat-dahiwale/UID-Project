@@ -1,184 +1,180 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CineSphere – Your Ultimate Movie Discovery Hub</title>
-    <link rel="stylesheet" href="indexStyles.css">
-    <script src = "indexScript.js"></script>
-  
-</head>
-<body>
-    <nav class="navbar">
-        <div class = "navleft">
-            <div class="logo">
-                <a href = "#">
-                    <img src = "Logo/cinesphere-high-resolution-logo-transparent_updated.png" alt = "cinesphere-high-resolution-logo-transparent">
-                </a>
-           </div>
-            <!-- Navigation Links -->
-            <ul class="nav-links">
-                <li><a href="#about">About Us </a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-
-    </div>
-    <div style = "display:flex;" >
-        <div class="search-box" style="display:flex; margin:0px 10px 0px 0px;">
-                <img src = "Logo/Search_logo_light_mode.svg"style = "margin: 0px 5px 0px 0px;">    
-            <input type="search" placeholder="Search for movies, genres, or actors...">
-        </div>
-        <!--Profile Icon-->
-        <div class="action" style = "align-items: center;">
-            <div class="profile" onclick="menuToggle()">
-              <img src="../homepage/profile/images/Rowan Atkinson.jpeg" alt="Profile Image">
-            </div>
-            <div class="menu">
-              <h3>Username <br><span>Student</span></h3>
-              <ul>
-                <li><img src="./Logo/user.png" alt="User Icon"><a href="../homepage/userprofile/userprofile.html">My profile</a></li>
-                <li><img src="./Logo/edit.png" alt="Edit Icon"><a href="../homepage/profile/index.html">Edit profile</a></li>
-                <li><img src="./Logo/star.png" alt="Your rating"><a href="#"> Your rating</a></li>
-                <li><img src="./Logo/bookmark.png" alt="Your watchlist"><a href="./watchlist/watchList.html">Your watchlist</a></li>
-                <li><img src="./Logo/settings.png" alt="Settings Icon"><a href="../homepage/profile/index.html">Settings</a></li>
-                <li><img src="./Logo/question.png" alt="Help Icon"><a href="#">Help</a></li>
-                <li><img src="./Logo/log-out.png" alt="Logout Icon"><a href="#">Logout</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-    </nav>
-    
-    <div class="hero" id = "bannerlist">
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>CineSphere – Your Ultimate Movie Discovery Hub</title>
+            <link rel="stylesheet" href="indexStyles.css">
+            <script src = "indexScript.js"></script>
         
-        <!--<div class="overlay" style="background-image: url('background_images/Iron_man.jpg');background-attachment: scroll;"></div>
-        <div class="overlay" style="background-image: url('background_images/the_batman_2022.jpg');background-attachment: scroll;"></div>
-        <div class="overlay" style="background-image: url('background_images/ford_vs_ferrari.jpg');background-attachment: scroll;"></div>
-    -->
-       <!-- <div class="hero-content">
+        </head>
+        <body>
+            <nav class="navbar">
+                <div class = "navleft">
+                    <div class="logo">
+                        <a href = "#">
+                            <img src = "Logo/cinesphere-high-resolution-logo-transparent_updated.png" alt = "cinesphere-high-resolution-logo-transparent">
+                        </a>
+                </div>
+                    <!-- Navigation Links -->
+                    <ul class="nav-links">
+                        <li><a href="#about">About Us </a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
 
-            <img src = "Logo/cinesphere-transparent-no-red-bg.png" alt = "cinesphere-high-resolution-logo-transparent">
-            <h2>Your Ultimate Movie Guide</h2>Explore trending movies, watch trailers, and find where to watch your favorites—all in one place.
-            <p>Explore, Find, Watch </p>
-            <a href="login.html" target="_blank">Login</a>
-            <a href="register.html" target="_blank">Register</a>
+            </div>
+            <div style = "display:flex;" >
+                <div class="search-box" style="display:flex; margin:0px 10px 0px 0px;">
+                        <img src = "Logo/Search_logo_light_mode.svg"style = "margin: 0px 5px 0px 0px;">    
+                    <input type="search" placeholder="Search for movies, genres, or actors...">
+                </div>
+                <!--Profile Icon-->
+                <div class="action" style = "align-items: center;">
+                    <div class="profile" onclick="menuToggle()">
+                    <img src="../homepage/profile/images/Rowan Atkinson.jpeg" alt="Profile Image">
+                    </div>
+                    <div class="menu">
+                    <h3>Username <br><span>Student</span></h3>
+                    <ul>
+                        <li><img src="./Logo/user.png" alt="User Icon"><a href="../homepage/userprofile/userprofile.html">My profile</a></li>
+                        <li><img src="./Logo/edit.png" alt="Edit Icon"><a href="../homepage/profile/index.html">Edit profile</a></li>
+                        <li><img src="./Logo/star.png" alt="Your rating"><a href="#"> Your rating</a></li>
+                        <li><img src="./Logo/bookmark.png" alt="Your watchlist"><a href="./watchlist/watchList.html">Your watchlist</a></li>
+                        <li><img src="./Logo/settings.png" alt="Settings Icon"><a href="../homepage/profile/index.html">Settings</a></li>
+                        <li><img src="./Logo/question.png" alt="Help Icon"><a href="#">Help</a></li>
+                        <li><img src="./Logo/log-out.png" alt="Logout Icon"><a href="#">Logout</a></li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </nav>
+            
+            <div class="hero" id = "bannerlist">
+            </div>
+
+            
+            <div class="trending">
+                <div class="trending-header">
+                    <h2>Trending Now</h2>
+                    <div class="direction">
+                        <button id="prev"> < </button>
+                        <button id="next"> > </button>
+                    </div>
+                </div>
+                <div id="formList">
+                    <div id="list">
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="AboutUs">
+            
+            <div class ="Image">
+                    <img src = "background_images/Movie_images.jpeg">
+            </div>
+            <div class="about" id = "about" style="width: 100%; margin:0;">
+                <h2 style="text-align: center;">About Us</h2>
+                <br>
+                <p> Welcome to CineSphere – Where Movies Come to Life! 🎥 </p>
+                <br>
+                <p> At CineSphere, we believe every movie tells a story, and so does every movie lover. That's why we built a platform that brings all your favorite films, trending releases, and must-watch classics under one roof. </p>      
+                <br>
+                <p> From discovering the latest blockbusters to finding hidden gems, CineSphere helps you explore, track, and enjoy movies effortlessly. Whether you're searching for cast details, trailers, ratings, or streaming availability, we've got everything you need—just a click away. </p>
+                <br>
+                <p> Because movies aren't just entertainment; they're an experience. And CineSphere is here to enhance yours. </p>
+            </div>  
         </div>
-    -->
-    </div>
+            
 
-    
-    <div class="trending">
-        <div class="trending-header">
-            <h2>Trending Now</h2>
-            <div class="direction">
-                <button id="prev"> < </button>
-                <button id="next"> > </button>
+            <div id="contact" style="width: 100%; margin: auto;">
+                <div id="ContactUs">
+                <h2> Contact<br> Us </h2>
             </div>
-        </div>
-        <div id="formList">
-            <div id="list">
-                
-            </div>
-        </div>
-    </div>
-    
-    <section class="about" id = "about" style="width: 100%; margin: auto;">
-        <h2 style="text-align: center;">About Us</h2>
-        <br>
-        <p> Welcome to CineSphere – Where Movies Come to Life! 🎥 </p>
-        <br>
-        <p> At CineSphere, we believe every movie tells a story, and so does every movie lover. That's why we built a platform that brings all your favorite films, trending releases, and must-watch classics under one roof. </p>      
-        <br>
-        <p> From discovering the latest blockbusters to finding hidden gems, CineSphere helps you explore, track, and enjoy movies effortlessly. Whether you're searching for cast details, trailers, ratings, or streaming availability, we've got everything you need—just a click away. </p>
-        <br>
-        <p> Because movies aren't just entertainment; they're an experience. And CineSphere is here to enhance yours. </p>
-    </section>   
-    <section id="contact" style="width: 100%; margin: auto;">
-        <h2> Contact Us </h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <br><br>
-                <input type="email" placeholder="Your Email" required>
-                <br><br>
-                <textarea placeholder="Your Message" required></textarea>
-                <br><br>
-                <button type="submit"> Send </button>
-            </form>
-    </section>
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h4>Get to Know Us</h4>
-                <a href="#about">About CineSphere</a><br>
-                <a href="#">Careers</a><br>
-                <a href="#">Press Releases</a><br>
-                <a href="#">CineSphere Blog</a>
-            </div>
-            <div class="footer-column">
-                <h4>Connect with Us</h4>
-                <a href="#">Facebook</a><br>
-                <a href="#">Twitter</a><br>
-                <a href="#">Instagram</a>
-            </div>
-            <div class="footer-column">
-                <h4>Watch with Us</h4>
-                <a href="#">Latest Releases</a><br>
-                <a href="#">Top Rated Movies</a><br>
-                <a href="#">Subscription Plans</a><br>
-                <a href="#">CineSphere Originals</a>
-            </div>
-            <div class="footer-column">
-                <h4>Need Help?</h4>
-                <a href="#">Your Account</a><br>
-                <a href="#">Support Center</a><br>
-                <a href="#">Subscription Assistance</a><br>
-                <a href="#">Download CineSphere App</a>
-            </div>
-        </div>
-    
-        <div class="footer-links">
-            <div>
-                <strong>IMDb</strong><br>
-                Movies, TV & Celebrities
-            </div>
-            <div>
-                <strong>CineSphere Originals</strong><br>
-                Exclusive Shows & Films
-            </div>
-            <div>
-                <strong>Streaming Now</strong><br>
-                Latest Blockbusters & Series
-            </div>
-            <div>
-                <strong>Movie Reviews</strong><br>
-                Critic & Audience Ratings
-            </div>
-            <div>
-                <strong>Upcoming Releases</strong><br>
-                Stay Updated with New Films
-            </div>
-        </div>
-    
-        <div class="footer-bottom">
-            <div class="legal-links">
-                <a href="#">Terms of Service</a> |
-                <a href="#">Privacy Policy</a> |
-                <a href="#">Cookies & Ads Info</a>
-            </div>
-            <p>&copy; 2025, CineSphere. All rights reserved.</p>
-        </div>
-    </footer>
-    <script src = "indexScript.js"></script>
-</body>
-</html>
+            <section id="ContactUsForm">
+                    <form>
+                        <label for="name">Name </label><br><br>
+                        <input type="text" placeholder="Your Name"  required>
+                        <br><br>
 
+                        <label for="email">Email </label>
+                        <br>
+                        <br>
+                        <input type="email" placeholder="Your Email" required>
+                        <br><br>
 
-
-
-
-
-
-
-
-
+                        <label for="message">Your Message! </label>
+                        <br><br>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <br><br>
+                        <button type="submit"> Send </button>
+                    </form>
+                </section>
+                </div>
+            <footer class="footer">
+                <div class="footer-container">
+                    <div class="footer-column">
+                        <h4>Get to Know Us</h4>
+                        <a href="#about">About CineSphere</a><br>
+                        <a href="#">Careers</a><br>
+                        <a href="#">Press Releases</a><br>
+                        <a href="#">CineSphere Blog</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect with Us</h4>
+                        <a href="#">Facebook</a><br>
+                        <a href="#">Twitter</a><br>
+                        <a href="#">Instagram</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Watch with Us</h4>
+                        <a href="#">Latest Releases</a><br>
+                        <a href="#">Top Rated Movies</a><br>
+                        <a href="#">Subscription Plans</a><br>
+                        <a href="#">CineSphere Originals</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Need Help?</h4>
+                        <a href="#">Your Account</a><br>
+                        <a href="#">Support Center</a><br>
+                        <a href="#">Subscription Assistance</a><br>
+                        <a href="#">Download CineSphere App</a>
+                    </div>
+                </div>
+            
+                <div class="footer-links">
+                    <div>
+                        <strong>IMDb</strong><br>
+                        Movies, TV & Celebrities
+                    </div>
+                    <div>
+                        <strong>CineSphere Originals</strong><br>
+                        Exclusive Shows & Films
+                    </div>
+                    <div>
+                        <strong>Streaming Now</strong><br>
+                        Latest Blockbusters & Series
+                    </div>
+                    <div>
+                        <strong>Movie Reviews</strong><br>
+                        Critic & Audience Ratings
+                    </div>
+                    <div>
+                        <strong>Upcoming Releases</strong><br>
+                        Stay Updated with New Films
+                    </div>
+                </div>
+            
+                <div class="footer-bottom">
+                    <div class="legal-links">
+                        <a href="#">Terms of Service</a> |
+                        <a href="#">Privacy Policy</a> |
+                        <a href="#">Cookies & Ads Info</a>
+                    </div>
+                    <p>&copy; 2025, CineSphere. All rights reserved.</p>
+                </div>
+            </footer>
+            <script src = "indexScript.js"></script>
+        </body>
+        </html>
 
