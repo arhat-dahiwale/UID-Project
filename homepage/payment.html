@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSphere</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">CineSphere</div>
+    </header>
+
+    <main>
+        
+        <section class="payment-form">
+            <h1>Pay with UPI</h1>
+            <br>
+            <p class="subtitle">Your membership starts as soon as payment is completed.</p>
+            
+            <div class="selected-plan">
+                <h3>Premium Plan</h3>
+                <div class="price">₹649/month</div>
+            </div>
+
+            <div class="payment-methods">
+                <div class="method-tabs">
+                    <button class="method-tab active" data-method="upi">UPI</button>
+                </div>
+
+                <div class="method-content" id="upi-method">
+                    <div class="upi-options">
+                        <div class="upi-option selected" data-option="id">
+                            <div class="upi-icon">📱</div>
+                            <div class="upi-label">UPI ID</div>
+                        </div>
+                        <div class="upi-option" data-option="qr">
+                            <div class="upi-icon">🔳</div>
+                            <div class="upi-label">QR Code</div>
+                        </div>
+                    </div>
+
+                    <form id="upiForm">
+                        <div class="form-group upi-id-group">
+                            <label for="upiId">Enter your UPI ID</label>
+                            <input type="text" id="upiId" placeholder="yourname@upi">
+                            <p class="hint">e.g. yourname@oksbi, yourmobilenumber@ybl</p>
+                        </div>
+
+                        <div class="form-group qr-group" style="display: none;">
+                            <div class="qr-code-placeholder">
+                                <div class="qr-code">
+                                    <!-- In a real app, this would be generated dynamically -->
+                                    <div class="qr-image" id="qrcode"></div>
+                                    <p class="qr-amount">Amount: ₹649</p>
+                                </div>
+                                <p class="hint">Scan this QR code with any UPI app to pay</p>
+                            </div>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="saveUpi" checked>
+                            <label for="saveUpi">Save this UPI ID for faster payments</label>
+                        </div>
+
+                        <div class="form-group">
+                            <p id = "upi-message" style="color: red"> </p>
+                            <br>
+                            <button onclick ="pay()" type="submit" class="submit-btn">Pay Now</button>
+                        </div>
+                        
+                    </form>
+                </div>
+
+            </div>
+
+            <p class="secure-message">
+                <span class="lock-icon">🔒</span> Your payments are secure and encrypted
+            </p>
+        </section>
+    </main>
+
+    <script src="payment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+</body>
+</html>

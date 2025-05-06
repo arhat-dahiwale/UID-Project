@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CineSphere</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">CineSphere</div>
+    </header>
+
+    <main class="confirmation-container">
+        
+        <section class="confirmation-message">
+            <div class="success-icon">🎉</div>
+            <h1>Welcome to CineSphere!</h1>
+            <br>
+            <p class="confirmation-text">Your account has been created successfully and your membership has started.</p>
+            
+            <div class="confirmation-details">
+                <div class="detail-item">
+                    <span class="detail-label">Plan:</span>
+                    <span class="detail-value">Premium (₹649/month)</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Billing starts:</span>
+                    <span class="detail-value" id="billing-date"></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Payment method:</span>
+                    <span class="detail-value upi-id">UPI (yourname@upi)</span>
+                </div>
+            </div>
+
+            <a href="main.html" class="start-watching-btn">Get Started</a>
+
+            <div class="help-section">
+                <p>Need help? <a href="#">Contact Customer Service</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="confirmation-footer">
+        <p>© 2025 CineSphere. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Help Center</a>
+        </div>
+    </footer>
+
+    <script>
+        const upiData = sessionStorage.getItem("userUpiData");
+        if (upiData) {
+            try {
+                const { upiId } = JSON.parse(upiData);
+                if (upiId) {
+                    document.querySelector(".upi-id").textContent = `UPI (${upiId})`;
+                }
+            } catch (err) {
+                console.error("Error parsing UPI data:", err);
+            }
+        }
+
+
+        // Set today's date as billing start
+        const billingDateEl = document.getElementById("billing-date");
+        const today = new Date();
+        const formattedDate = today.toLocaleDateString("en-GB"); // Format: DD/MM/YYYY
+        billingDateEl.textContent = formattedDate;
+
+    </script>
+    
+</body>
+</html>
