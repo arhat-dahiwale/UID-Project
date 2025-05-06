@@ -8,7 +8,7 @@ let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
 let timeDom = document.querySelector('.carousel .time');
 
 const user = JSON.parse(localStorage.getItem('user')) || {
-    name: 'Demo',password: 'admin123', role: 'Admin', age: 25, upiID : 'upiID'
+    name: 'Demo',password: 'admin123', role: 'FreemiumUser', age: 25, upiID : 'upiID'
 };
 
 function getAgeCategory(age) {
@@ -214,7 +214,12 @@ genresToShow.forEach(genre=>{
         if(removeModeGenre === g) {
             showDeleteModal(g, idx);
         } else {
-          if(movie.link) window.location.href = movie.link;
+            if (user.role === 'FreemiumUser' && movie.isPremium) {
+               showUpgradeModal();
+            }
+            else if (movie.link) {
+              window.location.href = movie.link;
+            }
         }
       };
     });
@@ -323,6 +328,35 @@ function showDeleteModal(genre, idx) {
       modal.classList.add('hidden');
     };
   }
+
+
+function showUpgradeModal() {
+
+    removeModeGenre = null;
+    document.querySelectorAll('.trending.removing')
+            .forEach(b=>b.classList.remove('removing'));
+  
+    // build the message
+    body.innerHTML = `
+      <h3>Premium Content Locked</h3>
+      <p>Sorry, it looks like you don’t have access to our best content.</p>
+      <p>You can upgrade to Premium at any time !</p>
+      <label>
+        <button id="goPremiumBtn">Go Premium</button>
+        <button id="cancelUpgrade" style="margin-left:8px;">Maybe Later</button>
+      </label>
+
+    `;
+
+    modal.classList.remove('hidden');
+  
+    document.getElementById('goPremiumBtn').onclick = () => {
+      window.location.href = './index.html';
+    };
+    document.getElementById('cancelUpgrade').onclick = () => {
+      modal.classList.add('hidden');
+    };
+  }
   
 
   // navbar
@@ -390,7 +424,12 @@ function bindCardClick(card, genre, idx) {
         // use the styled modal
         showDeleteModal(genre, idx);
       } else if (movie.link) {
-        window.location.href = movie.link;
+        if (user.role === 'FreemiumUser' && movie.isPremium) {
+            showUpgradeModal();
+        }
+        else if (movie.link) {
+           window.location.href = movie.link;
+        }
       }
     };
   }
