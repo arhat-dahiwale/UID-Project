@@ -29,6 +29,18 @@ function login(event) {
         else {
             message.style.color = "green";
             message.textContent = "Login successful !";
+
+            const role = username.toLowerCase() === "admin" ? "admin" : (plan === "Premium" ? "PremiumUser" : "FreemiumUser");
+
+            const userData = {
+            username: username,
+            password: password,
+            role: role,
+            age: age
+            };
+
+            localStorage.setItem("userData", JSON.stringify(userData));
+
             setTimeout(function() {
                 window.location.href = "main.html"; // redirect after delay
             }, 1500); 
@@ -42,6 +54,19 @@ function login(event) {
     }
     
 }
+
+window.addEventListener("DOMContentLoaded", () => {
+    const dobInput = document.getElementById("register-date");
+
+    // Calculate max date (3 years ago from today)
+    const today = new Date();
+    const maxDate = new Date(today.getFullYear() - 3, today.getMonth(), today.getDate());
+
+    // Format it as yyyy-mm-dd
+    const formattedDate = maxDate.toISOString().split("T")[0];
+
+    dobInput.setAttribute("max", formattedDate);
+});
 
 
 // Register function
@@ -65,8 +90,20 @@ function register(event) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Simple email validation regex
     const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/;
 
-    
+    const dobInput = document.getElementById("register-date");
+    const dob = new Date(dobInput.value);
+    const today = new Date();
+    let age = today.getFullYear() - dob.getFullYear();
+    const monthDiff = today.getMonth() - dob.getMonth();
 
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+        age--;
+    }
+    else if (isNaN(age) || age < 3) {
+        message.style.color = "red";
+        message.textContent = "You must be at least 3 years old to register.";
+    }
+    
 
     if (username && email && password && confirmPassword && plan) {
         if (password !== confirmPassword) {
@@ -90,12 +127,20 @@ function register(event) {
             message.textContent = "Please select a valid plan.";
         }
         else {
-            message.style.color = "green";
-            message.textContent = "Registered successfully!";
+            if (plan === "Freemium") {
+                message.style.color = "green";
+                message.textContent = "Registered successfully!";
+            }
+            else {
+                message.style.color = "green";
+                message.textContent = "Directing to payment page!";
+            }
+
             const redirectURL = plan === "Premium" ? "payment.html" : "main.html";
             setTimeout(function() {
                 window.location.href = redirectURL; // redirect after delay
             }, 1500);
+
             usernameInput.value = "";
             emailInput.value = "";
             passwordInput.value = "";
