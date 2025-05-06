@@ -16,21 +16,20 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #F8F2DE;
+    background-color: #EEEEEE;
     padding: 15px 15px;
     color: black;
     height: 8vh;
-    max-height:50px;
-    min-height:50px;
+    min-height:60px;
     box-shadow: 0px 0px black;
     
 }
 
 /* Logo */
 .logo img{
-    width:12vw;
-    min-width: 120px;
-    max-width: 170px;
+    width:15vw;
+    min-width: 150px;
+    max-width: 200px;
     display:flex;
     transition-duration: 100ms;
     transition-timing-function: ease-in-out;
@@ -65,7 +64,7 @@ body {
     max-height: 40px;
     
     transition-duration:300ms;
-    background-color:#ECDCBF;
+    background-color:#C2C2C2;
     font-family: "Funnel Display", sans-serif;
 }
 .search-box img{
@@ -112,7 +111,7 @@ body {
 .nav-links a {
     text-decoration: none;
     color: #232423;
-    font-size:1.2vw;
+    font-size:1.5vw;
     transition: 0.3s;
     font-family: "Funnel Display", sans-serif;
     font-optical-sizing: auto;
@@ -135,7 +134,7 @@ body, html {
 /* Hero Section */
 .hero {
     width: 100%;
-    height: 400px;
+    height: 100vh;
    /* background: url('background_images/movie1.jpg') no-repeat center/cover;*/
     position: relative;
     display: flex;
@@ -155,16 +154,21 @@ body, html {
 
 .overlay {
     position: absolute;
-    content:'';
-    background-size:cover;
-    background-position: right center;
-    opacity:0;
-    width: 100%;
+    top: 0;
+    left: 0;
+     width: 100%;
     height: 100%;
-    animation: changeBackground 18s infinite;
-    filter:brightness(65%);
-       
-    
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition-duration: 4s;
+    transition-timing-function: ease-in-out;
+
+}
+
+.overlay.active{
+    opacity:1;
+    z-index:1;
 }
 /*.overlay::after{
     position:absolute;
@@ -177,7 +181,7 @@ body, html {
 }
 */
 
-.overlay:nth-child(1){animation-delay:0s;}
+/*.overlay:nth-child(1){animation-delay:0s;}
 .overlay:nth-child(2){animation-delay:6s;}
 .overlay:nth-child(3){animation-delay:12s;}
 
@@ -204,11 +208,11 @@ body, html {
     position: relative;
     color: white;
     z-index: 1;
-    text-align: left;
+    text-align: center;
     padding:0 2vw;
-    background:linear-gradient(90deg,rgba(0,0,0,1) 0%,rgba(0,0,0,0.7)50%,rgba(0,0,0,0) 100%);
+    background:linear-gradient(90deg,rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6)50%,rgba(0,0,0,0.6) 100%);
     height:100%;
-    width:50%;
+    width:100%;
     align-content: center;
 }
 
@@ -224,6 +228,7 @@ body, html {
 }
 
 .hero-content a {
+    
     background-color: #E5383B;
     border:2px solid black;
     color: white;
@@ -296,7 +301,7 @@ body, html {
 }
 */
 
-.trending {
+/*.trending {
     padding: 40px;
     margin: auto;
     background-color: #F8F2DE;
@@ -309,12 +314,140 @@ body, html {
 .trending p {
     font-family: 'Georgia', serif;
     font-size: 1.2em;
+}*/
+
+.trending {
+    background-color: #EEEEEE;
+    padding: 20px 0;
+    font-family: "Funnel Display", sans-serif;
+}
+
+
+.trending-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    font-family: "Funnel Display", sans-serif;
+}
+
+.trending-header h2 {
+    font-family: "Funnel Display", sans-serif;
+    font-size: 24px;
+    margin: 0;
+    color: #333;
+}
+
+
+.direction{
+    text-align: right;
+    
+}
+.direction button{
+    font-family: cursive;
+    font-weight: bold;
+    background-color: red;
+    border:none;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    transition: 0.5s;
+    margin:0 10px;
+}
+.direction button:hover{
+    background-color: black;
+    color: red;
+}
+
+.item{
+    border-radius: 15px;
+
+    width:300px;
+    height:500px;
+    overflow: hidden;
+    margin:10px;
+    scroll-snap-align: start;
+    border:3px solid black;
+    box-shadow: 0px 0px 0px black;
+    background-color:black;
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(202, 202, 202, 0.7),
+        rgba(202, 202, 202, 0.7) 2px,
+        transparent 2px,
+        transparent 10px
+      );
+
+    }
+.item .avatar{
+    display: block;
+    margin:10px auto 10px;
+    width:auto;
+    height:300px;
+    object-fit: cover;
+    border-radius: 25px;
+    border:3px solid black;
+    box-shadow: 10px 10px 0px black;
+    background-color: black;
+    
+    
+}
+
+.item .content{
+    padding:0 30px;
+    font-family: "Funnel Display", sans-serif;
+    color: black;
+}
+.item .content table td{
+    padding:10px 0;
+    border-bottom: 1px solid #AEC0CE;
+}
+.item .content table td:nth-child(2){
+    text-align: right;
+}
+.item .nameGroup{
+    text-align: center;
+    padding:0;
+    margin:0;
+    border-bottom:none!important;
+}
+#list{
+    display: flex;
+    width:max-content;
+}
+#formList{
+    width:max-content;
+    max-width: 100%;
+    overflow: auto;
+    margin:0px 10px;
+    scroll-behavior: smooth;
+    scroll-snap-type: both;
+    
+}
+#formList::-webkit-scrollbar{
+    display: none;
+}
+@media screen and (max-width: 1024px){
+    .item{
+        width: calc(33.3vw - 20px);
+    }
+    .direction{
+        display: none;
+    }
+}
+@media screen and (max-width: 768px){
+    .item{
+        width: calc(50vw - 20px);
+    }
+    .direction{
+        display: none;
+    }
 }
 
 .about {
     padding: 40px;
     margin: auto;
-    background-color: #F8F2DE;
+    background-color: #EEEEEE;
     text-align:center;
 }
   

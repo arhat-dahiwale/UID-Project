@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CineSphere – Your Ultimate Movie Discovery Hub</title>
     <link rel="stylesheet" href="indexStyles.css">
-    <script src="script.js"></script>
     <script src = "indexScript.js"></script>
   
 </head>
@@ -13,15 +12,15 @@
     <nav class="navbar">
         <div class = "navleft">
             <div class="logo">
-            <a href = "#">
-                <img src = "Logo/cinesphere-high-resolution-logo-transparent.png" alt = "cinesphere-high-resolution-logo-transparent">
-            </a>
-        </div>
-        <!-- Navigation Links -->
-        <ul class="nav-links">
-            <li><a href="#about">About Us </a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
+                <a href = "#">
+                    <img src = "Logo/cinesphere-high-resolution-logo-transparent_updated.png" alt = "cinesphere-high-resolution-logo-transparent">
+                </a>
+           </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#about">About Us </a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
 
     </div>
     <div style = "display:flex;" >
@@ -48,31 +47,41 @@
             </div>
           </div>
         </div>
-
-
     </nav>
-    <div class="hero">
+    
+    <div class="hero" id = "bannerlist">
         
-        <div class="overlay" style="background-image: url('background_images/Iron_man.jpg');background-attachment: scroll;"></div>
+        <!--<div class="overlay" style="background-image: url('background_images/Iron_man.jpg');background-attachment: scroll;"></div>
         <div class="overlay" style="background-image: url('background_images/the_batman_2022.jpg');background-attachment: scroll;"></div>
-        <div class="overlay" style="background-image: url('background_images/interstellar-wide.jpg');background-attachment: scroll;"></div>
-       
-        <div class="hero-content">
+        <div class="overlay" style="background-image: url('background_images/ford_vs_ferrari.jpg');background-attachment: scroll;"></div>
+    -->
+       <!-- <div class="hero-content">
 
             <img src = "Logo/cinesphere-transparent-no-red-bg.png" alt = "cinesphere-high-resolution-logo-transparent">
-            <h2>Your Ultimate Movie Guide</h2><!--Explore trending movies, watch trailers, and find where to watch your favorites—all in one place.-->
+            <h2>Your Ultimate Movie Guide</h2>Explore trending movies, watch trailers, and find where to watch your favorites—all in one place.
             <p>Explore, Find, Watch </p>
             <a href="login.html" target="_blank">Login</a>
             <a href="register.html" target="_blank">Register</a>
         </div>
+    -->
     </div>
+
+    
     <div class="trending">
-        <h2 style="text-align:justify;"> Trending Now </h2>
-        <br>
-        <p> Content </p>
-        
-        
+        <div class="trending-header">
+            <h2>Trending Now</h2>
+            <div class="direction">
+                <button id="prev"> < </button>
+                <button id="next"> > </button>
+            </div>
+        </div>
+        <div id="formList">
+            <div id="list">
+                
+            </div>
+        </div>
     </div>
+    
     <section class="about" id = "about" style="width: 100%; margin: auto;">
         <h2 style="text-align: center;">About Us</h2>
         <br>
@@ -159,6 +168,7 @@
             <p>&copy; 2025, CineSphere. All rights reserved.</p>
         </div>
     </footer>
+    <script src = "indexScript.js"></script>
 </body>
 </html>
 

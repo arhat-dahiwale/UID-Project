@@ -583,7 +583,7 @@ body, html {
     overflow: hidden;
     position: relative;
     background-color: #000;
-    background-image: url('./posters/backgroundOfavs.png');
+    background-image: url('../posters/backgroundOfavs.png');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -751,13 +751,6 @@ body, html {
     }
 }
 
-.footer {
-    background-color: #D84040;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
 .btt {
     background-color: #EEEEEE;
 
@@ -769,6 +762,13 @@ body, html {
     color : #D84040;
 }
 
+
+.footer {
+    background-color: #D84040;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
 .footer a {
     color: white;
     text-decoration: none;
