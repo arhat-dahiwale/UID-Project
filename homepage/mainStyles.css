@@ -664,6 +664,7 @@ body, html {
     border-radius: 50%;
     transition: 0.5s;
     margin:0 10px;
+    font-size: large;
 }
 .direction button:hover{
     background-color: #F8F2DE;
@@ -767,6 +768,10 @@ body, html {
 .btt a {
     text-decoration: none;
     color : #D84040;
+}
+
+.btt a:hover {
+    cursor: default;
 }
 
 .footer a {

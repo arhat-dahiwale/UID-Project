@@ -5,7 +5,7 @@ function menuToggle() {
 
 
   
-const API_KEY = ``; // <-- Replace with your TMDB API key
+const API_KEY = `a5aa087bd3eea2461f282368e175c38f`; // <-- Replace with your TMDB API key
 const API_URL = `https://api.themoviedb.org/3/trending/movie/week?api_key=${API_KEY}`;
         
 document.addEventListener("DOMContentLoaded", () => {

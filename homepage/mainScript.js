@@ -108,4 +108,3 @@ function topFunction() {
         behavior: 'smooth'
     });
 }     
-document.getElementById("totop").addEventListener("click", topFunction());
