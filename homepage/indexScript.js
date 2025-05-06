@@ -70,8 +70,8 @@ function populateBanners(movies) {
     overlay.innerHTML=`<div class="hero-content">
 
             <img src = "Logo/cinesphere-high-resolution-logo-nobg_updated.png" alt = "cinesphere-high-resolution-logo-transparent">
-            <h2>Your Ultimate Movie Guide</h2><!--Explore trending movies, watch trailers, and find where to watch your favorites—all in one place.-->
-            <p>Explore, Find, Watch </p>
+            <h2>Your Ultimate Movie Guide</h2><!--Explore, Find, Watch.-->
+            <p> Explore trending movies, watch trailers, and find where to watch your favorites—all in one place. </p>
             <a href="login.html" target="_blank">Login</a>
             <a href="register.html" target="_blank">Register</a>
         </div>`;
