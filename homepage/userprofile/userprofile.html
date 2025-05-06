@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="userprofile.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<script src="./userprofile.js"></script>
+<body>
+
+<header>
+  <div class="logo-container">
+    <div class="logo">
+      <a href="../index.html">CineSphere</a>
+    </div>
+  </div>
+  <div class="nav-links">
+    <span class="watch-nav"><a href="../watchlist/watchList.html">Watchlist</a></span>
+    <div class="action">
+      <div class="profile" onclick="menuToggle()">
+        <img src="../profile/images/Rowan Atkinson.jpeg" alt="Profile Image">
+      </div>
+      <div class="menu">
+        <h3>Username <br><span>Student</span></h3>
+        <ul>
+          <li><img src="../Logo/user.png"><a href="#">My profile</a></li>
+          <li><img src="../Logo/edit.png"><a href="../profile/index.html">Edit profile</a></li>
+          <li><img src="../Logo/star.png"><a href="#">Your rating</a></li>
+          <li><img src="../Logo/bookmark.png"><a href="../watchlist/watchList.html">Your watchlist</a></li>
+          <li><img src="../Logo/settings.png"><a href="../profile/index.html">Settings</a></li>
+          <li><img src="../Logo/question.png"><a href="#">Help</a></li>
+          <li><img src="../Logo/log-out.png"><a href="#">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="profile-container">
+  <div class="profile-left">
+    <img src="../watchlist/img/Rowan Atkinson.jpeg" alt="Profile Photo">
+    <div class="profile-info">
+      <h2>Username</h2>
+      <p>📅 Joined Apr 2025</p>
+      <button class="edit-btn"><a href="../profile/">Edit Profile</a></button>
+      <div class="user-status">
+        <span id="userStatus">Freemium User</span>
+        <div class="stars" id="starRating">
+          <i class="fas fa-star"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="profile-right">
+    <div class="icons">
+      <i class="fas fa-cog" title="Settings" onclick="toggleSettingsDropdown()"></i>
+      <div id="settingsDropdown" class="dropdown-content">
+        <button onclick="window.location.href='../profile/index.html'">Account Settings</button>
+      </div>
+      <div class="share-container">
+        <i class="fas fa-share-alt" title="Share" onclick="toggleShareDropdown()"></i>
+        <div id="shareDropdown" class="dropdown-content">
+          <button id="copyLinkBtn">Copy Link</button>
+          <button onclick="shareToTwitter()">Share to Twitter</button>
+          <button onclick="shareToFacebook()">Share to Facebook</button>
+        </div>
+      </div>
+    </div>
+    <div class="grid-boxes">
+      <div class="box"><span>Ratings</span><span>0</span></div>
+      <div class="box"><span>Watchlist</span><span>1</span></div>
+      <div class="box"><span>Lists</span><span>0</span></div>
+      <div class="box more-btn" id="moreBtn"><span>More</span><span>→</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="info-box">
+  <strong>Welcome to your new profile</strong><br>
+  <br>
+  <a href="#">Follows CineSphere on social media</a>
+</div>
+
+<div class="section">
+  <div class="text">
+    <h2>Ratings</h2>
+    <span id="ratingsStatus">Your ratings are public. <a href="#" onclick="openModal('ratingsModal')">Edit</a></span>
+    <a href="#" class="btn">Browse popular movies</a>
+  </div>
+  <div class="count">0</div>
+</div>
+
+<div class="section">
+  <div class="text">
+    <h2>Watchlist</h2>
+    <span id="watchlistStatus">Your Watchlist is public. <a href="#" onclick="openModal('watchlistModal')">Edit</a></span>
+  </div>
+  <div class="count">0</div>
+</div>
+
+<div class="section">
+  <div class="text">
+    <h2>Check-ins</h2>
+    <span id="checkinsStatus">Your check-ins are private. <a href="#" onclick="openModal('checkinsModal')">Edit</a></span>
+  </div>
+  <div class="count">0</div>
+</div>
+
+<!-- 🌐 Privacy Modals -->
+<div id="ratingsModal" class="privacy-modal">
+  <div class="modal-content">
+    <h3 class="privacy">Change Ratings Visibility</h3><br>
+    <div class="modal-options">
+      <label><input type="radio" name="ratings" value="public" id="ratingsPublic" /> <span class="privacy">Make Public</span></label>
+      <label><input type="radio" name="ratings" value="private" id="ratingsPrivate" /> <span class="privacy">Make Private</span></label>
+    </div>
+    <button onclick="saveRatingsVisibility()">Save</button>
+    <button onclick="closeModal('ratingsModal')">Cancel</button>
+  </div>
+</div>
+
+<div id="watchlistModal" class="privacy-modal">
+  <div class="modal-content">
+    <h3 class="privacy">Change Watchlist Visibility</h3><br>
+    <div class="modal-options">
+      <label><input type="radio" name="watchlist" value="public" id="watchlistPublic" /> <span class="privacy">Make Public</span></label>
+      <label><input type="radio" name="watchlist" value="private" id="watchlistPrivate" /> <span class="privacy">Make Private</span></label>
+    </div>
+    <button onclick="saveWatchlistVisibility()">Save</button>
+    <button onclick="closeModal('watchlistModal')">Cancel</button>
+  </div>
+</div>
+
+<div id="checkinsModal" class="privacy-modal">
+  <div class="modal-content">
+    <h3 class="privacy">Change Check-ins Visibility</h3><br>
+    <div class="modal-options">
+      <label><input type="radio" name="checkins" value="public" id="checkinsPublic" /> <span class="privacy">Make Public</span></label>
+      <label><input type="radio" name="checkins" value="private" id="checkinsPrivate" /> <span class="privacy">Make Private</span></label>
+    </div>
+    <button onclick="saveCheckinsVisibility()">Save</button>
+    <button onclick="closeModal('checkinsModal')">Cancel</button>
+  </div>
+</div>
+
+<div id="toast">Link copied!</div>
+
+
+
+</body>
+</html>
