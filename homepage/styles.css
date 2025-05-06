@@ -1,0 +1,534 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: 700;
+    color: #e50914;
+}
+
+.logo span {
+    color: #333;
+}
+
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.plan-selection h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.plan-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.plan-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.plan-card.recommended {
+    border: 2px solid #e50914;
+}
+
+.recommended-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background-color: #e50914;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.plan-card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.price {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.price span {
+    font-size: 16px;
+    font-weight: 400;
+    color: #666;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.features li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.features li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #e50914;
+    font-weight: bold;
+}
+
+.select-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.select-btn:hover {
+    background-color: #f40612;
+}
+
+.navigation {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+}
+
+.next-btn {
+    padding: 12px 24px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.next-btn:hover {
+    background-color: #f40612;
+}
+
+.next-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .plans-container {
+        flex-direction: column;
+    }
+    
+    .plan-card {
+        width: 100%;
+    }
+}
+
+/* Add these to your existing styles.css */
+
+.completed {
+    background-color: #4CAF50 !important;
+    color: white !important;
+}
+
+.payment-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.selected-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.selected-plan h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.selected-plan .price {
+    font-weight: 500;
+    color: #666;
+}
+
+.change-plan {
+    color: #e50914;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-group input {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #f40612;
+}
+
+.secure-message {
+    text-align: center;
+    margin-top: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.lock-icon {
+    margin-right: 5px;
+}
+
+/* Add these to your existing styles.css */
+
+.payment-methods {
+    margin-top: 30px;
+}
+
+.method-tabs {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.method-tab {
+    padding: 12px 20px;
+    background: none;
+    border: none;
+    border-bottom: 3px solid transparent;
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    cursor: pointer;
+}
+
+.method-tab.active {
+    color: #e50914;
+    border-bottom-color: #e50914;
+}
+
+.upi-options {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.upi-option {
+    flex: 1;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.upi-option.selected {
+    border-color: #e50914;
+    background-color: #fff5f5;
+}
+
+.upi-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.upi-label {
+    font-weight: 500;
+}
+
+.hint {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+}
+
+.qr-code-placeholder {
+    text-align: center;
+    padding: 20px;
+}
+
+.qr-code {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.qr-image {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px dashed #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+
+.qr-amount {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .upi-options {
+        flex-direction: column;
+    }
+    
+    .method-tabs {
+        justify-content: space-between;
+    }
+    
+    .method-tab {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
+
+/* Add these to your existing styles.css */
+
+/* Registration Page Styles */
+.registration-form {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.plan-summary {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.plan-details {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.plan-name {
+    font-weight: 500;
+}
+
+.plan-price {
+    font-weight: 700;
+}
+
+.billing-info {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Confirmation Page Styles */
+.confirmation-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.confirmation-message {
+    background-color: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.success-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.confirmation-text {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.confirmation-details {
+    text-align: left;
+    max-width: 400px;
+    margin: 0 auto 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.detail-label {
+    font-weight: 500;
+    color: #666;
+}
+
+.detail-value {
+    font-weight: 500;
+}
+
+.email-confirmation {
+    margin: 30px 0;
+    padding: 15px;
+    background-color: #f0f7ff;
+    border-radius: 8px;
+    color: #0066cc;
+}
+
+.start-watching-btn {
+    display: inline-block;
+    padding: 14px 30px;
+    background-color: #e50914;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.start-watching-btn:hover {
+    background-color: #f40612;
+}
+
+.help-section {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.confirmation-footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.footer-links {
+    margin-top: 15px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
