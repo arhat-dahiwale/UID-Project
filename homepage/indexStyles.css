@@ -465,7 +465,7 @@ body, html {
     border:3px solid black;
     border-radius:20px;
     height:400px;
-    width:50%;
+    width:auto;
     object-fit: cover;
     overflow:hidden;
     object-position:left;
