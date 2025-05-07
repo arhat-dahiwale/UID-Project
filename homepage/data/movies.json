@@ -1,0 +1,132 @@
+{
+    "movies": [
+        {
+            "id": "avengers-endgame",
+            "title": "Avengers Endgame",
+            "year": "2019",
+            "bannerImage": "banners/avengers-banner.jpg",
+            "posterImage": "posters/poster1.png",
+            "rating": 8.9,
+            "certificate": "PG-13",
+            "runtime": "3h 1m",
+            "genres": ["Action", "Adventure", "Sci-Fi"],
+            "plot": "After the devastating events of Avengers: Infinity War, the universe is in ruins.",
+            "synopsis": "With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+            "director": "Anthony Russo, Joe Russo",
+            "writers": ["Christopher Markus", "Stephen McFeely"],
+            "releaseDate": "April 26, 2019",
+            "country": "United States",
+            "language": ["English"],
+            "trailerUrl": "trailers/trailer1.mp4",
+            "cast": [
+                { "name": "Robert Downey Jr.", "character": "Tony Stark / Iron Man", "image": "cast/rdj.jpg" },
+                { "name": "Chris Evans", "character": "Steve Rogers / Captain America", "image": "cast/evans.jpg" }
+            ],
+            "reviews": [
+                { "title": "Perfect culmination", "author": "MarvelFan", "rating": 5, "content": "The perfect ending to the Infinity Saga." }
+            ],
+            "recommendations": [
+                { "id": "avengers-infinity-war", "title": "Avengers: Infinity War", "image": "path/to/infinity-war.jpg", "rating": 4.8 }
+            ]
+        },
+        {
+            "id": "mandalorian",
+            "title": "The Mandalorian",
+            "year": "2019",
+            "bannerImage": "banners/mandalorian-banner.jpg",
+            "posterImage": "posters/poster2.png",
+            "rating": 8.5,
+            "certificate": "TV-14",
+            "runtime": "40m",
+            "genres": ["Action", "Adventure", "Sci-Fi"],
+            "plot": "The travels of a lone bounty hunter in the outer reaches of the galaxy.",
+            "synopsis": "After the fall of the Galactic Empire, a lone gunfighter makes his way through the lawless galaxy.",
+            "director": "Jon Favreau",
+            "writers": ["Jon Favreau"],
+            "releaseDate": "November 12, 2019",
+            "country": "United States",
+            "language": ["English"],
+            "trailerUrl": "trailers/trailer2.mp4",
+            "cast": [
+                { "name": "Pedro Pascal", "character": "The Mandalorian", "image": "cast/pascal.jpg" }
+            ],
+            "reviews": [
+                { "title": "Star Wars done right", "author": "StarWarsFan", "rating": 5, "content": "Brings back the magic of the original trilogy." }
+            ],
+            "recommendations": [
+                { "id": "star-wars-new-hope", "title": "Star Wars: A New Hope", "image": "path/to/new-hope.jpg", "rating": 4.7 }
+            ]
+        },
+        {
+            "id": "inception",
+            "title": "Inception",
+            "year": "2010",
+            "bannerImage": "banners/inception-banner.jpg",
+            "posterImage": "posters/poster3.png",
+            "rating": 8.8,
+            "certificate": "PG-13",
+            "runtime": "2h 28m",
+            "genres": ["Action", "Sci-Fi", "Thriller"],
+            "plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+            "synopsis": "Dom Cobb (Leonardo DiCaprio) is a thief with the rare ability to enter people's dreams and steal their secrets from their subconscious. His skill has made him a hot commodity in the world of corporate espionage but has also cost him everything he loves. Cobb gets a chance at redemption when he is offered a seemingly impossible task: Plant an idea in someone's mind. If he succeeds, it will be the perfect crime, but a dangerous enemy anticipates Cobb's every move.",
+            "director": "Christopher Nolan",
+            "writers": ["Christopher Nolan"],
+            "releaseDate": "July 16, 2010",
+            "country": "United States, United Kingdom",
+            "language": ["English", "Japanese", "French"],
+            "trailerUrl": "trailers/trailer3.mp4",
+            "cast": [
+                { "name": "Leonardo DiCaprio", "character": "Dom Cobb", "image": "https://via.placeholder.com/150x225" },
+                { "name": "Joseph Gordon-Levitt", "character": "Arthur", "image": "https://via.placeholder.com/150x225" },
+                { "name": "Elliot Page", "character": "Ariadne", "image": "https://via.placeholder.com/150x225" },
+                { "name": "Tom Hardy", "character": "Eames", "image": "https://via.placeholder.com/150x225" }
+            ],
+            "reviews": [
+                { "title": "Mind-blowing experience", "author": "MovieFan123", "rating": 5, "content": "Christopher Nolan has outdone himself with this masterpiece. The concept is brilliant, the execution flawless, and the performances outstanding. The ending will leave you thinking for days." },
+                { "title": "Complex but rewarding", "author": "CinemaLover", "rating": 4, "content": "It demands your full attention and multiple viewings to fully appreciate, but the payoff is worth it. The visual effects are stunning, especially the zero-gravity fight scene." }
+            ],
+            "recommendations": [
+                { "id": "interstellar", "title": "Interstellar", "image": "https://via.placeholder.com/200x300", "rating": 4.5 },
+                { "id": "the-matrix", "title": "The Matrix", "image": "https://via.placeholder.com/200x300", "rating": 4.5 },
+                { "id": "tenet", "title": "Tenet", "image": "https://via.placeholder.com/200x300", "rating": 4 },
+                { "id": "shutter-island", "title": "Shutter Island", "image": "https://via.placeholder.com/200x300", "rating": 4 }
+            ]
+        },
+        {
+            "id": "tangled",
+            "title": "Tangled",
+            "year": "2010",
+            "bannerImage": "banners/tangled-banner.jpg",
+            "posterImage": "posters/Disney4.png",
+            "rating": 7.7,
+            "certificate": "PG",
+            "runtime": "1h 40m",
+            "genres": ["Animation", "Adventure", "Comedy"],
+            "plot": "The magically long-haired Rapunzel has spent her entire life in a tower, but now that a runaway thief has stumbled upon her, she is about to discover the world for the first time—and who she really is.",
+            "synopsis": "Rapunzel, a young princess with magical long blonde hair that has healing powers, has been locked away in a tower for years. When she encounters a bandit named Flynn Rider, she seizes the chance to explore the outside world for the first time and unravel the mystery of her true heritage.",
+            "director": "Nathan Greno, Byron Howard",
+            "writers": ["Dan Fogelman", "Jacob Grimm", "Wilhelm Grimm"],
+            "releaseDate": "November 24, 2010",
+            "country": "United States",
+            "language": ["English"],
+            "trailerUrl": "https://www.youtube.com/embed/ycoY201RTRo",
+            "cast": [
+                { "name": "Mandy Moore", "character": "Rapunzel (voice)", "image": "https://via.placeholder.com/150x225/0000FF/808080" },
+                { "name": "Zachary Levi", "character": "Flynn Rider (voice)", "image": "https://via.placeholder.com/150x225/0000FF/808080" },
+                { "name": "Donna Murphy", "character": "Mother Gothel (voice)", "image": "https://via.placeholder.com/150x225/0000FF/808080" },
+                { "name": "Ron Perlman", "character": "Stabbington Brother (voice)", "image": "https://via.placeholder.com/150x225/0000FF/808080" }
+            ],
+            "reviews": [
+                { "title": "Charming and visually dazzling", "author": "DisneyFan123", "rating": 5, "content": "A delightful take on the classic fairy tale with stunning animation and heartwarming music." },
+                { "title": "Fun for all ages", "author": "FamilyViewer", "rating": 4.5, "content": "A perfect blend of humor, action, and emotion. Great voice acting and catchy songs make this a must-watch." }
+            ],
+            "recommendations": [
+                { "id": "frozen", "title": "Frozen", "image": "https://via.placeholder.com/200x300", "rating": 4.5 },
+                { "id": "moana", "title": "Moana", "image": "https://via.placeholder.com/200x300/0000FF/808080", "rating": 4.5 },
+                { "id": "brave", "title": "Brave", "image": "https://via.placeholder.com/200x300/0000FF/808080", "rating": 4 },
+                { "id": "enchanted", "title": "Enchanted", "image": "https://via.placeholder.com/200x300/0000FF/808080", "rating": 4.2 }
+            ]
+        }
+
+    ]
+}

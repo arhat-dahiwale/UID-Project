@@ -17,6 +17,22 @@ function getAgeCategory(age) {
     return               'elderly';
 }
 
+// To handle movie clicks
+function viewMovie(movieId) {
+  // Store the selected movie ID in localStorage
+  localStorage.setItem('selectedMovie', movieId);
+  // Redirect to description page
+  window.location.href = 'description.html';
+}
+
+// Update the carousel navigation to include movie IDs
+document.querySelectorAll('.item').forEach(item => {
+  item.addEventListener('click', function() {
+      const movieId = this.getAttribute('data-movie-id');
+      viewMovie(movieId);
+  });
+});
+
 const moviesByGenre = {
     Disney:       [
         { img: './posters/Disney1.png', title:'Frozen', rating:8.5, lang:'EN', isPremium:false, link:'./MD/frozen.html' },
