@@ -71,6 +71,10 @@
         const formattedDate = today.toLocaleDateString("en-GB"); // Format: DD/MM/YYYY
         billingDateEl.textContent = formattedDate;
 
+        const user = JSON.parse(localStorage.getItem("user"));
+        user.role = "PremiumUser";
+        localStorage.setItem('user', JSON.stringify(user));
+
     </script>
     
 </body>

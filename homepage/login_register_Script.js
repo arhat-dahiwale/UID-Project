@@ -1,8 +1,8 @@
 // Predefined credentials
 const predefinedUsers = {
-    "FreemiumUser": { email: "freemium@example.com", password: "Freemium@123", role: "FreemiumUser", age: 18 },
-    "PremiumUser": { email: "premium@example.com", password: "Premium@123", role: "PremiumUser", age: 20 },
-    "Admin": { email: "admin@example.com", password: "Admin@123", role: "Admin", age: 25 }
+    "FreemiumUser": { email: "freemium@example.com", password: "Freemium@123", role: "FreemiumUser", age: 12, upiID:'free@ybl' },
+    "PremiumUser": { email: "premium@example.com", password: "Premium@123", role: "PremiumUser", age: 20, upiID:'prem@ybl' },
+    "Admin": { email: "admin@example.com", password: "Admin@123", role: "Admin", age: 25, upiID:'adm@ybl' }
 };
 
 // Login function
@@ -49,14 +49,15 @@ function login(event) {
             message.style.color = "green";
             message.textContent = "Login successful !";
 
-            const userData = {
+            const user = {
                 username: username,
                 password: password,
                 role: predefinedUsers[username].role,
-                age: predefinedUsers[username].age
+                age: predefinedUsers[username].age,
+                upiID: predefinedUsers[username].upiID
             };
 
-            localStorage.setItem("userData", JSON.stringify(userData));
+            localStorage.setItem("user", JSON.stringify(user));
 
             setTimeout(function() {
                 window.location.href = "main.html"; // redirect after delay
@@ -162,6 +163,17 @@ function register(event) {
             }
 
             const redirectURL = plan === "Premium" ? "payment.html" : "main.html";
+
+            const user = {
+                username: username,
+                password: password,
+                role: plan==="Premium" ? null : "FreemiumUser",
+                age: age,
+                upiID: null
+            };
+
+            localStorage.setItem("user", JSON.stringify(user));
+
             setTimeout(function() {
                 window.location.href = redirectURL; // redirect after delay
             }, 1500);

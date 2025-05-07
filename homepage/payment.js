@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 sessionStorage.setItem("userUpiData", JSON.stringify({ upiId })); // store UPI ID in sessionStorage
 
                 // Store the UPI ID in localStorage for main.html access
-                let user = JSON.parse(localStorage.getItem('user')) || {};  // Get existing user data from localStorage
-                user.upiId = upiId;  // Add the UPI ID
+                let user = JSON.parse(localStorage.getItem('user'));  // Get existing user data from localStorage
+                user.upiID = upiId;  // Add the UPI ID
                 localStorage.setItem('user', JSON.stringify(user));  // Save updated user object back to localStorage
 
                 setTimeout(() => {
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Store the UPI ID in localStorage for main.html access
             let user = JSON.parse(localStorage.getItem('user')) || {};  // Get existing user data from localStorage
-            user.upiId = upiId;  // Add the UPI ID
+            user.upiID = upiId;  // Add the UPI ID
             localStorage.setItem('user', JSON.stringify(user));  // Save updated user object back to localStorage
 
             setTimeout(() => {
