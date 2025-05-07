@@ -411,12 +411,17 @@ siteSearch.addEventListener('input', () => {
     return;
   }
 
-  // find up to 10 matches across title / genre / cast
-  const matches = allMovies.filter(m => {
-    const hay = (m.title + ' ' + m.genre + ' ' + (m.cast||[]).join(' '))
-                  .toLowerCase();
-    return hay.includes(q);
-  }).slice(0, 10);
+  
+    // find up to 10 matches, but only in the genres we rendered
+    const matches = allMovies
+    .filter(m => 
+      genresToShow.includes(m.genre) &&                 // ← only these genres
+      ( (m.title + ' ' + m.genre + ' ' + (m.cast||[]).join(' '))
+          .toLowerCase()
+          .includes(q) )
+    )
+    .slice(0, 10);
+
 
   // build list items
   dropdown.innerHTML = matches.map(m => `
