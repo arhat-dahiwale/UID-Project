@@ -53,7 +53,7 @@
     <div class="carousel">
         <!-- list item -->
         <div class="list">
-            <div class="item">
+            <div class="item" data-movie-id="avengers-endgame">
                 <video autoplay muted loop id="myVideo1">
                     <source src="trailers/trailer1.mp4" type="video/mp4">
                     Your browser does not support HTML5 video.
@@ -67,12 +67,12 @@
                         On your left. 
                     </div>
                     <div class="buttons">
-                        <button>SEE MORE</button>
+                        <button onclick="viewMovie('avengers-endgame')>SEE MORE</button>
                         <button>4.9 ⭐</button>
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" data-movie-id="mandalorian">
                 <video autoplay muted loop id="myVideo2">
                     <source src="trailers/trailer2.mp4" type="video/mp4">
                     Your browser does not support HTML5 video.
@@ -85,12 +85,12 @@
                         May the Force be with you.
                     </div>
                     <div class="buttons">
-                        <button>SEE MORE</button>
+                        <button onclick="viewMovie('mandalorian')">SEE MORE</button>
                         <button>4.5 ⭐</button>
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" data-movie-id="inception">
                 <video autoplay muted loop id="myVideo3">
                     <source src="trailers/trailer3.mp4" type="video/mp4">
                     Your browser does not support HTML5 video.
@@ -103,7 +103,7 @@
                         Throw your brain cells into a complete disarray.
                     </div>
                     <div class="buttons">
-                        <button>SEE MORE</button>
+                        <button onclick="viewMovie('inception')">SEE MORE</button>
                         <button>4.9 ⭐</button>
                     </div>
                 </div>
@@ -147,7 +147,7 @@
         </div>
         <!-- list thumnail -->
         <div class="thumbnail">
-            <div class="item">
+            <div class="item" onclick="viewMovie('avengers-endgame')">
                 <img src="posters/poster1.png">
                 <div class="content">
                     <div class="title">
@@ -158,7 +158,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" onclick="viewMovie('mandalorian')">
                 <img src="posters/poster2.png">
                 <div class="content">
                     <div class="title">
@@ -169,7 +169,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" onclick="viewMovie('inception')">
                 <img src="posters/poster3.png">
                 <div class="content">
                     <div class="title">
@@ -220,8 +220,8 @@
     <div class="banner">
         
         <div class="slider" style="--quantity: 10">
-            <div class="itemOfBanner" data-link="favmovie1.html" style="--position: 1"><img src="posters/poster1.png" alt=""></div>
-            <div class="itemOfBanner" data-link="favmovie2.html" style="--position: 2"><img src="posters/Disney4.png" alt=""></div>
+            <div class="itemOfBanner" onclick="viewMovie('avengers-endgame')" style="--position: 1"><img src="posters/poster1.png" alt=""></div>
+            <div class="itemOfBanner" onclick="viewMovie('tangled')" style="--position: 2"><img src="posters/Disney4.png" alt=""></div>
             <div class="itemOfBanner" data-link="favmovie3.html" style="--position: 3"><img src="posters/Sitcom5.png" alt=""></div>
             <div class="itemOfBanner" data-link="favmovie4.html" style="--position: 4"><img src="posters/Horror4.png" alt=""></div>
             <div class="itemOfBanner" data-link="favmovie5.html" style="--position: 5"><img src="posters/Action1.png" alt=""></div>
