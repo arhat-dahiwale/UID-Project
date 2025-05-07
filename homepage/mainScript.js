@@ -8,7 +8,7 @@ let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
 let timeDom = document.querySelector('.carousel .time');
 
 const user = JSON.parse(localStorage.getItem('user')) || {
-    username: 'Demo',password: 'admin123', role: 'FreemiumUser', age: 25, upiID : 'demo@ybl'
+    username: 'Demo',password: 'admin123', role: 'Admin', age: 25, upiID : 'demo@ybl'
 };
 console.log(user);
 function getAgeCategory(age) {
@@ -19,46 +19,46 @@ function getAgeCategory(age) {
 
 const moviesByGenre = {
     Disney:       [
-        { img: './posters/Disney1.png', title:'Frozen', rating:4.5, lang:'EN', isPremium:false, link:'./MD/frozen.html' },
-        { img: './posters/Disney2.png', title:'Toy Story', rating:4.9, lang:'EN', isPremium:true, link:'./MD/toyStory.html' },
-        { img: './posters/Disney3.png', title:'The Lion King', rating:4.1, lang:'EN', isPremium:true, link:'./MD/TlKing.html' },
-        { img: './posters/Disney4.png', title:'Tangled', rating:4.7, lang:'EN', isPremium:true, link:'./MD/tangled.html' },
-        { img: './posters/Disney5.png', title:'Wreck It Ralph', rating:4.4, lang:'EN', isPremium:false, link:'./MD/wItRal.html' }     
+        { img: './posters/Disney1.png', title:'Frozen', rating:8.5, lang:'EN', isPremium:false, link:'./MD/frozen.html' },
+        { img: './posters/Disney2.png', title:'Toy Story', rating:9.3, lang:'EN', isPremium:true, link:'./MD/toyStory.html' },
+        { img: './posters/Disney3.png', title:'The Lion King', rating:8.1, lang:'EN', isPremium:true, link:'./MD/TlKing.html' },
+        { img: './posters/Disney4.png', title:'Tangled', rating:9.7, lang:'EN', isPremium:true, link:'./MD/tangled.html' },
+        { img: './posters/Disney5.png', title:'Wreck It Ralph', rating:8.4, lang:'EN', isPremium:false, link:'./MD/wItRal.html' }     
     ],
     Anime:        [
-        { img: './posters/Anime1.png', title:'Tokyo Ghoul', rating:4.8, lang:'JP', isPremium:true, link:'./MD/tGhoul.html' },
-        { img: './posters/Anime2.png', title:'Mobile Suit Gundame', rating:4.0, lang:'IND', isPremium:false, link:'./MD/MSG.html' },
-        { img: './posters/Anime3.png', title:'Horimiya', rating:4.5, lang:'JP', isPremium:false, link:'./MD/hori.html' },
-        { img: './posters/Anime4.png', title:'Neon Genesis Evangelion', rating:4.6, lang:'JP', isPremium:true, link:'./MD/NeonGE.html' },
-        { img: './posters/Anime5.png', title:'Berserk', rating:4.9, lang:'JP', isPremium:true, link:'./MD/berserk.html' },
+        { img: './posters/Anime1.png', title:'Tokyo Ghoul', rating:8.8, lang:'JP', isPremium:true, link:'./MD/tGhoul.html' },
+        { img: './posters/Anime2.png', title:'Mobile Suit Gundame', rating:7.75, lang:'IND', isPremium:false, link:'./MD/MSG.html' },
+        { img: './posters/Anime3.png', title:'Horimiya', rating:8.0, lang:'JP', isPremium:false, link:'./MD/hori.html' },
+        { img: './posters/Anime4.png', title:'Neon Genesis Evangelion', rating:9.6, lang:'JP', isPremium:true, link:'./MD/NeonGE.html' },
+        { img: './posters/Anime5.png', title:'Berserk', rating:9.9, lang:'JP', isPremium:true, link:'./MD/berserk.html' },
     ],
     Action:       [
-        { img: './posters/Action1.png', title:'The Batman', rating:4.9, lang:'EN', isPremium:true, link:'./MD/batman.html' },
-        { img: './posters/Action2.png', title:'John Wick 2', rating:4.5, lang:'EN', isPremium:false, link:'./MD/JW2.html' },
-        { img: './posters/poster1.png', title:'Avengers Endgame', rating:4.9, lang:'EN', isPremium:true, link:'./MD/AEndG.html' },
-        { img: './posters/Action4.png', title:'X-Men', rating:4.7, lang:'EN', isPremium:true, link:'./MD/XMen.html' },
-        { img: './posters/Action5.png', title:'Spider-Man', rating:4.3, lang:'EN', isPremium:false, link:'./MD/SPDM.html' }
+        { img: './posters/Action1.png', title:'The Batman', rating:9.5, lang:'EN', isPremium:true, link:'./MD/batman.html' },
+        { img: './posters/Action2.png', title:'John Wick 2', rating:8.3, lang:'EN', isPremium:false, link:'./MD/JW2.html' },
+        { img: './posters/poster1.png', title:'Avengers Endgame', rating:9.5, lang:'EN', isPremium:true, link:'./MD/AEndG.html' },
+        { img: './posters/Action4.png', title:'X-Men', rating:8.7, lang:'EN', isPremium:true, link:'./MD/XMen.html' },
+        { img: './posters/Action5.png', title:'Spider-Man', rating:7.3, lang:'EN', isPremium:false, link:'./MD/SPDM.html' }
     ],
     Horror:       [
-        { img: './posters/Horror1.png', title:'Annabelle', rating:4.1, lang:'EN', isPremium:true, link:'./MD/Anna.html' },
-        { img: './posters/Horror2.png', title:'Rings', rating:4.5, lang:'EN', isPremium:false, link:'./MD/rings.html' },
-        { img: './posters/poster8.png', title:'The Conjuring', rating:4.5, lang:'EN', isPremium:true, link:'./MD/TCjuring.html' },
-        { img: './posters/Horror4.png', title:'Haunting of The Bly Manor', rating:4.5, lang:'EN', isPremium:true, link:'./MD/blyManor.html' },
-        { img: './posters/Horror5.png', title:'The Grudge', rating:4.5, lang:'JP', isPremium:false, link:'./MD/TGrudge.html' }
+        { img: './posters/Horror1.png', title:'Annabelle', rating:7.3, lang:'EN', isPremium:true, link:'./MD/Anna.html' },
+        { img: './posters/Horror2.png', title:'Rings', rating:8.6, lang:'EN', isPremium:false, link:'./MD/rings.html' },
+        { img: './posters/poster8.png', title:'The Conjuring', rating:9.4, lang:'EN', isPremium:true, link:'./MD/TCjuring.html' },
+        { img: './posters/Horror4.png', title:'Haunting of The Bly Manor', rating:9.9, lang:'EN', isPremium:true, link:'./MD/blyManor.html' },
+        { img: './posters/Horror5.png', title:'The Grudge', rating:9.1, lang:'JP', isPremium:false, link:'./MD/TGrudge.html' }
     ],
     Sitcom:       [
-        { img: './posters/Sitcom1.png', title:'Friends', rating:4.6, lang:'EN', isPremium:true, link:'./MD/friends.html' },
-        { img: './posters/Sitcom2.png', title:'The Big Bang Theory', rating:4.5, lang:'EN', isPremium:false, link:'./MD/bbt.html' },
-        { img: './posters/Sitcom3.png', title:'The Modern Family', rating:4.4, lang:'EN', isPremium:true, link:'./MD/TMF.html' },
-        { img: './posters/Sitcom4.png', title:'How I Met Your Mother', rating:4.3, lang:'EN', isPremium:false, link:'./MD/HIMYM.html' },
-        { img: './posters/Sitcom5.png', title:'Brooklyn 99', rating:4.6, lang:'EN', isPremium:true, link:'./MD/B99.html' }
+        { img: './posters/Sitcom1.png', title:'Friends', rating:9.6, lang:'EN', isPremium:true, link:'./MD/friends.html' },
+        { img: './posters/Sitcom2.png', title:'The Big Bang Theory', rating:8.7, lang:'EN', isPremium:false, link:'./MD/bbt.html' },
+        { img: './posters/Sitcom3.png', title:'The Modern Family', rating:9.7, lang:'EN', isPremium:true, link:'./MD/TMF.html' },
+        { img: './posters/Sitcom4.png', title:'How I Met Your Mother', rating:8.8, lang:'EN', isPremium:false, link:'./MD/HIMYM.html' },
+        { img: './posters/Sitcom5.png', title:'Brooklyn 99', rating:9.1, lang:'EN', isPremium:true, link:'./MD/B99.html' }
     ],
     Documentary:  [
-        { img: './posters/Documentary1.png', title:'Cunk On Earth', rating:4.5, lang:'EN', isPremium:true, link:'./MD/COEar.html' },
-        { img: './posters/Documentary2.png', title:'Facing Ali', rating:4.3, lang:'EN', isPremium:true, link:'./MD/FAli.html' },
-        { img: './posters/Documentary3.png', title:'How To Rob A Bank', rating:4.2, lang:'EN', isPremium:false, link:'./MD/HTRAB.html' },
-        { img: './posters/Documentary4.png', title:'House Of Secrets', rating:4.8, lang:'EN', isPremium:true, link:'./MD/houseOS.html' },
-        { img: './posters/Documentary5.png', title:'Curry & Cyanide', rating:4.4, lang:'EN', isPremium:false, link:'./MD/cAndCya.html' }
+        { img: './posters/Documentary1.png', title:'Cunk On Earth', rating:7.5, lang:'EN', isPremium:true, link:'./MD/COEar.html' },
+        { img: './posters/Documentary2.png', title:'Facing Ali', rating:8.2, lang:'EN', isPremium:true, link:'./MD/FAli.html' },
+        { img: './posters/Documentary3.png', title:'How To Rob A Bank', rating:9.2, lang:'EN', isPremium:false, link:'./MD/HTRAB.html' },
+        { img: './posters/Documentary4.png', title:'House Of Secrets', rating:8.8, lang:'EN', isPremium:true, link:'./MD/houseOS.html' },
+        { img: './posters/Documentary5.png', title:'Curry & Cyanide', rating:7.4, lang:'EN', isPremium:false, link:'./MD/cAndCya.html' }
     ]
 };
 
@@ -246,39 +246,63 @@ genresToShow.forEach(genre=>{
   const closeX   = document.getElementById('modalClose');
   closeX.onclick = ()=> modal.classList.add('hidden');
   
-  function showAddModal(genre){
+  function showAddModal(genre) {
     removeModeGenre = null;
-    document.querySelectorAll('.trending.removing').forEach(b=>b.classList.remove('removing'));
+    document.querySelectorAll('.trending.removing').forEach(b => b.classList.remove('removing'));
+  
     body.innerHTML = `
       <h3 class="pop-out-heading add-pop">Add to ${genre}</h3>
-      <label class="add-pop pop-out-label">Poster URL:<input type="text" id="m_img"></label>
-      <label class="add-pop pop-out-label">Title:<input type="text" id="m_title"></label>
-      <label class="add-pop pop-out-label">Rating:<input type="number" id="m_rating" min="0" max="5" step="0.1"></label>
-      <label class="add-pop pop-out-label">Language:<input type="text" id="m_lang"></label>
+      <label class="add-pop pop-out-label">Poster URL:<input type="text" id="m_img" required></label>
+      <label class="add-pop pop-out-label">Title:<input type="text" id="m_title" required></label>
+      <label class="add-pop pop-out-label">
+        Rating:<input type="number" id="m_rating" min="0" max="10" step="0.1" required>
+        <span id="rating-error" style="color:red; font-size:0.9em; display:none;">Rating must be between 0 and 10</span>
+      </label>
+      <label class="add-pop pop-out-label">Language:<input type="text" id="m_lang" required></label>
       <label class="add-pop pop-out-label">Premium?<input type="checkbox" id="m_prem" class="pop-out-checkbox"></label>
       <button id="saveMovie">Save</button>
     `;
+  
     modal.classList.remove('hidden');
   
+    const ratingInput = document.getElementById('m_rating');
+    const ratingError = document.getElementById('rating-error');
+  
+    
+    ratingInput.addEventListener('input', () => {
+      const ratingVal = parseFloat(ratingInput.value);
+      if (isNaN(ratingVal) || ratingVal < 0 || ratingVal > 10) {
+        ratingError.style.display = 'inline';
+        ratingInput.style.borderColor = 'red';
+      } else {
+        ratingError.style.display = 'none';
+        ratingInput.style.borderColor = '';
+      }
+    });
+  
     document.getElementById('saveMovie').onclick = () => {
-      const img    = document.getElementById('m_img').value.trim();
-      const title  = document.getElementById('m_title').value.trim();
-      const rating = parseFloat(document.getElementById('m_rating').value);
-      const lang   = document.getElementById('m_lang').value.trim();
-      const prem   = document.getElementById('m_prem').checked;
-      
-      if(!img||!title||isNaN(rating)||!lang){
+      const img = document.getElementById('m_img').value.trim();
+      const title = document.getElementById('m_title').value.trim();
+      const ratingVal = parseFloat(ratingInput.value);
+      const lang = document.getElementById('m_lang').value.trim();
+      const prem = document.getElementById('m_prem').checked;
+  
+      if (!img || !title || !lang || isNaN(ratingVal)) {
         alert('All fields required.');
         return;
       }
-      
-      
-
+  
+      if (ratingVal < 0 || ratingVal > 10) {
+        ratingError.style.display = 'inline';
+        ratingInput.style.borderColor = 'red';
+        return;
+      }
+  
       const arr = moviesByGenre[genre];
-      arr.push({img,title,rating,lang,isPremium: prem, link:''});
-      
+      arr.push({ img, title, rating: ratingVal, lang, isPremium: prem, link: '' });
+  
       const listDiv = document.getElementById(`list_${genre}`);
-      const idx = arr.length-1;
+      const idx = arr.length - 1;
       const card = document.createElement('div');
       card.className = 'item';
       card.dataset.genre = genre;
@@ -289,22 +313,28 @@ genresToShow.forEach(genre=>{
         <div class="content">
           <table width="100%" cellspacing="0">
             <tr><td>Title</td><td>${title}</td></tr>
-            <tr><td>Rating</td><td>${rating}</td></tr>
+            <tr><td>Rating</td><td>${ratingVal}</td></tr>
             <tr><td>Lang</td><td>${lang}</td></tr>
             ${prem ? `<tr><td colspan="2" class="nameGroup" style="color:#D84040">Premium</td></tr>` : ''}
           </table>
         </div>
       `;
-      
+  
       bindCardClick(card, genre, idx);
       listDiv.appendChild(card);
       modal.classList.add('hidden');
     };
   }
+  
 
 
-function showDeleteModal(genre, idx) {
-    const movie = moviesByGenre[genre][idx];
+  function showDeleteModal(genre, idx) {
+    const movie   = moviesByGenre[genre][idx];
+    const block   = document.querySelector(`.trending.${genre}`);
+    const remBtn  = block.querySelector('.remBtn');
+    const listDiv = document.getElementById(`list_${genre}`);
+  
+  
     body.innerHTML = `
       <h3>Delete "${movie.title}" from ${genre}?</h3>
       <button id="confirmDelete">Yes</button>
@@ -312,22 +342,27 @@ function showDeleteModal(genre, idx) {
     `;
     modal.classList.remove('hidden');
   
-
+  
     document.getElementById('confirmDelete').onclick = () => {
+    
       moviesByGenre[genre].splice(idx, 1);
-      const listDiv = document.getElementById(`list_${genre}`);
       listDiv.children[idx].remove();
+  
+      //RE-INDEX & RE-BIND all remaining cards
+      Array.from(listDiv.children).forEach((card, newIndex) => {
+        card.dataset.index = newIndex;
+        bindCardClick(card, genre, newIndex);
+      });
+
       modal.classList.add('hidden');
-      removeModeGenre = null;
-      
-      document.querySelectorAll('.trending.removing').forEach(b=>b.classList.remove('removing'));
     };
   
-    
+  
     document.getElementById('cancelDelete').onclick = () => {
       modal.classList.add('hidden');
     };
   }
+  
 
 
 function showUpgradeModal() {
@@ -351,7 +386,7 @@ function showUpgradeModal() {
     modal.classList.remove('hidden');
   
     document.getElementById('goPremiumBtn').onclick = () => {
-      window.location.href = './index.html';
+      window.location.href = './payment.html';
     };
     document.getElementById('cancelUpgrade').onclick = () => {
       modal.classList.add('hidden');
