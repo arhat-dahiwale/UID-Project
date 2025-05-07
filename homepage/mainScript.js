@@ -8,9 +8,9 @@ let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
 let timeDom = document.querySelector('.carousel .time');
 
 const user = JSON.parse(localStorage.getItem('user')) || {
-    name: 'Demo',password: 'admin123', role: 'FreemiumUser', age: 25, upiID : 'upiID'
+    username: 'Demo',password: 'admin123', role: 'FreemiumUser', age: 25, upiID : 'demo@ybl'
 };
-
+console.log(user);
 function getAgeCategory(age) {
     if (age < 13)      return 'kid';
     if (age < 40)      return 'adult';
