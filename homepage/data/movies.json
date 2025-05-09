@@ -126,7 +126,344 @@
                 { "id": "brave", "title": "Brave", "image": "https://via.placeholder.com/200x300/0000FF/808080", "rating": 4 },
                 { "id": "enchanted", "title": "Enchanted", "image": "https://via.placeholder.com/200x300/0000FF/808080", "rating": 4.2 }
             ]
+        },
+        {
+            "id": "cunk-on-earth",
+            "title": "Cunk On Earth",
+            "year": "2022",
+            "bannerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5zZOGMTarI0_8Onscgp4GaJUt96UDR8ixPA&s",
+            "posterImage": "./posters/Documentary1.png",
+            "rating": 7.5,
+            "certificate": "PG-13",
+            "runtime": "2h 30m",
+            "genres": ["Documentary", "Adventure", "History"],
+            "plot": "Embark on a glorious journey through ancient history.",
+            "synopsis": "Help Cunk, the alien, find her way on this earth with her curiosity.",
+            "director": "Christian Watt",
+            "writers": ["Charlie Brooker"],
+            "releaseDate": "September 09, 2022",
+            "country": "United Kingdom",
+            "language": ["English"],
+            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "cast": [
+                { "name": "Diane Morgan", "character": "Cunk", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJiHy2OPWkQffYAlhI_arjw25JwpNZzJr6Pg&s" }
+            ],
+            "reviews": [
+                { "title": "Perfect Sarcasm", "author": "alien1", "rating": 9, "content": "The best pass time knowledge!" }
+            ],
+            "recommendations": [
+                { "id": "facing-ali", "title": "Facing Ali", "image": "./posters/Documentary2.png", "rating": 8.8 },
+                { "id": "how-to-rob-a-bank", "title": "How To Rob A Bank", "image": "./posters/Documentary3.png", "rating": 8.8 },
+                { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 8.8 },
+                { "id": "curry-and-cyanide", "title": "Curry And Cyanide", "image": "./posters/Documentary5.png", "rating": 8.8 }
+            ]
+        },
+        {
+            "id": "facing-ali",
+            "title": "Facing Ali",
+            "year": "2009",
+            "bannerImage": "https://images.mubicdn.net/images/film/21588/cache-92537-1547564408/image-w1280.jpg?size=800x",
+            "posterImage": "./posters/Documentary2.png",
+            "rating": 7.5,
+            "certificate": "PG-13",
+            "runtime": "1h 40m",
+            "genres": ["Documentary", "Adventure", "Action"],
+            "plot": "Get to know the struggle-some life of Muhammad Ali, the greatest.",
+            "synopsis": "Muhammad Ali, the all time best champion in the world of boxing, was not always a gifted brat, watch how he struggled as he rose to the mantle.",
+            "director": "Pete McCormack",
+            "writers": ["Pete McCormack"],
+            "releaseDate": "May 29, 2009",
+            "country": "United States",
+            "language": ["English"],
+            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "cast": [
+                { "name": "Muhammad Ali", "character": "Muhammad Ali", "image": "https://i0.wp.com/apeejay.news/wp-content/uploads/2024/04/09042024-Muhammad-Ali-01.jpg?resize=740%2C740&ssl=1" }
+            ],
+            "reviews": [
+                { "title": "Perfect Determination", "author": "boxer1", "rating": 9, "content": "The best way to motivate yourself into discipline." }
+            ],
+            "recommendations": [
+                { "id": "cunk-on-earth", "title": "Cunk On Earth", "image": "./posters/Documentary1.png", "rating": 8.8 },
+                { "id": "how-to-rob-a-bank", "title": "How To Rob A Bank", "image": "./posters/Documentary3.png", "rating": 8.8 },
+                { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 8.8 },
+                { "id": "curry-and-cyanide", "title": "Curry And Cyanide", "image": "./posters/Documentary5.png", "rating": 8.8 }
+            ]
+        },
+        {
+            "id": "how-to-rob-a-bank",
+            "title": "How To Rob A Bank",
+            "year": "2024",
+            "bannerImage": "https://dnm.nflximg.net/api/v6/BvVbc2Wxr2w6QuoANoSpJKEIWjQ/AAAAQVaMYNYxFcwYEM2SIUWD8wn7ZP3uZU_-Wn_dTbTxzd7eh0rf15A0rol6aI7_CX3fLnv8M7HpdCRECxwz8pcm5rMfbufD7VDKsH_nkkc06cqcYG3khO-liZTaWJR1Do8AqK7RGnQC8QSgvDzYZ6X30hwJ_jg.jpg?r=afe",
+            "posterImage": "./posters/Documentary3.png",
+            "rating": 7.5,
+            "certificate": "PG-13",
+            "runtime": "1h 27m",
+            "genres": ["Documentary", "Thriller", "Action"],
+            "plot": "Watch the true crime documentary of the world's best bank robber.",
+            "synopsis": "It's the 1990s in Seattle and the world's best bank robber has it all. But as law enforcement inches closer, his once-carefree life spirals into a suffocating trap, forcing him and his crew to risk it all in one final heist.",
+            "director": "Seth Porges, Stephen Robert Morse",
+            "writers": ["Seth Porges"],
+            "releaseDate": "June 05, 2024",
+            "country": "United States",
+            "language": ["English"],
+            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "cast": [
+                { "name": "Scott Scurlock", "character": "Bank Robber", "image": "https://resizing.flixster.com/Ej78sO1J-CXyLxyC55j14AndjuQ=/fit-in/705x460/v2/https://resizing.flixster.com/cfVCRb4zg84HIdpQJ3I2hNBnF-8=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzQxZWY1MWFhLWQ2Y2EtNDJjNS1iNzc2LWY0NjI1OTVhMzdlYy5qcGc=" },
+                { "name": "Shawn Johnson", "character": "FBI Detective", "image": "https://images.thedirect.com/media/photos/2shawn.png" }
+            ],
+            "reviews": [
+                { "title": "Perfect Robbery", "author": "faker1", "rating": 9, "content": "The climax got me so hung up that I could not!!" }
+            ],
+            "recommendations": [
+                { "id": "cunk-on-earth", "title": "Cunk On Earth", "image": "./posters/Documentary1.png", "rating": 8.8 },
+                { "id": "facing-ali", "title": "Facing Ali", "image": "./posters/Documentary2.png", "rating": 8.8 },
+                { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 8.8 },
+                { "id": "curry-and-cyanide", "title": "Curry And Cyanide", "image": "./posters/Documentary5.png", "rating": 8.8 }
+            ]
+        },
+        {
+            "id": "house-of-secrets",
+            "title": "House Of Secrets",
+            "year": "2021",
+            "bannerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJMcLwh7HJUwlrr_VpMxZ0cnRwPNGMGZdkFg&s",
+            "posterImage": "./posters/Documentary4.png",
+            "rating": 7.5,
+            "certificate": "PG-13",
+            "runtime": "2h 05m",
+            "genres": ["Documentary", "Murder", "Mystery"],
+            "plot": "Curious to find out what happened to the Buraru family ?",
+            "synopsis": "An examination of the truths and theories surrounding the deaths of 11 members of a Delhi family.",
+            "director": "Leena Yadav, Anubhav Chopra",
+            "writers": ["Leena Yadav"],
+            "releaseDate": "October 08, 2021",
+            "country": "India",
+            "language": ["English, Hindi"],
+            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "cast": [
+                { "name": "Anita Anand", "character": "Journalist", "image": "https://m.media-amazon.com/images/M/MV5BMDAxNTJjY2ItM2IzNC00OWU5LWI0NGYtN2JmN2JlNjM4MDVhXkEyXkFqcGc@._V1_.jpg" },
+                { "name": "Mukesh Senger", "character": "Senior Special Correspondent", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdfWaRKTwA9okzUcXJm2c7-qKAA3Ptbcxzyg&s" }
+            ],
+            "reviews": [
+                { "title": "Perfect Mystery", "author": "identity?", "rating": 9, "content": "I was so hooked the entire time, this was absolutely the best documentary of all time." }
+            ],
+            "recommendations": [
+                { "id": "cunk-on-earth", "title": "Cunk On Earth", "image": "./posters/Documentary1.png", "rating": 8.8 },
+                { "id": "facing-ali", "title": "Facing Ali", "image": "./posters/Documentary2.png", "rating": 8.8 },
+                { "id": "how-to-rob-a-bank", "title": "How To Rob A Bank", "image": "./posters/Documentary3.png", "rating": 8.8 },
+                { "id": "curry-and-cyanide", "title": "Curry And Cyanide", "image": "./posters/Documentary5.png", "rating": 8.8 }
+            ]
+        },
+        {
+            "id": "curry-and-cyanide",
+            "title": "Curry And Cyanide",
+            "year": "2023",
+            "bannerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDTos0EnDXeoYjkeR1_TIzrac8ZWk6n2H_Dw&s",
+            "posterImage": "./posters/Documentary5.png",
+            "rating": 7.5,
+            "certificate": "PG-13",
+            "runtime": "1h 38m",
+            "genres": ["Documentary", "Murder", "Mystery"],
+            "plot": "The bone chilling case of cyanide killings.",
+            "synopsis": "Curry & Cyanide: The Jolly Joseph Case is a true crime documentary directed by Christo Tomy, investigating six deaths in the same family and the woman at the center of the Koodathayi Cyanide killing case.",
+            "director": "Christo Tomy",
+            "writers": ["Christo Tomy"],
+            "releaseDate": "December 22, 2023",
+            "country": "India",
+            "language": ["English, Hindi"],
+            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "cast": [
+                { "name": "Nikhila Henry", "character": "Journalist", "image": "https://timesofindia.indiatimes.com/authorphoto/00479175433.cms" }
+            ],
+            "reviews": [
+                { "title": "Perfect Killing", "author": "Chemist", "rating": 9, "content": "SPOILER ALERT : So skilled that there were no traces of the cyanide in the food, hats off." }
+            ],
+            "recommendations": [
+                { "id": "cunk-on-earth", "title": "Cunk On Earth", "image": "./posters/Documentary1.png", "rating": 8.8 },
+                { "id": "facing-ali", "title": "Facing Ali", "image": "./posters/Documentary2.png", "rating": 8.8 },
+                { "id": "how-to-rob-a-bank", "title": "How To Rob A Bank", "image": "./posters/Documentary3.png", "rating": 8.8 },
+                { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 8.8 }
+            ]
+        },
+        {
+            "id": "friends",
+            "title": "Friends",
+            "year": "1994",
+            "bannerImage": "https://uniathenaprods3.uniathena.com/s3fs-public/insights-article/seriesreview-e2-80-9cfriends-e2-80-9d_0.jpg",
+            "posterImage": "./posters/Sitcom1.png",
+            "rating": 7.5,
+            "certificate": "PG-13",
+            "runtime": "41h 38m",
+            "genres": ["Sitcom", "Entertainment", "Comedy"],
+            "plot": "The all time best friend group!",
+            "synopsis": "Follow the lives of six reckless adults living in Manhattan, as they indulge in adventures which make their lives both troublesome and happening.",
+            "director": "Marta Kauffman",
+            "writers": ["Marta Kauffman, David Crane, Wil Calhoun"],
+            "releaseDate": "September 22, 1994",
+            "country": "United States",
+            "language": ["English"],
+            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "cast": [
+                { "name": "David Schwimmer", "character": "Ross Geller", "image": "https://cdn.britannica.com/05/188705-050-135C37B7/David-Schwimmer-2007.jpg" },
+                { "name": "Jennifer Aniston", "character": "Rachel Green", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkEthU9iuYFUhK_eT4GkSe6HklmkXBXpDGeQ&s" },
+                { "name": "Courteney Cox", "character": "Monica Geller", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5YNOjdpx0WD89BCva1hGy5ZzEt-2cHZoaJg&s" },
+                { "name": "Matthew Perry", "character": "Chandler Bing", "image": "https://m.media-amazon.com/images/M/MV5BMTMwODc5NjI3N15BMl5BanBnXkFtZTcwNDEyMTE3Mw@@._V1_FMjpg_UX1000_.jpg" },
+                { "name": "Matt LeBlanc", "character": "Joey Tribbiani", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToj2qTTx7MzCX_biSVXgO7FEK5zI0TQ2YUJw&s" },
+                { "name": "Lisa Kudrow", "character": "Phoebe Buffay", "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Lisa_Kudrow_at_TIFF_2009.jpg/640px-Lisa_Kudrow_at_TIFF_2009.jpg" }
+            ],
+            "reviews": [
+                { "title": "Perfect Comedy", "author": "noFriends", "rating": 9, "content": "One of the best comedy and sitcoms I have ever watched." }
+            ],
+            "recommendations": [
+                { "id": "the-big-bang-theory", "title": "The Big Bang Theory", "image": "./posters/Sitcom2.png", "rating": 8.8 },
+                { "id": "modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
+                { "id": "how-i-met-your-mother", "title": "How I Met Your Mother", "image": "./posters/Sitcom4.png", "rating": 8.8 },
+                { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 8.8 }
+            ]
+        },
+        {
+            "id": "the-big-bang-theory",
+            "title": "The Big Bang Theory",
+            "year": "2007",
+            "bannerImage": "https://static1.srcdn.com/wordpress/wp-content/uploads/2020/08/The-Big-Bang-Theory-cast.jpg",
+            "posterImage": "./posters/Sitcom2.png",
+            "rating": 7.5,
+            "certificate": "PG-13",
+            "runtime": "48h 15m",
+            "genres": ["Sitcom", "Entertainment", "Comedy"],
+            "plot": "Meet the nerds who have everything messed up except for their equations.",
+            "synopsis": "The lives of four socially awkward friends, Leonard, Sheldon, Howard and Raj, take a wild turn when they meet the beautiful and free-spirited Penny.",
+            "director": "Chuck Lorre",
+            "writers": ["Chuck Lorre"],
+            "releaseDate": "September 24, 2007",
+            "country": "United States",
+            "language": ["English"],
+            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "cast": [
+                { "name": "Jim Parsons", "character": "Sheldon Cooper", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvTMjK_Vz2Tw4cCrpizveT4pG-xqai6n2VNw&s" },
+                { "name": "Kaley Cuoco", "character": "Penny", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrESChF-UQnMQoBWENCJeD112oVh-CTlYLAQ&s" },
+                { "name": "Johnny Galecki", "character": "Leonard Hofstadter", "image": "https://ntvb.tmsimg.com/assets/assets/33631_v9_bc.jpg?w=360&h=480" },
+                { "name": "Simon Helberg", "character": "Howard Wolowitz", "image": "https://ntvb.tmsimg.com/assets/assets/220961_v9_bb.jpg?w=360&h=480" },
+                { "name": "Kunal Nayyar", "character": "Raj Koothrapalli", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTsa4igsKCvGy55oPPt_rNGKoZLIYwZFXZHQ&s" }
+            ],
+            "reviews": [
+                { "title": "Perfect Brain Rot", "author": "literate", "rating": 9, "content": "I'm only watching this to learn a lot of things and I love it so far." }
+            ],
+            "recommendations": [
+                { "id": "friends", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 8.8 },
+                { "id": "modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
+                { "id": "how-i-met-your-mother", "title": "How I Met Your Mother", "image": "./posters/Sitcom4.png", "rating": 8.8 },
+                { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 8.8 }
+            ]
+        },
+        {
+            "id": "the-modern-family",
+            "title": "Modern Family",
+            "year": "2009",
+            "bannerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5sbZU8Ao3Hl4eOuA0MGJHTYGTWWJuPAZPSg&s",
+            "posterImage": "./posters/Sitcom3.png",
+            "rating": 7.5,
+            "certificate": "PG-13",
+            "runtime": "11 Seasons",
+            "genres": ["Sitcom", "Entertainment", "Comedy"],
+            "plot": "A story of 3 families and their problems.",
+            "synopsis": "Three modern-day families from California try to deal with their kids, quirky spouses and jobs in their own unique ways, often falling into hilarious situations.",
+            "director": "Christopher Lloyd",
+            "writers": ["Christopher Lloyd, Steven Levitan"],
+            "releaseDate": "September 23, 2009",
+            "country": "United States",
+            "language": ["English"],
+            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "cast": [
+                { "name": "Julie Bowen", "character": "Claire Dunphy", "image": "https://m.media-amazon.com/images/M/MV5BMjIxMjI3ODI5M15BMl5BanBnXkFtZTcwNjIyNTA0NA@@._V1_FMjpg_UX1000_.jpg" },
+                { "name": "Ty Burrell", "character": "Phil Dunphy", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHGF_zYnm3dbp2LpXzyrnd72uQSOdE6CKykw&s" },
+                { "name": "Sarah Hyland", "character": "Haley Dunphy", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSODF1qI_G-jVZam8zq3k82o_76OPfCsdjLuw&s" },
+                { "name": "Eric Stonestreet", "character": "Cameron Tucker", "image": "https://d26oc3sg82pgk3.cloudfront.net/files/media/edit/image/18428/article_aligned%403x.png" },
+                { "name": "Jesse Tyler Furguson", "character": "Mitchell Prittchett", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbUhZMrF-D10QUxWfMR_rpNySS3PZ373tBEQ&s" },
+                { "name": "Sofia Vergara", "character": "Gloria Delgado", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY_r_4QFcwEevmEhBoIPfubeGRD8AGvJy-bA&s" }
+            ],
+            "reviews": [
+                { "title": "Perfect Drama", "author": "homeless", "rating": 9, "content": "The open mindedness of these people is just like their struggles, all silly and laughable." }
+            ],
+            "recommendations": [
+                { "id": "the-big-bang-theory", "title": "The Big Bang Theory", "image": "./posters/Sitcom2.png", "rating": 8.8 },
+                { "id": "frineds", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 8.8 },
+                { "id": "how-i-met-your-mother", "title": "How I Met Your Mother", "image": "./posters/Sitcom4.png", "rating": 8.8 },
+                { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 8.8 }
+            ]
+        },
+        {
+            "id": "how-i-met-your-mother",
+            "title": "How I Met Your Mother",
+            "year": "2005",
+            "bannerImage": "https://upload.wikimedia.org/wikipedia/en/4/4d/How_I_Met_Your_Mother_%28cast%29.jpg",
+            "posterImage": "./posters/Sitcom4.png",
+            "rating": 7.5,
+            "certificate": "PG-13",
+            "runtime": "9 Seasons",
+            "genres": ["Sitcom", "Entertainment", "Comedy"],
+            "plot": "Get to know how I met your mother.",
+            "synopsis": "Ted Mosby, an architect, recounts to his children the events that led him to meet their mother. His journey is made more eventful by the presence of his friends Lily, Marshall, Robin and Barney.",
+            "director": "Chris Romano",
+            "writers": ["Chris Romano, Craig Thomas, Carter Bays, Jonathan Groff"],
+            "releaseDate": "September 19, 2005",
+            "country": "United States",
+            "language": ["English"],
+            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "cast": [
+                { "name": "Josh Radnor", "character": "Ted Mosby", "image": "https://m.media-amazon.com/images/M/MV5BMjAwNTUxMTM4OF5BMl5BanBnXkFtZTcwNjUyNzc4Mg@@._V1_FMjpg_UX1000_.jpg" },
+                { "name": "Neil Patrick Harris", "character": "Barney Stinson", "image": "https://i.scdn.co/image/5f6e2560cac39961626610acfc9192c7d78975dc" },
+                { "name": "Cobie Smulders", "character": "Robin Scherbatsky", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuOGJqrm2kzYFggX1Aqx-PfzNCtId5zix3rw&s" },
+                { "name": "Alyson Hannigan", "character": "Lily Aldrin", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqmd9N1T_VHfFpcWjtsDzg0YSCc4xOmF4m0Q&s" },
+                { "name": "Jason Segel", "character": "Marshall Erikson", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5um7oksmuxo9xwNv6tSsXxim85_oNKSVXnw&s" },
+                { "name": "Christin Milioti", "character": "The Mother", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRH9Sa40ivIqgTPQHIoXGadoXRBJn9nRCFiw&s" }
+            ],
+            "reviews": [
+                { "title": "Perfect Romance", "author": "single", "rating": 9, "content": "I didn't know it was gonna end that way omggg." }
+            ],
+            "recommendations": [
+                { "id": "the-big-bang-theory", "title": "The Big Bang Theory", "image": "./posters/Sitcom2.png", "rating": 8.8 },
+                { "id": "modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
+                { "id": "friends", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 8.8 },
+                { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 8.8 }
+            ]
+        },
+        {
+            "id": "brooklyn-99",
+            "title": "Brooklyn 99",
+            "year": "2013",
+            "bannerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaRiAtjHpu566yql5d8oB3rWzvFPSy9VGspw&s",
+            "posterImage": "./posters/Sitcom5.png",
+            "rating": 7.5,
+            "certificate": "PG-13",
+            "runtime": "8 Seasons",
+            "genres": ["Sitcom", "Entertainment", "Comedy"],
+            "plot": "The station wasn't this chaotic a while ago, was it ?",
+            "synopsis": "Ray Holt, an eccentric commanding officer, and his diverse and quirky team of odd detectives solve crimes in Brooklyn, New York City.",
+            "director": "Michael Schur",
+            "writers": ["Michael Schur, Dan Goor, Carly Hallam, Norm Hiscock"],
+            "releaseDate": "September 17, 2013",
+            "country": "United States",
+            "language": ["English"],
+            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "cast": [
+                { "name": "Andy Samberg", "character": "Jake Peralta", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQyS2PqsjlqoPfitu11JIPCa52zk0gfiqFjw&s" },
+                { "name": "Melissa Fumero", "character": "Amy Santiago", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYxzMRoYElJADO2dvohlYEX0L5gTg_ocTItQ&s" },
+                { "name": "Andre Braugher", "character": "Captain Ray Holt", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1fPFFQN_TQAfHMG83jY7lXFnTNeI__E_L8Q&s" },
+                { "name": "Stephanie Beatriz", "character": "Rosa Diaz", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVn72jihy41zo79lGl6j0mqVjgF5hsfqoyqg&s" },
+                { "name": "Joe Lo Truglio", "character": "Charles Boyle", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy6lR2A43NAFfPKpTRNRjvcWe2mgen--4fiw&s" },
+                { "name": "Terry Crews", "character": "Terry Crews", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKVLWrxpZiW6iCHxqMZl5wWVKCwwXK69ZJkQ&s" }
+            ],
+            "reviews": [
+                { "title": "Perfect Case", "author": "thief", "rating": 9, "content": "If only cops would be this chill in real life. sigh." }
+            ],
+            "recommendations": [
+                { "id": "the-big-bang-theory", "title": "The Big Bang Theory", "image": "./posters/Sitcom2.png", "rating": 8.8 },
+                { "id": "modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
+                { "id": "how-i-met-your-mother", "title": "How I Met Your Mother", "image": "./posters/Sitcom4.png", "rating": 8.8 },
+                { "id": "friends", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 8.8 }
+            ]
         }
+        
 
     ]
 }
