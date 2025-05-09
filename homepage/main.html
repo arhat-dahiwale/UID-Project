@@ -11,14 +11,14 @@
     <nav class="navbar">
         <div class = "navleft">
             <div class="logo">
-                <a href = "#">
+                <a href = "./index.html">
                     <img src = "Logo/cinesphere-high-resolution-logo-transparent_updated.png" alt = "cinesphere-high-resolution-logo-transparent">
                 </a>
            </div>
             <!-- Navigation Links -->
             <ul class="nav-links">
-                <li><a href="#about">About Us </a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="./index.html#about">About Us </a></li>
+                <li><a href="./index.html#ContactUsForm">Contact Us</a></li>
             </ul>
 
     </div>
@@ -67,7 +67,7 @@
                         On your left. 
                     </div>
                     <div class="buttons">
-                        <button onclick="viewMovie('avengers-endgame')>SEE MORE</button>
+                        <button>SEE MORE</button>
                         <button>4.9 ⭐</button>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                         May the Force be with you.
                     </div>
                     <div class="buttons">
-                        <button onclick="viewMovie('mandalorian')">SEE MORE</button>
+                        <button>SEE MORE</button>
                         <button>4.5 ⭐</button>
                     </div>
                 </div>
@@ -103,12 +103,12 @@
                         Throw your brain cells into a complete disarray.
                     </div>
                     <div class="buttons">
-                        <button onclick="viewMovie('inception')">SEE MORE</button>
+                        <button>SEE MORE</button>
                         <button>4.9 ⭐</button>
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" data-movie-id="tangled">
                 <video autoplay muted loop id="myVideo4">
                     <source src="trailers/trailer4.mp4" type="video/mp4">
                     Your browser does not support HTML5 video.
@@ -126,7 +126,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" data-movie-id="the-great-gatsby">
                 <video autoplay muted loop id="myVideo5">
                     <source src="trailers/trailer5.mp4" type="video/mp4">
                     Your browser does not support HTML5 video.
@@ -147,7 +147,7 @@
         </div>
         <!-- list thumnail -->
         <div class="thumbnail">
-            <div class="item" onclick="viewMovie('avengers-endgame')">
+            <div class="item" data-movie-id="avengers-endgame">
                 <img src="posters/poster1.png">
                 <div class="content">
                     <div class="title">
@@ -158,7 +158,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item" onclick="viewMovie('mandalorian')">
+            <div class="item" data-movie-id="mandalorian">
                 <img src="posters/poster2.png">
                 <div class="content">
                     <div class="title">
@@ -169,7 +169,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item" onclick="viewMovie('inception')">
+            <div class="item" data-movie-id="inception">
                 <img src="posters/poster3.png">
                 <div class="content">
                     <div class="title">
@@ -180,7 +180,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" data-movie-id="harry-potter">
                 <img src="posters/poster4.png">
                 <div class="content">
                     <div class="title">
@@ -191,7 +191,7 @@
                     </div>
                 </div>
             </div>
-            <div class="item">
+            <div class="item" data-movie-id="the-great-gatsby">
                 <img src="posters/poster5.png">
                 <div class="content">
                     <div class="title">
@@ -220,16 +220,16 @@
     <div class="banner">
         
         <div class="slider" style="--quantity: 10">
-            <div class="itemOfBanner" onclick="viewMovie('avengers-endgame')" style="--position: 1"><img src="posters/poster1.png" alt=""></div>
-            <div class="itemOfBanner" onclick="viewMovie('tangled')" style="--position: 2"><img src="posters/Disney4.png" alt=""></div>
-            <div class="itemOfBanner" data-link="favmovie3.html" style="--position: 3"><img src="posters/Sitcom5.png" alt=""></div>
-            <div class="itemOfBanner" data-link="favmovie4.html" style="--position: 4"><img src="posters/Horror4.png" alt=""></div>
-            <div class="itemOfBanner" data-link="favmovie5.html" style="--position: 5"><img src="posters/Action1.png" alt=""></div>
-            <div class="itemOfBanner" data-link="favmovie6.html" style="--position: 6"><img src="posters/Documentary4.png" alt=""></div>
-            <div class="itemOfBanner" data-link="favmovie7.html" style="--position: 7"><img src="posters/Disney2.png" alt=""></div>
-            <div class="itemOfBanner" data-link="favmovie8.html" style="--position: 8"><img src="posters/poster8.png" alt=""></div>
-            <div class="itemOfBanner" data-link="favmovie9.html" style="--position: 9"><img src="posters/Sitcom1.png" alt=""></div>
-            <div class="itemOfBanner" data-link="favmovie10.html" style="--position: 10"><img src="posters/Anime5.png" alt=""></div>
+            <div class="itemOfBanner" data-movie-id="avengers-endgame" style="--position: 1"><img src="posters/poster1.png" alt=""></div>
+            <div class="itemOfBanner" data-movie-id="tangled" style="--position: 2"><img src="posters/Disney4.png" alt=""></div>
+            <div class="itemOfBanner" data-movie-id="brooklyn-99" style="--position: 3"><img src="posters/Sitcom5.png" alt=""></div>
+            <div class="itemOfBanner" data-movie-id="haunting-of-the-bly-manor" style="--position: 4"><img src="posters/Horror4.png" alt=""></div>
+            <div class="itemOfBanner" data-movie-id="the-batman" style="--position: 5"><img src="posters/Action1.png" alt=""></div>
+            <div class="itemOfBanner" data-movie-id="house-of-secrets" style="--position: 6"><img src="posters/Documentary4.png" alt=""></div>
+            <div class="itemOfBanner" data-movie-id="toy-story" style="--position: 7"><img src="posters/Disney2.png" alt=""></div>
+            <div class="itemOfBanner" data-movie-id="the-conjuring" style="--position: 8"><img src="posters/poster8.png" alt=""></div>
+            <div class="itemOfBanner" data-movie-id="friends" style="--position: 9"><img src="posters/Sitcom1.png" alt=""></div>
+            <div class="itemOfBanner" data-movie-id="berserk" style="--position: 10"><img src="posters/Anime5.png" alt=""></div>
         </div>
     </div>
 

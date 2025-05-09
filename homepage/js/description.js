@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Get movie ID from localStorage
-    const movieId = localStorage.getItem('selectedMovie') || 'avengers-endgame';
-    
+    const movieId = localStorage.getItem('selectedMovie').trim().toLowerCase();
+    console.log('looking up movieId:', JSON.stringify(movieId));
     // Fetch movie data
     fetchMovieData(movieId);
 });
@@ -10,7 +10,9 @@ function fetchMovieData(movieId) {
     fetch('data/movies.json')
         .then(response => response.json())
         .then(data => {
-            const movie = data.movies.find(m => m.id === movieId) || data.movies[0];
+            console.log('available IDs:', data.movies.map(m => m.id));
+            const movie = data.movies.find(m => m.id.toLowerCase() === movieId);
+            console.log('matched movie:', movie);
             renderMoviePage(movie);
         })
         .catch(error => {
@@ -94,7 +96,7 @@ function renderMoviePage(movie) {
                     <div class="mt-4">
                         <h5 class="fw-bold mb-3">Trailer</h5>
                         <div class="ratio ratio-16x9">
-                            <iframe src="${movie.trailerUrl}" allowfullscreen></iframe>
+                            <iframe src="${movie.trailerUrl}" allowfullscreen muted></iframe>
                         </div>
                     </div>
                 </div>
