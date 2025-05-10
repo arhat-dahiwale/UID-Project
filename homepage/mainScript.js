@@ -18,63 +18,79 @@ function getAgeCategory(age) {
 }
 
 // To handle movie clicks
-function viewMovie(movieId) {
-  // Store the selected movie ID in localStorage
-  localStorage.setItem('selectedMovie', movieId);
-  // Redirect to description page
+function findMovieById(id) {
+  for (const [genre, arr] of Object.entries(moviesByGenre)) {
+    const m = arr.find(x => x.id === id);
+    if (m) return m;
+  }
+  return null;
+}
+
+function viewMovie(id) {
+  const movie = findMovieById(id);
+  if (!movie) return console.warn('Unknown movie:', id);
+
+  // Freemium users can’t see Premium content anywhere
+  if (user.role === 'FreemiumUser' && movie.isPremium) {
+    return showUpgradeModal();
+  }
+
+  // otherwise store and navigate
+  localStorage.setItem('selectedMovie', id);
   window.location.href = 'description.html';
 }
 
-// Update the carousel navigation to include movie IDs
-document.querySelectorAll('.item').forEach(item => {
-  item.addEventListener('click', function() {
-      const movieId = this.getAttribute('data-movie-id');
-      viewMovie(movieId);
-  });
-});
+
 
 const moviesByGenre = {
     Disney:       [
-        { img: './posters/Disney1.png', title:'Frozen', rating:8.5, lang:'EN', isPremium:false, link:'./MD/frozen.html' },
-        { img: './posters/Disney2.png', title:'Toy Story', rating:9.3, lang:'EN', isPremium:true, link:'./MD/toyStory.html' },
-        { img: './posters/Disney3.png', title:'The Lion King', rating:8.1, lang:'EN', isPremium:true, link:'./MD/TlKing.html' },
-        { img: './posters/Disney4.png', title:'Tangled', rating:9.7, lang:'EN', isPremium:true, link:'./MD/tangled.html' },
-        { img: './posters/Disney5.png', title:'Wreck It Ralph', rating:8.4, lang:'EN', isPremium:false, link:'./MD/wItRal.html' }     
+        { img: './posters/Disney1.png', title:'Frozen', rating:8.5, lang:'EN', isPremium:false, id:"frozen" },
+        { img: './posters/Disney2.png', title:'Toy Story', rating:9.3, lang:'EN', isPremium:true, id:"toy-story" },
+        { img: './posters/Disney3.png', title:'The Lion King', rating:8.1, lang:'EN', isPremium:true, id:"the-lion-king" },
+        { img: './posters/Disney4.png', title:'Tangled', rating:9.7, lang:'EN', isPremium:true, id:"tangled" },
+        { img: './posters/Disney5.png', title:'Wreck It Ralph', rating:8.4, lang:'EN', isPremium:false, id:"wreck-it-ralph" }     
     ],
     Anime:        [
-        { img: './posters/Anime1.png', title:'Tokyo Ghoul', rating:8.8, lang:'JP', isPremium:true, link:'./MD/tGhoul.html' },
-        { img: './posters/Anime2.png', title:'Mobile Suit Gundame', rating:7.75, lang:'IND', isPremium:false, link:'./MD/MSG.html' },
-        { img: './posters/Anime3.png', title:'Horimiya', rating:8.0, lang:'JP', isPremium:false, link:'./MD/hori.html' },
-        { img: './posters/Anime4.png', title:'Neon Genesis Evangelion', rating:9.6, lang:'JP', isPremium:true, link:'./MD/NeonGE.html' },
-        { img: './posters/Anime5.png', title:'Berserk', rating:9.9, lang:'JP', isPremium:true, link:'./MD/berserk.html' },
+        { img: './posters/Anime1.png', title:'Tokyo Ghoul', rating:8.8, lang:'JP', isPremium:true, id:"tokyo-ghoul" },
+        { img: './posters/Anime2.png', title:'Mobile Suit Gundame', rating:7.75, lang:'IND', isPremium:false, id:"mobile-suit-gundame" },
+        { img: './posters/Anime3.png', title:'Horimiya', rating:8.0, lang:'JP', isPremium:false, id:"horimiya" },
+        { img: './posters/Anime4.png', title:'Neon Genesis Evangelion', rating:9.6, lang:'JP', isPremium:true, id:"neon-genesis-evangelion" },
+        { img: './posters/Anime5.png', title:'Berserk', rating:9.9, lang:'JP', isPremium:true, id:"berserk" },
     ],
     Action:       [
-        { img: './posters/Action1.png', title:'The Batman', rating:9.5, lang:'EN', isPremium:true, link:'./MD/batman.html' },
-        { img: './posters/Action2.png', title:'John Wick 2', rating:8.3, lang:'EN', isPremium:false, link:'./MD/JW2.html' },
-        { img: './posters/poster1.png', title:'Avengers Endgame', rating:9.5, lang:'EN', isPremium:true, link:'./MD/AEndG.html' },
-        { img: './posters/Action4.png', title:'X-Men', rating:8.7, lang:'EN', isPremium:true, link:'./MD/XMen.html' },
-        { img: './posters/Action5.png', title:'Spider-Man', rating:7.3, lang:'EN', isPremium:false, link:'./MD/SPDM.html' }
+        { img: './posters/Action1.png', title:'The Batman', rating:9.5, lang:'EN', isPremium:true,id:"the-batman"},
+        { img: './posters/Action2.png', title:'John Wick 2', rating:8.3, lang:'EN', isPremium:false, id:"john-wick" },
+        { img: './posters/poster1.png', title:'Avengers Endgame', rating:9.5, lang:'EN', isPremium:true, id:"avengers-endgame" },
+        { img: './posters/Action4.png', title:'X-Men', rating:8.7, lang:'EN', isPremium:true, id:"x-men" },
+        { img: './posters/Action5.png', title:'Spider-Man', rating:7.3, lang:'EN', isPremium:false, id:"spider-man" }
     ],
     Horror:       [
-        { img: './posters/Horror1.png', title:'Annabelle', rating:7.3, lang:'EN', isPremium:true, link:'./MD/Anna.html' },
-        { img: './posters/Horror2.png', title:'Rings', rating:8.6, lang:'EN', isPremium:false, link:'./MD/rings.html' },
-        { img: './posters/poster8.png', title:'The Conjuring', rating:9.4, lang:'EN', isPremium:true, link:'./MD/TCjuring.html' },
-        { img: './posters/Horror4.png', title:'Haunting of The Bly Manor', rating:9.9, lang:'EN', isPremium:true, link:'./MD/blyManor.html' },
-        { img: './posters/Horror5.png', title:'The Grudge', rating:9.1, lang:'JP', isPremium:false, link:'./MD/TGrudge.html' }
+        { img: './posters/Horror1.png', title:'Annabelle', rating:7.3, lang:'EN', isPremium:true, id:"annabelle" },
+        { img: './posters/Horror2.png', title:'Rings', rating:8.6, lang:'EN', isPremium:false, id:"rings" },
+        { img: './posters/poster8.png', title:'The Conjuring', rating:9.4, lang:'EN', isPremium:true, id:"the-conjuring" },
+        { img: './posters/Horror4.png', title:'Haunting of The Bly Manor', rating:9.9, lang:'EN', isPremium:true, id:"haunting-of-the-bly-manor" },
+        { img: './posters/Horror5.png', title:'The Grudge', rating:9.1, lang:'JP', isPremium:false, id:"the-grudge" }
     ],
     Sitcom:       [
-        { img: './posters/Sitcom1.png', title:'Friends', rating:9.6, lang:'EN', isPremium:true, link:'./MD/friends.html' },
-        { img: './posters/Sitcom2.png', title:'The Big Bang Theory', rating:8.7, lang:'EN', isPremium:false, link:'./MD/bbt.html' },
-        { img: './posters/Sitcom3.png', title:'The Modern Family', rating:9.7, lang:'EN', isPremium:true, link:'./MD/TMF.html' },
-        { img: './posters/Sitcom4.png', title:'How I Met Your Mother', rating:8.8, lang:'EN', isPremium:false, link:'./MD/HIMYM.html' },
-        { img: './posters/Sitcom5.png', title:'Brooklyn 99', rating:9.1, lang:'EN', isPremium:true, link:'./MD/B99.html' }
+        { img: './posters/Sitcom1.png', title:'Friends', rating:9.6, lang:'EN', isPremium:true, id:"friends" },
+        { img: './posters/Sitcom2.png', title:'The Big Bang Theory', rating:8.7, lang:'EN', isPremium:false, id:"the-big-bang-theory" },
+        { img: './posters/Sitcom3.png', title:'The Modern Family', rating:9.7, lang:'EN', isPremium:true, id:"the-modern-family" },
+        { img: './posters/Sitcom4.png', title:'How I Met Your Mother', rating:8.8, lang:'EN', isPremium:false, id:"how-i-met-your-mother" },
+        { img: './posters/Sitcom5.png', title:'Brooklyn 99', rating:9.1, lang:'EN', isPremium:true, id:"brooklyn-99" }
     ],
     Documentary:  [
-        { img: './posters/Documentary1.png', title:'Cunk On Earth', rating:7.5, lang:'EN', isPremium:true, link:'./MD/COEar.html' },
-        { img: './posters/Documentary2.png', title:'Facing Ali', rating:8.2, lang:'EN', isPremium:true, link:'./MD/FAli.html' },
-        { img: './posters/Documentary3.png', title:'How To Rob A Bank', rating:9.2, lang:'EN', isPremium:false, link:'./MD/HTRAB.html' },
-        { img: './posters/Documentary4.png', title:'House Of Secrets', rating:8.8, lang:'EN', isPremium:true, link:'./MD/houseOS.html' },
-        { img: './posters/Documentary5.png', title:'Curry & Cyanide', rating:7.4, lang:'EN', isPremium:false, link:'./MD/cAndCya.html' }
+        { img: './posters/Documentary1.png', title:'Cunk On Earth', rating:7.5, lang:'EN', isPremium:true, id:"cunk-on-earth" },
+        { img: './posters/Documentary2.png', title:'Facing Ali', rating:8.2, lang:'EN', isPremium:true, id:"facing-ali" },
+        { img: './posters/Documentary3.png', title:'How To Rob A Bank', rating:9.2, lang:'EN', isPremium:false, id:"how-to-rob-a-bank" },
+        { img: './posters/Documentary4.png', title:'House Of Secrets', rating:8.8, lang:'EN', isPremium:true, id:"house-of-secrets" },
+        { img: './posters/Documentary5.png', title:'Curry & Cyanide', rating:7.4, lang:'EN', isPremium:false, id:"curry-and-cyanide" }
+    ],
+    trailerCarousel: [
+        { img: './posters/poster1.png', title:'Avengers Endgame', rating:7.5, lang:'EN', isPremium:true, id:"avengers-endgame" },
+        { img: './posters/poster2.png', title:'The Mandalorian', rating:7.5, lang:'EN', isPremium:true, id:"mandalorian" },
+        { img: './posters/poster3.png', title:'Inception', rating:7.5, lang:'EN', isPremium:true, id:"inception" },
+        { img: './posters/poster4.png', title:'Harry Potter', rating:7.5, lang:'EN', isPremium:true, id:"harry-potter" },
+        { img: './posters/poster5.png', title:'The Great Gatsby', rating:7.5, lang:'EN', isPremium:true, id:"the-great-gatsby" },
     ]
 };
 
@@ -88,11 +104,9 @@ const ageMapping = {
 let genresToShow = [];
   
 if (user.role === 'Admin') {
-    
-    genresToShow = Object.keys(moviesByGenre);
+    genresToShow = Object.keys(moviesByGenre).filter(g => g !== 'trailerCarousel');
 }
 else if (user.role === 'PremiumUser' || user.role === 'FreemiumUser') {
-    
     genresToShow = ageMapping[getAgeCategory(user.age)] || [];
 }
 
@@ -194,7 +208,7 @@ genresToShow.forEach(genre=>{
       <div id="formList_${genre}">
         <div id="list_${genre}">
           ${moviesByGenre[genre].map((m,i)=>`
-            <div class="item" data-genre="${genre}" data-index="${i}" style="cursor:pointer">
+            <div class="item" data-genre="${genre}" data-index="${i}" data-movie-id="${m.id}" style="cursor:pointer">
               <img src="${m.img}" class="avatar">
               <div class="content">
                 <table width="100%" cellspacing="0">
@@ -511,4 +525,11 @@ document.addEventListener('click', e => {
     dropdown.classList.add('hidden');
     siteSearch.value = '';
   }
+});
+
+// GLOBAL click handler for any movie card
+document.body.addEventListener('click', e => {
+  const card = e.target.closest('[data-movie-id]');
+  if (!card) return;
+  viewMovie(card.dataset.movieId);
 });
