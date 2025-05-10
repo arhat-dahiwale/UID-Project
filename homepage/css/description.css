@@ -1,3 +1,199 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EEEEEE;
+    padding: 0 15px;
+    height: 50px; /* Fixed height instead of vh for consistency */
+    box-shadow: 0px 0px black;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    width: clamp(120px, 12vw, 170px); /* Better responsive control */
+    transition: all 100ms ease-in-out;
+    transform: translate(-4px, -4px);
+    filter: drop-shadow(4px 4px 0px black);
+}
+
+.logo img:hover {
+    transform: translate(0, 0);
+    filter: drop-shadow(0px 0px 0px black);
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #232423;
+    font-size: clamp(14px, 1.2vw, 18px);
+    font-family: "Funnel Display", sans-serif;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #E5383B;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 10px;
+}
+
+.search-box img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.search-box input {
+    border: 2px solid black;
+    border-radius: 50px;
+    width: 20vw;
+    min-width: 150px;
+    height: 30px;
+    background-color: #c2c2c2;
+    font-family: "Funnel Display", sans-serif;
+    transition: width 300ms;
+    padding: 0 10px;
+}
+
+.search-box input:hover,
+.search-box input:focus {
+    width: 30vw;
+}
+
+.action {
+    position: relative;
+    z-index: 999;
+}
+
+.profile {
+    transform: translate(-3px, -3px);
+    filter: drop-shadow(3px 3px black);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 100ms ease;
+}
+
+.profile:hover {
+    transform: translate(0, 0);
+    filter: drop-shadow(0px 0px black);
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background-color: #EEEEEE;
+    border: 3px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    width: 20vw;
+    min-width: 200px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 300ms ease;
+    z-index: 1000;
+}
+
+.menu.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    background-color: #EEEEEE;
+    transform: rotate(45deg);
+    border-left: 3px solid black;
+    border-top: 3px solid black;
+}
+
+.menu h3 {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px;
+    color: black;
+}
+
+.menu h3 span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.menu ul {
+    padding: 0 10px;
+    list-style: none;
+}
+
+.menu ul li {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu ul li img {
+    width: 20px;
+    height: 20px;
+}
+
+.menu ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #E5383B;
+}
+
+
+
 .movie-banner {
     background-size: cover;
     color: white;
@@ -64,4 +260,121 @@
 
 #movie-content {
     min-height: 100vh;
+}
+
+/* Premium badge style */
+.poster-container {
+    position: relative;
+}
+
+.premium-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(255, 215, 0, 0.9);
+    color: #000;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.premium-badge i {
+    font-size: 1rem;
+}
+
+/* Streaming platforms styling */
+.streaming-platform img, 
+.theater-platform img {
+    height: 200px;
+    width: auto;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.streaming-platform:hover img,
+.theater-platform:hover img {
+    transform: scale(1.1);
+}
+
+/* Admin edit button */
+.edit-movie-btn {
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Watchlist button style */
+.btn-watchlist {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-watchlist:hover {
+    background-color: #5a6268;
+    color: white;
+}
+
+/* Add this to your description.css */
+.edit-movie-btn {
+    background-color: #E5383B !important; /* Bright yellow background */
+    color: #000 !important; /* Black text */
+    border: none !important; /* Orange border */
+    font-weight: bold;
+    margin-top: 10px;
+    position: absolute;
+    bottom: 9px;
+    left: 14%;
+    transform: translateX(-50%);
+    width: 15%;
+    z-index: 10;
+}
+
+.edit-movie-btn:hover {
+    background-color: #911B1B !important; /* Darker yellow on hover */
+}
+
+
+/* Make the pencil icon larger */
+.edit-movie-btn .bi {
+    font-size: 1.2rem;
+    margin-right: 5px;
+}
+
+.modal-backdrop {
+    z-index: 1040 !important;
+}
+
+.modal {
+    z-index: 1050 !important;
+}
+
+/* Modal backdrop fix */
+.modal-backdrop.show {
+    opacity: 0.5 !important;
+}
+
+/* Ensure modal inputs are interactive */
+.modal input, 
+.modal textarea, 
+.modal select {
+    pointer-events: auto !important;
+}
+
+/* Fix modal focus */
+.modal {
+    z-index: 1060 !important;
+}
+
+.modal-backdrop {
+    z-index: 1050 !important;
+}
+
+/* Remove any disabled states */
+#movieEditForm input:not([disabled]), 
+#movieEditForm textarea:not([disabled]) {
+    background-color: white !important;
+    cursor: text !important;
 }
