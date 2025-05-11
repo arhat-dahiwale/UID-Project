@@ -13,28 +13,42 @@
 </head>
 <body>
     <!-- Header/Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">CineSphere</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Movies</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">TV Shows</a>
-                    </li>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-left">
+                <div class="logo">
+                    <a href="./index.html">
+                        <img src="Logo/cinesphere-high-resolution-logo-transparent_updated.png" alt="CineSphere Logo">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="./index.html#about">About Us</a></li>
+                    <li><a href="./index.html#ContactUsForm">Contact Us</a></li>
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search movies...">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
+            </div>
+            <div class="nav-right">
+                <div class="search-box">
+                    <img src="Logo/Search_logo_light_mode.svg" alt="Search">
+                    <input id="siteSearch" type="search" placeholder="Search for movies, genres, or actors...">
+                    <ul id="searchDropdown" class="menu hidden"></ul>
+                </div>
+                <div class="action" id="profileAction">
+                    <div class="profile" id="profileBtn">
+                        <img src="../homepage/profile/images/Rowan Atkinson.jpeg" alt="Profile Image">
+                    </div>
+                    <div class="menu" id="profileMenu">
+                        <h3>Username <br><span>Student</span></h3>
+                        <ul>
+                            <li><img src="./Logo/user.png" alt="User Icon"><a href="../homepage/userprofile/userprofile.html">My profile</a></li>
+                            <li><img src="./Logo/edit.png" alt="Edit Icon"><a href="../homepage/profile/index.html">Edit profile</a></li>
+                            <li><img src="./Logo/star.png" alt="Your rating"><a href="#">Your rating</a></li>
+                            <li><img src="./Logo/bookmark.png" alt="Your watchlist"><a href="./watchlist/watchList.html">Your watchlist</a></li>
+                            <li><img src="./Logo/settings.png" alt="Settings Icon"><a href="../homepage/profile/index.html">Settings</a></li>
+                            <li><img src="./Logo/question.png" alt="Help Icon"><a href="#">Help</a></li>
+                            <li><img src="./Logo/log-out.png" alt="Logout Icon"><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>

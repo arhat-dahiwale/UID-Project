@@ -86,7 +86,7 @@ const moviesByGenre = {
         { img: './posters/Documentary5.png', title:'Curry & Cyanide', rating:7.4, lang:'EN', isPremium:false, id:"curry-and-cyanide" }
     ],
     trailerCarousel: [
-        { img: './posters/poster1.png', title:'Avengers Endgame', rating:7.5, lang:'EN', isPremium:true, id:"avengers-endgame" },
+        { img: './posters/poster1.png', title:'Avengers Endgame', rating:9.5, lang:'EN', isPremium:true, id:"avengers-endgame" },
         { img: './posters/poster2.png', title:'The Mandalorian', rating:7.5, lang:'EN', isPremium:true, id:"mandalorian" },
         { img: './posters/poster3.png', title:'Inception', rating:7.5, lang:'EN', isPremium:true, id:"inception" },
         { img: './posters/poster4.png', title:'Harry Potter', rating:7.5, lang:'EN', isPremium:true, id:"harry-potter" },

@@ -6,7 +6,7 @@
             "year": "2019",
             "bannerImage": "banners/avengers-banner.jpg",
             "posterImage": "posters/poster1.png",
-            "rating": 8.9,
+            "rating": 9.5,
             "certificate": "PG-13",
             "runtime": "3h 1m",
             "genres": ["Action", "Adventure", "Sci-Fi"],
@@ -23,10 +23,39 @@
                 { "name": "Chris Evans", "character": "Steve Rogers / Captain America", "image": "cast/evans.jpg" }
             ],
             "reviews": [
-                { "title": "Perfect culmination", "author": "MarvelFan", "rating": 5, "content": "The perfect ending to the Infinity Saga." }
+                { "title": "Perfect culmination", "author": "MarvelFan", "rating": 9.5, "content": "The perfect ending to the Infinity Saga." }
             ],
             "recommendations": [
-                { "id": "avengers-infinity-war", "title": "Avengers: Infinity War", "image": "path/to/infinity-war.jpg", "rating": 4.8 }
+                { "id": "the-batman", "title": "The Batman", "image": "./posters/Action1.png", "rating": 9.5 },
+                { "id": "john-wick", "title": "John Wick 2", "image": "./posters/Action2.png", "rating": 8.3 },
+                { "id": "x-men", "title": "X-Men", "image": "./posters/Action4.png", "rating": 8.7 },
+                { "id": "spider-man", "title": "Spider-Man", "image": "./posters/Action5.png", "rating": 7.3 }
+
+            ],
+            "isPremium": true,
+            "streamingPlatforms": [
+                {
+                    "name": "Disney+",
+                    "url": "https://www.hotstar.com/in/movies/avengers-endgame/1260013556",
+                    "logo": "Logo/disney-plus-logo.png"
+                },
+                {
+                    "name": "Amazon Prime",
+                    "url": "https://www.primevideo.com/detail/Avengers-Endgame/",
+                    "logo": "Logo/prime-logo.png"
+                }
+            ],
+            "theaterBooking": [
+                {
+                    "name": "BookMyShow",
+                    "url": "https://in.bookmyshow.com/movies/bengaluru/avengers-endgame/ET00090482",
+                    "logo": "Logo/bookmyshow-logo.png"
+                },
+                {
+                    "name": "AMC Theatres",
+                    "url": "https://www.amctheatres.com/movies/avengers-endgame",
+                    "logo": "Logo/amc-logo.png"
+                }
             ]
         },
         {
@@ -35,7 +64,7 @@
             "year": "2019",
             "bannerImage": "banners/mandalorian-banner.jpg",
             "posterImage": "posters/poster2.png",
-            "rating": 8.5,
+            "rating": 7.5,
             "certificate": "TV-14",
             "runtime": "40m",
             "genres": ["Action", "Adventure", "Sci-Fi"],
@@ -51,11 +80,24 @@
                 { "name": "Pedro Pascal", "character": "The Mandalorian", "image": "cast/pascal.jpg" }
             ],
             "reviews": [
-                { "title": "Star Wars done right", "author": "StarWarsFan", "rating": 5, "content": "Brings back the magic of the original trilogy." }
+                { "title": "Star Wars done right", "author": "StarWarsFan", "rating": 7.5, "content": "Brings back the magic of the original trilogy." }
             ],
             "recommendations": [
-                { "id": "star-wars-new-hope", "title": "Star Wars: A New Hope", "image": "path/to/new-hope.jpg", "rating": 4.7 }
-            ]
+                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.5 },
+                { "id": "inception", "title": "Inception", "image": "./posters/poster3.png", "rating": 7.5 },
+                { "id": "harry-potter", "title": "Harry Potter", "image": "./posters/poster4.png", "rating": 7.5 },
+                { "id": "the-great-gatsby", "title": "The Great Gatsby", "image": "./posters/poster5.png", "rating": 7.5 }
+
+            ],
+            "isPremium": true,
+            "streamingPlatforms": [
+                {
+                    "name": "Disney+",
+                    "url": "https://www.hotstar.com/in/shows/the-mandalorian/1260021071",
+                    "logo": "Logo/disney-plus-logo.png"
+                }
+            ],
+            "theaterBooking": [] 
         },
         {
             "id": "inception",
@@ -76,20 +118,40 @@
             "language": ["English", "Japanese", "French"],
             "trailerUrl": "trailers/trailer3.mp4",
             "cast": [
-                { "name": "Leonardo DiCaprio", "character": "Dom Cobb", "image": "https://via.placeholder.com/150x225" },
-                { "name": "Joseph Gordon-Levitt", "character": "Arthur", "image": "https://via.placeholder.com/150x225" },
-                { "name": "Elliot Page", "character": "Ariadne", "image": "https://via.placeholder.com/150x225" },
-                { "name": "Tom Hardy", "character": "Eames", "image": "https://via.placeholder.com/150x225" }
+                { "name": "Leonardo DiCaprio", "character": "Dom Cobb", "image": "cast/leonardo.jpg" },
+                { "name": "Joseph Gordon-Levitt", "character": "Arthur", "image": "cast/joseph.jpg" },
+                { "name": "Elliot Page", "character": "Ariadne", "image": "cast/elliot.jpg" },
+                { "name": "Tom Hardy", "character": "Eames", "image": "cast/tom.jpg" }
             ],
             "reviews": [
-                { "title": "Mind-blowing experience", "author": "MovieFan123", "rating": 5, "content": "Christopher Nolan has outdone himself with this masterpiece. The concept is brilliant, the execution flawless, and the performances outstanding. The ending will leave you thinking for days." },
-                { "title": "Complex but rewarding", "author": "CinemaLover", "rating": 4, "content": "It demands your full attention and multiple viewings to fully appreciate, but the payoff is worth it. The visual effects are stunning, especially the zero-gravity fight scene." }
+                { "title": "Mind-blowing experience", "author": "MovieFan123", "rating": 7.5, "content": "Christopher Nolan has outdone himself with this masterpiece. The concept is brilliant, the execution flawless, and the performances outstanding. The ending will leave you thinking for days." },
+                { "title": "Complex but rewarding", "author": "CinemaLover", "rating": 6.5, "content": "It demands your full attention and multiple viewings to fully appreciate, but the payoff is worth it. The visual effects are stunning, especially the zero-gravity fight scene." }
             ],
             "recommendations": [
-                { "id": "interstellar", "title": "Interstellar", "image": "https://via.placeholder.com/200x300", "rating": 4.5 },
-                { "id": "the-matrix", "title": "The Matrix", "image": "https://via.placeholder.com/200x300", "rating": 4.5 },
-                { "id": "tenet", "title": "Tenet", "image": "https://via.placeholder.com/200x300", "rating": 4 },
-                { "id": "shutter-island", "title": "Shutter Island", "image": "https://via.placeholder.com/200x300", "rating": 4 }
+                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.5 },
+                { "id": "mandalorian", "title": "The Mandalorian", "image": "./posters/poster2.png", "rating": 7.5 },
+                { "id": "harry-potter", "title": "Harry Potter", "image": "./posters/poster4.png", "rating": 7.5 },
+                { "id": "the-great-gatsby", "title": "The Great Gatsby", "image": "./posters/poster5.png", "rating": 7.5 }
+            ],
+            "isPremium": true,
+            "streamingPlatforms": [
+                {
+                    "name": "Netflix",
+                    "url": "https://www.netflix.com/",
+                    "logo": "Logo/netflix-logo.png"
+                },
+                {
+                    "name": "HBO Max",
+                    "url": "https://play.hbomax.com/page/urn:hbo:page:GXdu2ZAglVJuAuwEAADbH",
+                    "logo": "Logo/hbo-logo.png"
+                }
+            ],
+            "theaterBooking": [
+                {
+                    "name": "PVR Cinemas",
+                    "url": "https://www.pvrcinemas.com/",
+                    "logo": "Logo/pvr-logo.png"
+                }
             ]
         },
         {
@@ -98,7 +160,7 @@
             "year": "2010",
             "bannerImage": "banners/tangled-banner.jpg",
             "posterImage": "posters/Disney4.png",
-            "rating": 7.7,
+            "rating": 9.7,
             "certificate": "PG",
             "runtime": "1h 40m",
             "genres": ["Animation", "Adventure", "Comedy"],
@@ -111,20 +173,40 @@
             "language": ["English"],
             "trailerUrl": "https://www.youtube.com/embed/ycoY201RTRo",
             "cast": [
-                { "name": "Mandy Moore", "character": "Rapunzel (voice)", "image": "https://via.placeholder.com/150x225/0000FF/808080" },
-                { "name": "Zachary Levi", "character": "Flynn Rider (voice)", "image": "https://via.placeholder.com/150x225/0000FF/808080" },
-                { "name": "Donna Murphy", "character": "Mother Gothel (voice)", "image": "https://via.placeholder.com/150x225/0000FF/808080" },
-                { "name": "Ron Perlman", "character": "Stabbington Brother (voice)", "image": "https://via.placeholder.com/150x225/0000FF/808080" }
+                { "name": "Mandy Moore", "character": "Rapunzel (voice)", "image": "cast/mandy.jpg" },
+                { "name": "Zachary Levi", "character": "Flynn Rider (voice)", "image": "cast/zachary.jpg" },
+                { "name": "Donna Murphy", "character": "Mother Gothel (voice)", "image": "cast/donna.jpg" },
+                { "name": "Ron Perlman", "character": "Stabbington Brother (voice)", "image": "cast/ron.jpg" }
             ],
             "reviews": [
-                { "title": "Charming and visually dazzling", "author": "DisneyFan123", "rating": 5, "content": "A delightful take on the classic fairy tale with stunning animation and heartwarming music." },
-                { "title": "Fun for all ages", "author": "FamilyViewer", "rating": 4.5, "content": "A perfect blend of humor, action, and emotion. Great voice acting and catchy songs make this a must-watch." }
+                { "title": "Charming and visually dazzling", "author": "DisneyFan123", "rating": 9.7, "content": "A delightful take on the classic fairy tale with stunning animation and heartwarming music." },
+                { "title": "Fun for all ages", "author": "FamilyViewer", "rating": 9.2, "content": "A perfect blend of humor, action, and emotion. Great voice acting and catchy songs make this a must-watch." }
             ],
             "recommendations": [
-                { "id": "frozen", "title": "Frozen", "image": "https://via.placeholder.com/200x300", "rating": 4.5 },
-                { "id": "moana", "title": "Moana", "image": "https://via.placeholder.com/200x300/0000FF/808080", "rating": 4.5 },
-                { "id": "brave", "title": "Brave", "image": "https://via.placeholder.com/200x300/0000FF/808080", "rating": 4 },
-                { "id": "enchanted", "title": "Enchanted", "image": "https://via.placeholder.com/200x300/0000FF/808080", "rating": 4.2 }
+                { "id": "frozen", "title": "Frozen", "image": "./posters/Disney1.png", "rating": 8.5 },
+                { "id": "toy-story", "title": "Toy Story", "image": "./posters/Disney2.png", "rating": 9.3 },
+                { "id": "the-lion-king", "title": "The Lion King", "image": "./posters/Disney3.png", "rating": 8.1 },
+                { "id": "wreck-it-ralph", "title": "Wreck It Ralph", "image": "./posters/Disney5.png", "rating": 8.4 }
+            ],
+            "isPremium": true,
+            "streamingPlatforms": [
+                {
+                    "name": "Disney+",
+                    "url": "https://www.hotstar.com/in/movies/tangled/1660010196",
+                    "logo": "Logo/disney-plus-logo.png"
+                }
+            ],
+            "theaterBooking": [
+                {
+                    "name": "BookMyShow",
+                    "url": "https://in.bookmyshow.com/movies/bengaluru/tangled-3d/ET00006168",
+                    "logo": "Logo/bookmyshow-logo.png"
+                },
+                {
+                    "name": "AMC Theatres",
+                    "url": "https://www.amctheatres.com/movies/",
+                    "logo": "Logo/amc-logo.png"
+                }
             ]
         },
         {
@@ -144,7 +226,7 @@
             "releaseDate": "September 09, 2022",
             "country": "United Kingdom",
             "language": ["English"],
-            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "trailerUrl": "https://www.youtube.com/embed/Hm6AOHq9OL4",
             "cast": [
                 { "name": "Diane Morgan", "character": "Cunk", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJiHy2OPWkQffYAlhI_arjw25JwpNZzJr6Pg&s" }
             ],
@@ -156,7 +238,16 @@
                 { "id": "how-to-rob-a-bank", "title": "How To Rob A Bank", "image": "./posters/Documentary3.png", "rating": 8.8 },
                 { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 8.8 },
                 { "id": "curry-and-cyanide", "title": "Curry And Cyanide", "image": "./posters/Documentary5.png", "rating": 8.8 }
-            ]
+            ],
+            "isPremium": true,
+            "streamingPlatforms": [
+                {
+                    "name": "Netflix",
+                    "url": "https://www.netflix.com/title/cunk-on-earth",
+                    "logo": "Logo/netflix-logo.png"
+                }
+            ],
+            "theaterBooking": []
         },
         {
             "id": "facing-ali",
@@ -175,7 +266,7 @@
             "releaseDate": "May 29, 2009",
             "country": "United States",
             "language": ["English"],
-            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "trailerUrl": "https://www.youtube.com/embed/iEmmHzQ_Oq0",
             "cast": [
                 { "name": "Muhammad Ali", "character": "Muhammad Ali", "image": "https://i0.wp.com/apeejay.news/wp-content/uploads/2024/04/09042024-Muhammad-Ali-01.jpg?resize=740%2C740&ssl=1" }
             ],
@@ -187,6 +278,21 @@
                 { "id": "how-to-rob-a-bank", "title": "How To Rob A Bank", "image": "./posters/Documentary3.png", "rating": 8.8 },
                 { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 8.8 },
                 { "id": "curry-and-cyanide", "title": "Curry And Cyanide", "image": "./posters/Documentary5.png", "rating": 8.8 }
+            ],
+            "isPremium": true,
+            "streamingPlatforms": [
+                {
+                    "name": "Amazon Prime",
+                    "url": "https://www.primevideo.com/detail/Facing-Ali/",
+                    "logo": "Logo/prime-logo.png"
+                }
+            ],
+            "theaterBooking": [
+                {
+                    "name": "BookMyShow",
+                    "url": "https://in.bookmyshow.com/movies/facing-ali/123",
+                    "logo": "Logo/bookmyshow-logo.png"
+                }
             ]
         },
         {
@@ -206,7 +312,7 @@
             "releaseDate": "June 05, 2024",
             "country": "United States",
             "language": ["English"],
-            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "trailerUrl": "https://www.youtube.com/embed/w20aHhlRjDc",
             "cast": [
                 { "name": "Scott Scurlock", "character": "Bank Robber", "image": "https://resizing.flixster.com/Ej78sO1J-CXyLxyC55j14AndjuQ=/fit-in/705x460/v2/https://resizing.flixster.com/cfVCRb4zg84HIdpQJ3I2hNBnF-8=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzLzQxZWY1MWFhLWQ2Y2EtNDJjNS1iNzc2LWY0NjI1OTVhMzdlYy5qcGc=" },
                 { "name": "Shawn Johnson", "character": "FBI Detective", "image": "https://images.thedirect.com/media/photos/2shawn.png" }
@@ -219,7 +325,16 @@
                 { "id": "facing-ali", "title": "Facing Ali", "image": "./posters/Documentary2.png", "rating": 8.8 },
                 { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 8.8 },
                 { "id": "curry-and-cyanide", "title": "Curry And Cyanide", "image": "./posters/Documentary5.png", "rating": 8.8 }
-            ]
+            ],
+            "isPremium": false,
+            "streamingPlatforms": [
+                {
+                    "name": "Netflix",
+                    "url": "https://www.netflix.com/title/how-to-rob-a-bank",
+                    "logo": "Logo/netflix-logo.png"
+                }
+            ],
+            "theaterBooking": []
         },
         {
             "id": "house-of-secrets",
@@ -238,7 +353,7 @@
             "releaseDate": "October 08, 2021",
             "country": "India",
             "language": ["English, Hindi"],
-            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "trailerUrl": "https://www.youtube.com/embed/Gp3OmiJMGjc",
             "cast": [
                 { "name": "Anita Anand", "character": "Journalist", "image": "https://m.media-amazon.com/images/M/MV5BMDAxNTJjY2ItM2IzNC00OWU5LWI0NGYtN2JmN2JlNjM4MDVhXkEyXkFqcGc@._V1_.jpg" },
                 { "name": "Mukesh Senger", "character": "Senior Special Correspondent", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdfWaRKTwA9okzUcXJm2c7-qKAA3Ptbcxzyg&s" }
@@ -251,7 +366,16 @@
                 { "id": "facing-ali", "title": "Facing Ali", "image": "./posters/Documentary2.png", "rating": 8.8 },
                 { "id": "how-to-rob-a-bank", "title": "How To Rob A Bank", "image": "./posters/Documentary3.png", "rating": 8.8 },
                 { "id": "curry-and-cyanide", "title": "Curry And Cyanide", "image": "./posters/Documentary5.png", "rating": 8.8 }
-            ]
+            ],
+            "isPremium": true,
+            "streamingPlatforms": [
+                {
+                    "name": "Netflix",
+                    "url": "https://www.netflix.com/title/house-of-secrets",
+                    "logo": "Logo/netflix-logo.png"
+                }
+            ],
+            "theaterBooking": []
         },
         {
             "id": "curry-and-cyanide",
@@ -270,7 +394,7 @@
             "releaseDate": "December 22, 2023",
             "country": "India",
             "language": ["English, Hindi"],
-            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "trailerUrl": "https://www.youtube.com/embed/XZY_7VGnxn4",
             "cast": [
                 { "name": "Nikhila Henry", "character": "Journalist", "image": "https://timesofindia.indiatimes.com/authorphoto/00479175433.cms" }
             ],
@@ -282,7 +406,16 @@
                 { "id": "facing-ali", "title": "Facing Ali", "image": "./posters/Documentary2.png", "rating": 8.8 },
                 { "id": "how-to-rob-a-bank", "title": "How To Rob A Bank", "image": "./posters/Documentary3.png", "rating": 8.8 },
                 { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 8.8 }
-            ]
+            ],
+            "isPremium": false,
+            "streamingPlatforms": [
+                {
+                    "name": "Netflix",
+                    "url": "https://www.netflix.com/title/curry-and-cyanide",
+                    "logo": "Logo/netflix-logo.png"
+                }
+            ],
+            "theaterBooking": []
         },
         {
             "id": "friends",
@@ -301,7 +434,7 @@
             "releaseDate": "September 22, 1994",
             "country": "United States",
             "language": ["English"],
-            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "trailerUrl": "https://www.youtube.com/embed/8wThS5WCzs4",
             "cast": [
                 { "name": "David Schwimmer", "character": "Ross Geller", "image": "https://cdn.britannica.com/05/188705-050-135C37B7/David-Schwimmer-2007.jpg" },
                 { "name": "Jennifer Aniston", "character": "Rachel Green", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkEthU9iuYFUhK_eT4GkSe6HklmkXBXpDGeQ&s" },
@@ -318,7 +451,16 @@
                 { "id": "modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
                 { "id": "how-i-met-your-mother", "title": "How I Met Your Mother", "image": "./posters/Sitcom4.png", "rating": 8.8 },
                 { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 8.8 }
-            ]
+            ],
+            "isPremium": true,
+            "streamingPlatforms": [
+                {
+                    "name": "Netflix",
+                    "url": "https://www.netflix.com/title/friends",
+                    "logo": "Logo/netflix-logo.png"
+                }
+            ],
+            "theaterBooking": []
         },
         {
             "id": "the-big-bang-theory",
@@ -337,7 +479,7 @@
             "releaseDate": "September 24, 2007",
             "country": "United States",
             "language": ["English"],
-            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "trailerUrl": "https://www.youtube.com/embed/WBb3fojgW0Q",
             "cast": [
                 { "name": "Jim Parsons", "character": "Sheldon Cooper", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvTMjK_Vz2Tw4cCrpizveT4pG-xqai6n2VNw&s" },
                 { "name": "Kaley Cuoco", "character": "Penny", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrESChF-UQnMQoBWENCJeD112oVh-CTlYLAQ&s" },
@@ -353,7 +495,16 @@
                 { "id": "modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
                 { "id": "how-i-met-your-mother", "title": "How I Met Your Mother", "image": "./posters/Sitcom4.png", "rating": 8.8 },
                 { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 8.8 }
-            ]
+            ],
+            "isPremium": false,
+            "streamingPlatforms": [
+                {
+                    "name": "Amazon Prime",
+                    "url": "https://www.primevideo.com/detail/The-Big-Bang-Theory/",
+                    "logo": "Logo/prime-logo.png"
+                }
+            ],
+            "theaterBooking": []
         },
         {
             "id": "the-modern-family",
@@ -372,7 +523,7 @@
             "releaseDate": "September 23, 2009",
             "country": "United States",
             "language": ["English"],
-            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "trailerUrl": "https://www.youtube.com/embed/KO29jdnEiAs",
             "cast": [
                 { "name": "Julie Bowen", "character": "Claire Dunphy", "image": "https://m.media-amazon.com/images/M/MV5BMjIxMjI3ODI5M15BMl5BanBnXkFtZTcwNjIyNTA0NA@@._V1_FMjpg_UX1000_.jpg" },
                 { "name": "Ty Burrell", "character": "Phil Dunphy", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHGF_zYnm3dbp2LpXzyrnd72uQSOdE6CKykw&s" },
@@ -389,7 +540,16 @@
                 { "id": "frineds", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 8.8 },
                 { "id": "how-i-met-your-mother", "title": "How I Met Your Mother", "image": "./posters/Sitcom4.png", "rating": 8.8 },
                 { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 8.8 }
-            ]
+            ],
+            "isPremium": true,
+            "streamingPlatforms": [
+                {
+                    "name": "Disney+",
+                    "url": "https://www.disneyplus.com/series/modern-family/",
+                    "logo": "Logo/disney-plus-logo.png"
+                }
+            ],
+            "theaterBooking": []
         },
         {
             "id": "how-i-met-your-mother",
@@ -408,7 +568,7 @@
             "releaseDate": "September 19, 2005",
             "country": "United States",
             "language": ["English"],
-            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "trailerUrl": "https://www.youtube.com/embed/aJtVL2_fA5w",
             "cast": [
                 { "name": "Josh Radnor", "character": "Ted Mosby", "image": "https://m.media-amazon.com/images/M/MV5BMjAwNTUxMTM4OF5BMl5BanBnXkFtZTcwNjUyNzc4Mg@@._V1_FMjpg_UX1000_.jpg" },
                 { "name": "Neil Patrick Harris", "character": "Barney Stinson", "image": "https://i.scdn.co/image/5f6e2560cac39961626610acfc9192c7d78975dc" },
@@ -425,7 +585,16 @@
                 { "id": "modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
                 { "id": "friends", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 8.8 },
                 { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 8.8 }
-            ]
+            ],
+            "isPremium": false,
+            "streamingPlatforms": [
+                {
+                    "name": "Disney+",
+                    "url": "https://www.disneyplus.com/series/how-i-met-your-mother/",
+                    "logo": "Logo/disney-plus-logo.png"
+                }
+            ],
+            "theaterBooking": []
         },
         {
             "id": "brooklyn-99",
@@ -444,7 +613,7 @@
             "releaseDate": "September 17, 2013",
             "country": "United States",
             "language": ["English"],
-            "trailerUrl": "https://www.youtube.com/watch?v=Hm6AOHq9OL4",
+            "trailerUrl": "https://www.youtube.com/embed/Zbdtowum840",
             "cast": [
                 { "name": "Andy Samberg", "character": "Jake Peralta", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQyS2PqsjlqoPfitu11JIPCa52zk0gfiqFjw&s" },
                 { "name": "Melissa Fumero", "character": "Amy Santiago", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYxzMRoYElJADO2dvohlYEX0L5gTg_ocTItQ&s" },
@@ -461,8 +630,324 @@
                 { "id": "modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
                 { "id": "how-i-met-your-mother", "title": "How I Met Your Mother", "image": "./posters/Sitcom4.png", "rating": 8.8 },
                 { "id": "friends", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 8.8 }
+            ],
+            "isPremium": true,
+            "streamingPlatforms": [
+                {
+                    "name": "Netflix",
+                    "url": "https://www.netflix.com/title/brooklyn-99",
+                    "logo": "Logo/netflix-logo.png"
+                }
+            ],
+            "theaterBooking": []
+        },
+        {
+            "id": "horimiya",
+            "title": "Horimiya",
+            "year": "2021",
+            "bannerImage": "banners/horimiya-banner.jpg",
+            "posterImage": "./posters/Anime3.png",
+            "rating": 8.0,
+            "certificate": "TV-14",
+            "runtime": "13 episodes",
+            "genres": ["Animation", "Romance", "Slice of Life"],
+            "plot": "A popular girl and a quiet boy discover each other's hidden sides and form an unexpected bond.",
+            "synopsis": "Kyoko Hori is a bright and popular high school student, while her classmate Izumi Miyamura is quiet and seemingly gloomy. However, both have hidden sides: Hori is a homebody who takes care of her younger brother, and Miyamura sports tattoos and piercings. When they discover each other's secrets, a unique friendship blossoms into something more.",
+            "director": "Masashi Ishihama",
+            "writers": ["Takao Yoshioka", "HERO (original manga)", "Daisuke Hagiwara (illustrations)"],
+            "releaseDate": "January 10, 2021",
+            "country": "Japan",
+            "language": ["Japanese"],
+            "trailerUrl": "https://www.youtube.com/embed/e4RCugyx5No",
+            "cast": [
+              { "name": "Haruka Tomatsu", "character": "Kyoko Hori", "image": "cast/haruka.jpg" },
+              { "name": "Koki Uchiyama", "character": "Izumi Miyamura", "image": "cast/koki.jpg" },
+              { "name": "Seiichiro Yamashita", "character": "Tooru Ishikawa", "image": "cast/seiichiro.jpg" },
+              { "name": "Yurie Kozakai", "character": "Yuki Yoshikawa", "image": "cast/yurie.jpg" }
+            ],
+            "reviews": [
+              { "title": "Heartwarming and relatable", "author": "AnimeLover92", "rating": 8.5, "content": "A beautiful portrayal of young love and friendship with well-developed characters." },
+              { "title": "A refreshing take on romance", "author": "SliceOfLifeFan", "rating": 8.0, "content": "Horimiya stands out with its realistic depiction of high school relationships and personal growth." }
+            ],
+            "recommendations": [
+              { "id": "tokyo-ghoul", "title": "Tokyo Ghoul", "image": "./posters/Anime1.png", "rating": 8.8 },
+              { "id": "mobile-suit-gundame", "title": "Mobile Suit Gundame", "image": "./posters/Anime2.png", "rating": 7.75 },
+              { "id": "neon-genesis-evangelion", "title": "Neon Genesis Evangelion", "image": "./posters/Anime4.png", "rating": 9.6 },
+              { "id": "berserk", "title": "Berserk", "image": "./posters/Anime5.png", "rating": 9.9 }
+            ],
+            "isPremium": false,
+            "streamingPlatforms": [
+                {
+                    "name": "Crunchyroll",
+                    "url": "https://www.crunchyroll.com/series/GG5H5XQ9V/horimiya",
+                    "logo": "Logo/crunchyroll-logo.png"
+                }
+            ],
+            "theaterBooking": []
+        },
+        {
+            "id": "the-conjuring",
+            "title": "The Conjuring",
+            "year": "2013",
+            "bannerImage": "banners/the-conjuring-banner.jpg",
+            "posterImage": "./posters/poster8.png",
+            "rating": 9.4,
+            "certificate": "R",
+            "runtime": "1h 52m",
+            "genres": ["Horror", "Mystery", "Thriller"],
+            "plot": "Paranormal investigators Ed and Lorraine Warren work to help a family terrorized by a dark presence in their farmhouse.",
+            "synopsis": "In 1971, Carolyn and Roger Perron move their family into a secluded Rhode Island farmhouse. Soon, they experience disturbing events and seek help from renowned paranormal investigators Ed and Lorraine Warren. The Warrens uncover a satanic haunting that threatens to destroy the family.",
+            "director": "James Wan",
+            "writers": ["Chad Hayes", "Carey W. Hayes"],
+            "releaseDate": "July 19, 2013",
+            "country": "United States",
+            "language": ["English"],
+            "trailerUrl": "https://www.youtube.com/embed/k10ETZ41q5o",
+            "cast": [
+              { "name": "Vera Farmiga", "character": "Lorraine Warren", "image": "cast/vera.jpg" },
+              { "name": "Patrick Wilson", "character": "Ed Warren", "image": "cast/patrick.jpg" },
+              { "name": "Lili Taylor", "character": "Carolyn Perron", "image": "cast/lili.jpg" },
+              { "name": "Ron Livingston", "character": "Roger Perron", "image": "cast/ron.jpg" }
+            ],
+            "reviews": [
+              { "title": "Terrifying and well-crafted", "author": "HorrorFan88", "rating": 9.0, "content": "A masterclass in horror that keeps you on the edge of your seat." },
+              { "title": "A chilling experience", "author": "SpookyLover", "rating": 8.8, "content": "The Conjuring delivers genuine scares with a compelling story." }
+            ],
+            "recommendations": [
+                { "id": "annabelle", "title": "Annabelle", "image": "./posters/Horror1.png", "rating": 7.3 },
+                { "id": "rings", "title": "Rings", "image": "./posters/Horror2.png", "rating": 8.6 },
+                { "id": "haunting-of-the-bly-manor", "title": "Haunting of The Bly Manor", "image": "./posters/Horror4.png", "rating": 9.9 },
+                { "id": "the-grudge", "title": "The Grudge", "image": "./posters/Horror5.png", "rating": 9.1 }
+                
+            ],
+            "isPremium": true,
+            "streamingPlatforms": [
+                {
+                    "name": "Amazon Prime",
+                    "url": "https://www.primevideo.com/detail/The-Conjuring/",
+                    "logo": "Logo/prime-logo.png"
+                }
+            ],
+            "theaterBooking": [
+                {
+                    "name": "BookMyShow",
+                    "url": "https://in.bookmyshow.com/movies/the-conjuring/123",
+                    "logo": "Logo/bookmyshow-logo.png"
+                }
+            ]
+        },
+        {
+            "id": "the-batman",
+            "title": "The Batman",
+            "year": "2022",
+            "bannerImage": "banners/the-batman-banner.jpg",
+            "posterImage": "./posters/Action1.png",
+            "rating": 7.8,
+            "certificate": "PG-13",
+            "runtime": "2h 56m",
+            "genres": ["Action", "Crime", "Drama"],
+            "plot": "Batman ventures into Gotham City's underworld when a sadistic killer leaves behind a trail of cryptic clues.",
+            "synopsis": "In his second year of fighting crime, Batman uncovers corruption in Gotham City that connects to his own family while facing the serial killer known as the Riddler.",
+            "director": "Matt Reeves",
+            "writers": ["Matt Reeves", "Peter Craig"],
+            "releaseDate": "March 4, 2022",
+            "country": "United States",
+            "language": ["English"],
+            "trailerUrl": "https://www.youtube.com/embed/mqqft2x_Aa4",
+            "cast": [
+              { "name": "Robert Pattinson", "character": "Bruce Wayne / Batman", "image": "cast/robert.jpg" },
+              { "name": "Zoë Kravitz", "character": "Selina Kyle / Catwoman", "image": "cast/zoe.jpg" },
+              { "name": "Paul Dano", "character": "Edward Nashton / Riddler", "image": "cast/paul.jpg" },
+              { "name": "Jeffrey Wright", "character": "James Gordon", "image": "cast/jeffrey.jpg" }
+            ],
+            "reviews": [
+              { "title": "A dark and gripping take on the Dark Knight", "author": "GothamFan", "rating": 8.5, "content": "An intense and atmospheric film that redefines Batman for a new generation." },
+              { "title": "Visually stunning and emotionally resonant", "author": "CinemaLover", "rating": 8.2, "content": "The Batman delivers a compelling story with strong performances and direction." }
+            ],
+            "recommendations": [
+                { "id": "john-wick", "title": "John Wick 2", "image": "./posters/Action2.png", "rating": 8.3 },
+                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.5 },
+                { "id": "x-men", "title": "X-Men", "image": "./posters/Action4.png", "rating": 8.7 },
+                { "id": "spider-man", "title": "Spider-Man", "image": "./posters/Action5.png", "rating": 7.3 }
+                
+            ],
+            "isPremium": true,
+            "streamingPlatforms": [
+                {
+                    "name": "Amazon Prime",
+                    "url": "https://www.primevideo.com/detail/0TNWJYOSXYR74OY4W78E71780P/ref=atv_sr_fle_c_Tn74RA_3_1_3?sr=1-3&pageTypeIdSource=ASIN&pageTypeId=B0BZMHKKM3&qid=1746918885494",
+                    "logo": "Logo/prime-logo.png"
+                }
+            ],
+            "theaterBooking": [
+                {
+                    "name": "AMC Theatres",
+                    "url": "https://www.amctheatres.com/movies/",
+                    "logo": "Logo/amc-logo.png"
+                }
+            ]
+        },
+        {
+            "id": "john-wick",
+            "title": "John Wick: Chapter 2",
+            "year": "2017",
+            "bannerImage": "banners/john-wick-2-banner.jpg",
+            "posterImage": "./posters/Action2.png",
+            "rating": 7.4,
+            "certificate": "R",
+            "runtime": "2h 2m",
+            "genres": ["Action", "Thriller"],
+            "plot": "After returning to the criminal underworld to repay a debt, John Wick discovers that a large bounty has been put on his life.",
+            "synopsis": "Bound by a blood oath to help an Italian crime lord, John Wick is forced to assassinate a target he doesn't want to kill. After completing the task, he finds himself betrayed and with a massive bounty on his head, leading to a relentless pursuit by assassins around the world.",
+            "director": "Chad Stahelski",
+            "writers": ["Derek Kolstad"],
+            "releaseDate": "February 10, 2017",
+            "country": "United States",
+            "language": ["English"],
+            "trailerUrl": "https://www.youtube.com/embed/ChpLV9AMqm4",
+            "cast": [
+              { "name": "Keanu Reeves", "character": "John Wick", "image": "cast/keanu.jpg" },
+              { "name": "Riccardo Scamarcio", "character": "Santino D'Antonio", "image": "cast/riccardo.jpg" },
+              { "name": "Ian McShane", "character": "Winston", "image": "cast/ian.jpg" },
+              { "name": "Laurence Fishburne", "character": "The Bowery King", "image": "cast/laurence.jpg" }
+            ],
+            "reviews": [
+              { "title": "Non-stop action and thrilling fight scenes", "author": "ActionFan88", "rating": 8.0, "content": "A sequel that ups the stakes and delivers even more intense action, with a fantastic performance by Keanu Reeves." },
+              { "title": "A worthy follow-up to the original", "author": "MovieBuff24", "rating": 7.6, "content": "John Wick: Chapter 2 expands the world of John Wick and keeps the adrenaline flowing from start to finish." }
+            ],
+            "recommendations": [
+                { "id": "the-batman", "title": "The Batman", "image": "./posters/Action1.png", "rating": 9.5 },
+                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.5 },
+                { "id": "x-men", "title": "X-Men", "image": "./posters/Action4.png", "rating": 8.7 },
+                { "id": "spider-man", "title": "Spider-Man", "image": "./posters/Action5.png", "rating": 7.3 }
+                
+            ],
+            "isPremium": false,
+            "streamingPlatforms": [
+                {
+                    "name": "Amazon Prime",
+                    "url": "https://www.primevideo.com/detail/John-Wick-Chapter-2/",
+                    "logo": "Logo/prime-logo.png"
+                }
+            ],
+            "theaterBooking": [
+                {
+                    "name": "BookMyShow",
+                    "url": "https://in.bookmyshow.com/movies/john-wick-chapter-2/123",
+                    "logo": "Logo/bookmyshow-logo.png"
+                }
+            ]
+        },
+        {
+            "id": "x-men",
+            "title": "X-Men",
+            "year": "2000",
+            "bannerImage": "banners/x-men-banner.jpg",
+            "posterImage": "./posters/Action4.png",
+            "rating": 7.4,
+            "certificate": "PG-13",
+            "runtime": "1h 44m",
+            "genres": ["Action", "Adventure", "Sci-Fi"],
+            "plot": "A team of mutants with extraordinary powers are united to stop the evil plans of Magneto, a mutant who wants to declare war on humans.",
+            "synopsis": "The X-Men, a group of mutants with unique powers, are led by Professor Charles Xavier. They battle Magneto, who wants to start a war between humans and mutants. As both sides clash, they must grapple with their own identities and the concept of tolerance versus segregation.",
+            "director": "Bryan Singer",
+            "writers": ["David Hayter", "Stan Lee", "Jack Kirby"],
+            "releaseDate": "July 14, 2000",
+            "country": "United States",
+            "language": ["English"],
+            "trailerUrl": "https://www.youtube.com/embed/9ZxgR2Fw5CA",
+            "cast": [
+              { "name": "Hugh Jackman", "character": "Logan / Wolverine", "image": "cast/hugh.jpg" },
+              { "name": "Patrick Stewart", "character": "Professor Charles Xavier", "image": "cast/patrick.jpg" },
+              { "name": "Ian McKellen", "character": "Magneto", "image": "cast/ian.jpg" },
+              { "name": "Famke Janssen", "character": "Jean Grey", "image": "cast/famke.jpg" }
+            ],
+            "reviews": [
+              { "title": "A solid start to the franchise", "author": "SuperheroFan42", "rating": 7.8, "content": "X-Men kicks off a successful franchise with great action and a strong cast." },
+              { "title": "A fun and engaging superhero film", "author": "ComicLover89", "rating": 7.0, "content": "It’s not without its flaws, but X-Men does a great job of introducing a diverse group of characters with distinct personalities." }
+            ],
+            "recommendations": [
+                { "id": "the-batman", "title": "The Batman", "image": "./posters/Action1.png", "rating": 9.5 },
+                { "id": "john-wick", "title": "John Wick 2", "image": "./posters/Action2.png", "rating": 8.3 },
+                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.5 },
+                { "id": "spider-man", "title": "Spider-Man", "image": "./posters/Action5.png", "rating": 7.3 }
+                
+            ],
+            "isPremium": true,
+            "streamingPlatforms": [
+                {
+                    "name": "Disney+",
+                    "url": "https://www.disneyplus.com/movies/x-men/",
+                    "logo": "Logo/disney-plus-logo.png"
+                }
+            ],
+            "theaterBooking": [
+                {
+                    "name": "AMC Theatres",
+                    "url": "https://www.amctheatres.com/movies/x-men",
+                    "logo": "Logo/amc-logo.png"
+                }
+            ]
+        },
+        {
+            "id": "spider-man",
+            "title": "Spider-Man",
+            "year": "2002",
+            "bannerImage": "banners/spider-man-banner.jpg",
+            "posterImage": "./posters/Action5.png",
+            "rating": 7.3,
+            "certificate": "PG-13",
+            "runtime": "2h 1m",
+            "genres": ["Action", "Adventure", "Sci-Fi"],
+            "plot": "After being bitten by a genetically-altered spider, high school student Peter Parker gains spider-like abilities, which he uses to fight crime and avenge his uncle's death.",
+            "synopsis": "Peter Parker, a shy high school student, is bitten by a genetically-altered spider and develops superhuman strength, agility, and the ability to cling to walls. After the tragic death of his uncle, Peter assumes the identity of Spider-Man to fight crime and bring justice to New York City.",
+            "director": "Sam Raimi",
+            "writers": ["David Koepp", "Stan Lee", "Steve Ditko"],
+            "releaseDate": "May 3, 2002",
+            "country": "United States",
+            "language": ["English"],
+            "trailerUrl": "https://www.youtube.com/embed/t06RUxPbp_c",
+            "cast": [
+              { "name": "Tobey Maguire", "character": "Peter Parker / Spider-Man", "image": "cast/tobey.jpg" },
+              { "name": "Kirsten Dunst", "character": "Mary Jane Watson", "image": "cast/kirsten.jpg" },
+              { "name": "Willem Dafoe", "character": "Norman Osborn / Green Goblin", "image": "cast/willem.jpg" },
+              { "name": "James Franco", "character": "Harry Osborn", "image": "cast/james.jpg" }
+            ],
+            "reviews": [
+              { "title": "A milestone for superhero films", "author": "SpiderManFan82", "rating": 7.5, "content": "The film captures the essence of Spider-Man perfectly and is a game-changer for the superhero genre." },
+              { "title": "A fun and action-packed adventure", "author": "CinemaBuff", "rating": 7.2, "content": "It’s an engaging movie with an iconic performance by Willem Dafoe as the villain." }
+            ],
+            "recommendations": [
+                { "id": "the-batman", "title": "The Batman", "image": "./posters/Action1.png", "rating": 9.5 },
+                { "id": "john-wick", "title": "John Wick 2", "image": "./posters/Action2.png", "rating": 8.3 },
+                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.5 },
+                { "id": "x-men", "title": "X-Men", "image": "./posters/Action4.png", "rating": 8.7 }
+                
+            ],
+            "isPremium": false,
+            "streamingPlatforms": [
+                {
+                    "name": "Sony LIV",
+                    "url": "https://www.sonyliv.com/movies/spider-man",
+                    "logo": "Logo/sony-liv-logo.png"
+                }
+            ],
+            "theaterBooking": [
+                {
+                    "name": "BookMyShow",
+                    "url": "https://in.bookmyshow.com/movies/spider-man/123",
+                    "logo": "Logo/bookmyshow-logo.png"
+                }
             ]
         }
+          
+          
+          
+           
+          
+          
+          
+          
         
 
     ]
