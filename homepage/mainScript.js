@@ -565,3 +565,7 @@ function showHamMenu() {
 function hideHamMenu() {
   document.querySelector('.Hammenu').classList.remove('show');
 }
+
+localStorage.setItem('user',JSON.stringify(user));
+localStorage.setItem('genresToShow', JSON.stringify(genresToShow));
+localStorage.setItem('moviesByGenre', JSON.stringify(moviesByGenre));

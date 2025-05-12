@@ -10,23 +10,39 @@ body {
     color: #333;
 }
 
-header {
+.navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    background-color: #EEEEEE;
+    padding: 0 15px;
+    height: 50px; /* Fixed height instead of vh for consistency */
+    box-shadow: 0px 0px black;
 }
 
-.logo {
-    font-size: 28px;
-    font-weight: 700;
-    color: #e50914;
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
 }
 
-.logo span {
-    color: #333;
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img {
+    width: clamp(120px, 12vw, 170px); /* Better responsive control */
+    transition: all 100ms ease-in-out;
+    transform: translate(-4px, -4px);
+    filter: drop-shadow(4px 4px 0px black);
+}
+
+.logo img:hover {
+    transform: translate(0, 0);
+    filter: drop-shadow(0px 0px 0px black);
 }
 
 main {

@@ -767,3 +767,129 @@ if (!localStorage.getItem('moviesData')) {
         .then(res => res.json())
         .then(data => localStorage.setItem('moviesData', JSON.stringify(data)));
 }
+
+
+
+const moviesByGenre = {
+    Disney:       [
+        { img: './posters/Disney1.png', title:'Frozen', rating:8.5, lang:'EN', isPremium:false, id:"frozen" },
+        { img: './posters/Disney2.png', title:'Toy Story', rating:9.3, lang:'EN', isPremium:true, id:"toy-story" },
+        { img: './posters/Disney3.png', title:'The Lion King', rating:8.1, lang:'EN', isPremium:true, id:"the-lion-king" },
+        { img: './posters/Disney4.png', title:'Tangled', rating:9.7, lang:'EN', isPremium:true, id:"tangled" },
+        { img: './posters/Disney5.png', title:'Wreck It Ralph', rating:8.4, lang:'EN', isPremium:false, id:"wreck-it-ralph" }     
+    ],
+    Anime:        [
+        { img: './posters/Anime1.png', title:'Tokyo Ghoul', rating:8.8, lang:'JP', isPremium:true, id:"tokyo-ghoul" },
+        { img: './posters/Anime2.png', title:'Mobile Suit Gundame', rating:7.75, lang:'IND', isPremium:false, id:"mobile-suit-gundame" },
+        { img: './posters/Anime3.png', title:'Horimiya', rating:8.0, lang:'JP', isPremium:false, id:"horimiya" },
+        { img: './posters/Anime4.png', title:'Neon Genesis Evangelion', rating:9.6, lang:'JP', isPremium:true, id:"neon-genesis-evangelion" },
+        { img: './posters/Anime5.png', title:'Berserk', rating:9.9, lang:'JP', isPremium:true, id:"berserk" },
+    ],
+    Action:       [
+        { img: './posters/Action1.png', title:'The Batman', rating:9.5, lang:'EN', isPremium:true,id:"the-batman"},
+        { img: './posters/Action2.png', title:'John Wick 2', rating:8.3, lang:'EN', isPremium:false, id:"john-wick" },
+        { img: './posters/poster1.png', title:'Avengers Endgame', rating:9.5, lang:'EN', isPremium:true, id:"avengers-endgame" },
+        { img: './posters/Action4.png', title:'X-Men', rating:8.7, lang:'EN', isPremium:true, id:"x-men" },
+        { img: './posters/Action5.png', title:'Spider-Man', rating:7.3, lang:'EN', isPremium:false, id:"spider-man" }
+    ],
+    Horror:       [
+        { img: './posters/Horror1.png', title:'Annabelle', rating:7.3, lang:'EN', isPremium:true, id:"annabelle" },
+        { img: './posters/Horror2.png', title:'Rings', rating:8.6, lang:'EN', isPremium:false, id:"rings" },
+        { img: './posters/poster8.png', title:'The Conjuring', rating:9.4, lang:'EN', isPremium:true, id:"the-conjuring" },
+        { img: './posters/Horror4.png', title:'Haunting of The Bly Manor', rating:9.9, lang:'EN', isPremium:true, id:"haunting-of-the-bly-manor" },
+        { img: './posters/Horror5.png', title:'The Grudge', rating:9.1, lang:'JP', isPremium:false, id:"the-grudge" }
+    ],
+    Sitcom:       [
+        { img: './posters/Sitcom1.png', title:'Friends', rating:9.6, lang:'EN', isPremium:true, id:"friends" },
+        { img: './posters/Sitcom2.png', title:'The Big Bang Theory', rating:8.7, lang:'EN', isPremium:false, id:"the-big-bang-theory" },
+        { img: './posters/Sitcom3.png', title:'The Modern Family', rating:9.7, lang:'EN', isPremium:true, id:"the-modern-family" },
+        { img: './posters/Sitcom4.png', title:'How I Met Your Mother', rating:8.8, lang:'EN', isPremium:false, id:"how-i-met-your-mother" },
+        { img: './posters/Sitcom5.png', title:'Brooklyn 99', rating:9.1, lang:'EN', isPremium:true, id:"brooklyn-99" }
+    ],
+    Documentary:  [
+        { img: './posters/Documentary1.png', title:'Cunk On Earth', rating:7.5, lang:'EN', isPremium:true, id:"cunk-on-earth" },
+        { img: './posters/Documentary2.png', title:'Facing Ali', rating:8.2, lang:'EN', isPremium:true, id:"facing-ali" },
+        { img: './posters/Documentary3.png', title:'How To Rob A Bank', rating:9.2, lang:'EN', isPremium:false, id:"how-to-rob-a-bank" },
+        { img: './posters/Documentary4.png', title:'House Of Secrets', rating:8.8, lang:'EN', isPremium:true, id:"house-of-secrets" },
+        { img: './posters/Documentary5.png', title:'Curry & Cyanide', rating:7.4, lang:'EN', isPremium:false, id:"curry-and-cyanide" }
+    ],
+    trailerCarousel: [
+        { img: './posters/poster1.png', title:'Avengers Endgame', rating:9.5, lang:'EN', isPremium:true, id:"avengers-endgame" },
+        { img: './posters/poster2.png', title:'The Mandalorian', rating:7.5, lang:'EN', isPremium:true, id:"mandalorian" },
+        { img: './posters/poster3.png', title:'Inception', rating:7.5, lang:'EN', isPremium:true, id:"inception" },
+        { img: './posters/poster4.png', title:'Harry Potter', rating:7.5, lang:'EN', isPremium:true, id:"harry-potter" },
+        { img: './posters/poster5.png', title:'The Great Gatsby', rating:7.5, lang:'EN', isPremium:true, id:"the-great-gatsby" },
+    ]
+};
+
+function getAgeCategory(age) {
+    if (age < 13)      return 'kid';
+    if (age < 40)      return 'adult';
+    return               'elderly';
+}
+
+const ageMapping = {
+    kid:     ['Disney',      'Anime'],
+    adult:   ['Action',      'Horror'],
+    elderly: ['Sitcom',      'Documentary']
+};
+  
+
+let genresToShow = [];
+  
+if (user.role === 'Admin') {
+    genresToShow = Object.keys(moviesByGenre).filter(g => g !== 'trailerCarousel');
+}
+else if (user.role === 'PremiumUser' || user.role === 'FreemiumUser') {
+    genresToShow = ageMapping[getAgeCategory(user.age)] || [];
+}
+
+// (assumes moviesByGenre & genresToShow are already in scope)
+const siteSearch   = document.getElementById('siteSearch');
+const dropdown     = document.getElementById('searchDropdown');
+
+const allMovies = Object.entries(moviesByGenre).flatMap(([genre, arr]) =>
+  arr.map(m => ({ ...m, genre }))
+);
+
+siteSearch.addEventListener('input', () => {
+  const q = siteSearch.value.trim().toLowerCase();
+  if (!q) {
+    dropdown.classList.add('hidden');
+    return;
+  }
+
+  const matches = allMovies
+    .filter(m =>
+      genresToShow.includes(m.genre) &&
+      (m.title + ' ' + m.genre + ' ' + (m.cast || []).join(' '))
+        .toLowerCase()
+        .includes(q)
+    )
+    .slice(0, 10);
+
+  dropdown.innerHTML = matches.map(m => `
+    <li data-link="${m.id}">
+      <img src="${m.img}" alt="${m.title}">
+      <span class="title">${m.title}</span>
+    </li>
+  `).join('');
+
+  dropdown.classList.toggle('hidden', matches.length === 0);
+});
+
+dropdown.addEventListener('click', e => {
+  const li = e.target.closest('li');
+  if (!li) return;
+  const movieId = li.dataset.link;
+  viewMovie(movieId);
+});
+
+document.addEventListener('click', e => {
+  if (!siteSearch.contains(e.target) && !dropdown.contains(e.target)) {
+    dropdown.classList.add('hidden');
+  }
+});
+
+
+console.log(user); console.log(moviesByGenre); console.log(genresToShow);
