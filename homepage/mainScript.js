@@ -548,3 +548,10 @@ document.addEventListener('DOMContentLoaded', function () {
         roleElement.textContent = user.role.replace(/([a-z])([A-Z])/g, '$1 $2');
     }
 });
+function showHamMenu() {
+  document.querySelector('.Hammenu').classList.add('show');
+}
+
+function hideHamMenu() {
+  document.querySelector('.Hammenu').classList.remove('show');
+}

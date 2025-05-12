@@ -93,3 +93,11 @@ function startBannerSlideshow() {
     banners[current].classList.add('active');
   }, 4000); // 5-second interval
 }
+
+function showHamMenu() {
+  document.querySelector('.Hammenu').classList.add('show');
+}
+
+function hideHamMenu() {
+  document.querySelector('.Hammenu').classList.remove('show');
+}
