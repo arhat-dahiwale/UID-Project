@@ -79,7 +79,7 @@ function renderMoviePage(movie) {
     
     // Admin edit button
     const adminEditBtn = userStatus.isAdmin ? 
-    `<button class="btn btn-lg edit-movie-btn" id="editMovieBtn" style="z-index: 1000;">
+    `<button class="btn btn-lg edit-movie-btn" id="editMovieBtn" style="z-index: 1000; margin:10px 0px 0px 55px;">
         <i class="bi bi-pencil-fill"></i> EDIT MOVIE
     </button>` : '';
     
@@ -310,9 +310,7 @@ function renderMoviePage(movie) {
     });
         
     // Enhanced Admin edit functionality
-    document.getElementById('editMovieBtn')?.addEventListener('click', function() {
-        showEditModal(movie);
-    });
+    
 }
 
 // Global variable to track modal state

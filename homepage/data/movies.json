@@ -448,7 +448,7 @@
             ],
             "recommendations": [
                 { "id": "the-big-bang-theory", "title": "The Big Bang Theory", "image": "./posters/Sitcom2.png", "rating": 8.8 },
-                { "id": "modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
+                { "id": "the-modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
                 { "id": "how-i-met-your-mother", "title": "How I Met Your Mother", "image": "./posters/Sitcom4.png", "rating": 8.8 },
                 { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 8.8 }
             ],
@@ -492,7 +492,7 @@
             ],
             "recommendations": [
                 { "id": "friends", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 8.8 },
-                { "id": "modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
+                { "id": "the-modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
                 { "id": "how-i-met-your-mother", "title": "How I Met Your Mother", "image": "./posters/Sitcom4.png", "rating": 8.8 },
                 { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 8.8 }
             ],
@@ -582,7 +582,7 @@
             ],
             "recommendations": [
                 { "id": "the-big-bang-theory", "title": "The Big Bang Theory", "image": "./posters/Sitcom2.png", "rating": 8.8 },
-                { "id": "modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
+                { "id": "the-modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
                 { "id": "friends", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 8.8 },
                 { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 8.8 }
             ],
@@ -627,7 +627,7 @@
             ],
             "recommendations": [
                 { "id": "the-big-bang-theory", "title": "The Big Bang Theory", "image": "./posters/Sitcom2.png", "rating": 8.8 },
-                { "id": "modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
+                { "id": "the-modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
                 { "id": "how-i-met-your-mother", "title": "How I Met Your Mother", "image": "./posters/Sitcom4.png", "rating": 8.8 },
                 { "id": "friends", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 8.8 }
             ],
