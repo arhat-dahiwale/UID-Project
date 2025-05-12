@@ -1053,14 +1053,5 @@ body, html {
 
   
 
-/*#formList_Disney,
-#formList_Anime,
-#formList_Action,
-#formList_Horror,
-#formList_Sitcom,
-#formList_Documentary {
-    width: 100%;       
-    overflow-x: auto; 
-    scroll-snap-type: x mandatory;
-    margin: 0;        
-} */
+
+

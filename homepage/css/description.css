@@ -378,3 +378,120 @@
     background-color: white !important;
     cursor: text !important;
 }
+
+.footer {
+    background-color: darkred;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.btt {
+    background-color: #EEEEEE;
+
+    text-align: center;
+    padding : 5px;
+}
+.btt a {
+    text-decoration: none;
+    color : #D84040;
+}
+
+.btt a:hover {
+    cursor: default;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.footer-logo {
+    text-align: center;
+    margin-top: 20px;
+}
+.footer-bottom {
+    background-color: #540202;
+    padding: 10px;
+    font-size: 12px;
+}
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    background-color: #540202;
+}
+.footer-links div {
+    margin: 10px 20px;
+    text-align: center;
+}
+.legal-links {
+    margin-top: 10px;
+}
+
+.search-dropdown {
+    position: absolute;
+    top: calc(100% + 4px);    /* just below the input */
+    left: 0;
+    width: 100%;              /* matches whatever width the input has */
+    max-height: 300px;        /* scroll if too tall */
+    overflow-y: auto;
+    background: #EEEEEE;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    z-index: 1500;
+  }
+  
+  /* hide when no results / not active */
+  .search-dropdown.hidden {
+    display: none;
+  }
+  
+  .search-dropdown li {
+    display: flex;
+    align-items: center;
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .search-dropdown li:hover {
+    background: #D84040;
+  }
+  
+  .search-dropdown li img {
+    width: 40px;
+    height: 60px;
+    object-fit: cover;
+    margin-right: 10px;
+    border-radius: 4px;
+  }
+  
+  .search-dropdown li .title {
+    color: black;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
