@@ -6,7 +6,11 @@
             <title>CineSphere – Your Ultimate Movie Discovery Hub</title>
             <link rel="stylesheet" href="indexStyles.css">
             <script src = "indexScript.js"></script>
+
             <link rel="stylesheet" href="styles.css">  
+
+            <link rel="stylesheet" href="styles.css">
+
             <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
         
@@ -21,6 +25,20 @@
                 </div>
                     <!-- Navigation Links -->
                     <ul class="nav-links">
+                        <li class = "hideOnMobile"><a href="#about">About Us </a></li>
+                        <li class = "hideOnMobile"><a href="#contact">Contact Us</a></li>
+                        <li style = "display:none" class = "hideOnDesktop" onclick = "showHamMenu()"><a href = "#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -980 960 960" width="40px" fill="#232423"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a> </li>
+                    </ul>
+                    <!--Hamburger Menu-->
+                    <ul class = "Hammenu">
+                        <li style = "padding:30px 0 0 0 ;"><a href="#" onclick="hideHamMenu()"><svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#232423"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                        <li>
+                        <div class="logo">
+                        <a href = "#">
+                            <img src = "Logo/cinesphere-high-resolution-logo-transparent_updated.png" alt = "cinesphere-high-resolution-logo-transparent" width="700px">
+                        </a>
+                        </div>
+                        </li>
                         <li><a href="#about">About Us </a></li>
                         <li><a href="#contact">Contact Us</a></li>
                     </ul>
