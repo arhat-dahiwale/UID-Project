@@ -201,8 +201,8 @@ genresToShow.forEach(genre=>{
         <h2>${genre} Movies</h2>
         <div class="direction">
           ${adminBtns}
-          <button class="prevOf${genre}">‹</button>
-          <button class="nextOf${genre}">›</button>
+          <button class="prevOf${genre} arrow">‹</button>
+          <button class="nextOf${genre} arrow">›</button>
         </div>
       </div>
       <div id="formList_${genre}">
@@ -531,8 +531,18 @@ document.addEventListener('click', e => {
 document.body.addEventListener('click', e => {
   const card = e.target.closest('[data-movie-id]');
   if (!card) return;
+
+  // If we are in remove-mode for this genre, do NOT navigate
+  const trendingBlock = card.closest('.trending');
+  if (removeModeGenre && trendingBlock && trendingBlock.classList.contains(removeModeGenre)) {
+    // Let the card.onclick handler (showDeleteModal) run, but skip navigation.
+    return;
+  }
+
+  // Otherwise, safe to view the movie
   viewMovie(card.dataset.movieId);
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
