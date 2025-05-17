@@ -6,7 +6,7 @@
             "year": "2019",
             "bannerImage": "banners/avengers-banner.jpg",
             "posterImage": "posters/poster1.png",
-            "rating": 9.5,
+            "rating": 9.9,
             "certificate": "PG-13",
             "runtime": "3h 1m",
             "genres": ["Action", "Adventure", "Sci-Fi"],
@@ -30,7 +30,7 @@
                 { "title": "Perfect culmination", "author": "MarvelFan", "rating": 9.5, "content": "The perfect ending to the Infinity Saga." }
             ],
             "recommendations": [
-                { "id": "the-batman", "title": "The Batman", "image": "./posters/Action1.png", "rating": 9.5 },
+                { "id": "the-batman", "title": "The Batman", "image": "./posters/Action1.png", "rating": 9.9 },
                 { "id": "john-wick", "title": "John Wick 2", "image": "./posters/Action2.png", "rating": 8.3 },
                 { "id": "x-men", "title": "X-Men", "image": "./posters/Action4.png", "rating": 8.7 },
                 { "id": "spider-man", "title": "Spider-Man", "image": "./posters/Action5.png", "rating": 7.3 }
@@ -87,7 +87,7 @@
                 { "title": "Star Wars done right", "author": "StarWarsFan", "rating": 7.5, "content": "Brings back the magic of the original trilogy." }
             ],
             "recommendations": [
-                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.5 },
+                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.9 },
                 { "id": "inception", "title": "Inception", "image": "./posters/poster3.png", "rating": 7.5 },
                 { "id": "harry-potter", "title": "Harry Potter", "image": "./posters/poster4.png", "rating": 7.5 },
                 { "id": "the-great-gatsby", "title": "The Great Gatsby", "image": "./posters/poster5.png", "rating": 7.5 }
@@ -132,7 +132,7 @@
                 { "title": "Complex but rewarding", "author": "CinemaLover", "rating": 6.5, "content": "It demands your full attention and multiple viewings to fully appreciate, but the payoff is worth it. The visual effects are stunning, especially the zero-gravity fight scene." }
             ],
             "recommendations": [
-                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.5 },
+                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.9 },
                 { "id": "mandalorian", "title": "The Mandalorian", "image": "./posters/poster2.png", "rating": 7.5 },
                 { "id": "harry-potter", "title": "Harry Potter", "image": "./posters/poster4.png", "rating": 7.5 },
                 { "id": "the-great-gatsby", "title": "The Great Gatsby", "image": "./posters/poster5.png", "rating": 7.5 }
@@ -164,7 +164,7 @@
             "year": "2010",
             "bannerImage": "banners/tangled-banner.jpg",
             "posterImage": "posters/Disney4.png",
-            "rating": 9.7,
+            "rating": 9.9,
             "certificate": "PG",
             "runtime": "1h 40m",
             "genres": ["Animation", "Adventure", "Comedy"],
@@ -188,7 +188,7 @@
             ],
             "recommendations": [
                 { "id": "frozen", "title": "Frozen", "image": "./posters/Disney1.png", "rating": 8.5 },
-                { "id": "toy-story", "title": "Toy Story", "image": "./posters/Disney2.png", "rating": 9.3 },
+                { "id": "toy-story", "title": "Toy Story", "image": "./posters/Disney2.png", "rating": 9.9 },
                 { "id": "the-lion-king", "title": "The Lion King", "image": "./posters/Disney3.png", "rating": 8.1 },
                 { "id": "wreck-it-ralph", "title": "Wreck It Ralph", "image": "./posters/Disney5.png", "rating": 8.4 }
             ],
@@ -240,7 +240,7 @@
             "recommendations": [
                 { "id": "facing-ali", "title": "Facing Ali", "image": "./posters/Documentary2.png", "rating": 8.8 },
                 { "id": "how-to-rob-a-bank", "title": "How To Rob A Bank", "image": "./posters/Documentary3.png", "rating": 8.8 },
-                { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 8.8 },
+                { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 9.9 },
                 { "id": "curry-and-cyanide", "title": "Curry And Cyanide", "image": "./posters/Documentary5.png", "rating": 8.8 }
             ],
             "isPremium": true,
@@ -280,7 +280,7 @@
             "recommendations": [
                 { "id": "cunk-on-earth", "title": "Cunk On Earth", "image": "./posters/Documentary1.png", "rating": 8.8 },
                 { "id": "how-to-rob-a-bank", "title": "How To Rob A Bank", "image": "./posters/Documentary3.png", "rating": 8.8 },
-                { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 8.8 },
+                { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 9.9 },
                 { "id": "curry-and-cyanide", "title": "Curry And Cyanide", "image": "./posters/Documentary5.png", "rating": 8.8 }
             ],
             "isPremium": true,
@@ -327,7 +327,7 @@
             "recommendations": [
                 { "id": "cunk-on-earth", "title": "Cunk On Earth", "image": "./posters/Documentary1.png", "rating": 8.8 },
                 { "id": "facing-ali", "title": "Facing Ali", "image": "./posters/Documentary2.png", "rating": 8.8 },
-                { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 8.8 },
+                { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 9.9 },
                 { "id": "curry-and-cyanide", "title": "Curry And Cyanide", "image": "./posters/Documentary5.png", "rating": 8.8 }
             ],
             "isPremium": false,
@@ -346,7 +346,7 @@
             "year": "2021",
             "bannerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJMcLwh7HJUwlrr_VpMxZ0cnRwPNGMGZdkFg&s",
             "posterImage": "./posters/Documentary4.png",
-            "rating": 7.5,
+            "rating": 9.9,
             "certificate": "PG-13",
             "runtime": "2h 05m",
             "genres": ["Documentary", "Murder", "Mystery"],
@@ -409,7 +409,7 @@
                 { "id": "cunk-on-earth", "title": "Cunk On Earth", "image": "./posters/Documentary1.png", "rating": 8.8 },
                 { "id": "facing-ali", "title": "Facing Ali", "image": "./posters/Documentary2.png", "rating": 8.8 },
                 { "id": "how-to-rob-a-bank", "title": "How To Rob A Bank", "image": "./posters/Documentary3.png", "rating": 8.8 },
-                { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 8.8 }
+                { "id": "house-of-secrets", "title": "House Of Secrets", "image": "./posters/Documentary4.png", "rating": 9.9 }
             ],
             "isPremium": false,
             "streamingPlatforms": [
@@ -427,7 +427,7 @@
             "year": "1994",
             "bannerImage": "https://uniathenaprods3.uniathena.com/s3fs-public/insights-article/seriesreview-e2-80-9cfriends-e2-80-9d_0.jpg",
             "posterImage": "./posters/Sitcom1.png",
-            "rating": 7.5,
+            "rating": 9.9,
             "certificate": "PG-13",
             "runtime": "41h 38m",
             "genres": ["Sitcom", "Entertainment", "Comedy"],
@@ -454,7 +454,7 @@
                 { "id": "the-big-bang-theory", "title": "The Big Bang Theory", "image": "./posters/Sitcom2.png", "rating": 8.8 },
                 { "id": "the-modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
                 { "id": "how-i-met-your-mother", "title": "How I Met Your Mother", "image": "./posters/Sitcom4.png", "rating": 8.8 },
-                { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 8.8 }
+                { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 9.99 }
             ],
             "isPremium": true,
             "streamingPlatforms": [
@@ -495,10 +495,10 @@
                 { "title": "Perfect Brain Rot", "author": "literate", "rating": 9, "content": "I'm only watching this to learn a lot of things and I love it so far." }
             ],
             "recommendations": [
-                { "id": "friends", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 8.8 },
+                { "id": "friends", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 9.9 },
                 { "id": "the-modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
                 { "id": "how-i-met-your-mother", "title": "How I Met Your Mother", "image": "./posters/Sitcom4.png", "rating": 8.8 },
-                { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 8.8 }
+                { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 9.99 }
             ],
             "isPremium": false,
             "streamingPlatforms": [
@@ -541,9 +541,9 @@
             ],
             "recommendations": [
                 { "id": "the-big-bang-theory", "title": "The Big Bang Theory", "image": "./posters/Sitcom2.png", "rating": 8.8 },
-                { "id": "frineds", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 8.8 },
+                { "id": "frineds", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 9.9 },
                 { "id": "how-i-met-your-mother", "title": "How I Met Your Mother", "image": "./posters/Sitcom4.png", "rating": 8.8 },
-                { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 8.8 }
+                { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 9.99 }
             ],
             "isPremium": true,
             "streamingPlatforms": [
@@ -587,8 +587,8 @@
             "recommendations": [
                 { "id": "the-big-bang-theory", "title": "The Big Bang Theory", "image": "./posters/Sitcom2.png", "rating": 8.8 },
                 { "id": "the-modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
-                { "id": "friends", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 8.8 },
-                { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 8.8 }
+                { "id": "friends", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 9.9 },
+                { "id": "brooklyn-99", "title": "Brooklyn 99", "image": "./posters/Sitcom5.png", "rating": 9.99 }
             ],
             "isPremium": false,
             "streamingPlatforms": [
@@ -606,7 +606,7 @@
             "year": "2013",
             "bannerImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaRiAtjHpu566yql5d8oB3rWzvFPSy9VGspw&s",
             "posterImage": "./posters/Sitcom5.png",
-            "rating": 7.5,
+            "rating": 9.99,
             "certificate": "PG-13",
             "runtime": "8 Seasons",
             "genres": ["Sitcom", "Entertainment", "Comedy"],
@@ -627,13 +627,13 @@
                 { "name": "Terry Crews", "character": "Terry Crews", "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKVLWrxpZiW6iCHxqMZl5wWVKCwwXK69ZJkQ&s" }
             ],
             "reviews": [
-                { "title": "Perfect Case", "author": "thief", "rating": 9, "content": "If only cops would be this chill in real life. sigh." }
+                { "title": "Perfect Case", "author": "thief", "rating": 9.99, "content": "If only cops would be this chill in real life. sigh." }
             ],
             "recommendations": [
                 { "id": "the-big-bang-theory", "title": "The Big Bang Theory", "image": "./posters/Sitcom2.png", "rating": 8.8 },
                 { "id": "the-modern-family", "title": "Modern Family", "image": "./posters/Sitcom3.png", "rating": 8.8 },
                 { "id": "how-i-met-your-mother", "title": "How I Met Your Mother", "image": "./posters/Sitcom4.png", "rating": 8.8 },
-                { "id": "friends", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 8.8 }
+                { "id": "friends", "title": "Friends", "image": "./posters/Sitcom1.png", "rating": 9.9 }
             ],
             "isPremium": true,
             "streamingPlatforms": [
@@ -695,7 +695,7 @@
             "year": "2013",
             "bannerImage": "banners/the-conjuring-banner.jpg",
             "posterImage": "./posters/poster8.png",
-            "rating": 9.4,
+            "rating": 9.9,
             "certificate": "R",
             "runtime": "1h 52m",
             "genres": ["Horror", "Mystery", "Thriller"],
@@ -746,7 +746,7 @@
             "year": "2022",
             "bannerImage": "banners/the-batman-banner.jpg",
             "posterImage": "./posters/Action1.png",
-            "rating": 7.8,
+            "rating": 9.9,
             "certificate": "PG-13",
             "runtime": "2h 56m",
             "genres": ["Action", "Crime", "Drama"],
@@ -770,7 +770,7 @@
             ],
             "recommendations": [
                 { "id": "john-wick", "title": "John Wick 2", "image": "./posters/Action2.png", "rating": 8.3 },
-                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.5 },
+                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.9 },
                 { "id": "x-men", "title": "X-Men", "image": "./posters/Action4.png", "rating": 8.7 },
                 { "id": "spider-man", "title": "Spider-Man", "image": "./posters/Action5.png", "rating": 7.3 }
                 
@@ -820,8 +820,8 @@
               { "title": "A worthy follow-up to the original", "author": "MovieBuff24", "rating": 7.6, "content": "John Wick: Chapter 2 expands the world of John Wick and keeps the adrenaline flowing from start to finish." }
             ],
             "recommendations": [
-                { "id": "the-batman", "title": "The Batman", "image": "./posters/Action1.png", "rating": 9.5 },
-                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.5 },
+                { "id": "the-batman", "title": "The Batman", "image": "./posters/Action1.png", "rating": 9.9 },
+                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.9 },
                 { "id": "x-men", "title": "X-Men", "image": "./posters/Action4.png", "rating": 8.7 },
                 { "id": "spider-man", "title": "Spider-Man", "image": "./posters/Action5.png", "rating": 7.3 }
                 
@@ -871,9 +871,9 @@
               { "title": "A fun and engaging superhero film", "author": "ComicLover89", "rating": 7.0, "content": "It’s not without its flaws, but X-Men does a great job of introducing a diverse group of characters with distinct personalities." }
             ],
             "recommendations": [
-                { "id": "the-batman", "title": "The Batman", "image": "./posters/Action1.png", "rating": 9.5 },
+                { "id": "the-batman", "title": "The Batman", "image": "./posters/Action1.png", "rating": 9.9 },
                 { "id": "john-wick", "title": "John Wick 2", "image": "./posters/Action2.png", "rating": 8.3 },
-                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.5 },
+                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.9 },
                 { "id": "spider-man", "title": "Spider-Man", "image": "./posters/Action5.png", "rating": 7.3 }
                 
             ],
@@ -922,9 +922,9 @@
               { "title": "A fun and action-packed adventure", "author": "CinemaBuff", "rating": 7.2, "content": "It’s an engaging movie with an iconic performance by Willem Dafoe as the villain." }
             ],
             "recommendations": [
-                { "id": "the-batman", "title": "The Batman", "image": "./posters/Action1.png", "rating": 9.5 },
+                { "id": "the-batman", "title": "The Batman", "image": "./posters/Action1.png", "rating": 9.9 },
                 { "id": "john-wick", "title": "John Wick 2", "image": "./posters/Action2.png", "rating": 8.3 },
-                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.5 },
+                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.9 },
                 { "id": "x-men", "title": "X-Men", "image": "./posters/Action4.png", "rating": 8.7 }
                 
             ],
@@ -976,7 +976,7 @@
             ],
             "recommendations": [
             { "id": "rings", "title": "Rings", "image": "./posters/Horror2.png", "rating": 8.6 },
-            { "id": "the-conjuring", "title": "The Conjuring", "image": "./posters/poster8.png", "rating": 9.4 },
+            { "id": "the-conjuring", "title": "The Conjuring", "image": "./posters/poster8.png", "rating": 9.9 },
             { "id": "haunting-of-the-bly-manor", "title": "Haunting of The Bly Manor", "image": "./posters/Horror4.png", "rating": 9.9 },
             { "id": "the-grudge", "title": "The Grudge", "image": "./posters/Horror5.png", "rating": 9.1 }
             
@@ -1040,7 +1040,7 @@
             "recommendations": [
             { "id": "annabelle", "title": "Annabelle", "image": "./posters/Horror1.png", "rating": 7.3 },
             { "id": "the-conjuring", "title": "The Conjuring", "image": "./posters/poster8.png", "rating": 9.9 },
-            { "id": "haunting-of-the-bly-manor", "title": "Haunting of The Bly Manor", "image": "./posters/Horror4.png", "rating": 8.6 },
+            { "id": "haunting-of-the-bly-manor", "title": "Haunting of The Bly Manor", "image": "./posters/Horror4.png", "rating": 9.9 },
             { "id": "the-grudge", "title": "The Grudge", "image": "./posters/Horror5.png", "rating": 8.6 }
 
             ],
@@ -1106,7 +1106,7 @@
             "recommendations": [
             { "id": "annabelle", "title": "Annabelle", "image": "./posters/Horror1.png", "rating": 7.3 },
             { "id": "rings", "title": "Rings", "image": "./posters/Horror2.png", "rating": 8.6 },
-            { "id": "the-conjuring", "title": "The Conjuring", "image": "./posters/poster8.png", "rating": 9.4 },
+            { "id": "the-conjuring", "title": "The Conjuring", "image": "./posters/poster8.png", "rating": 9.9 },
             { "id": "the-grudge", "title": "The Grudge", "image": "./posters/Horror5.png", "rating": 9.1 }
 
             ],
@@ -1154,7 +1154,7 @@
             "recommendations": [
             { "id": "annabelle", "title": "Annabelle", "image": "./posters/Horror1.png", "rating": 7.3 },
             { "id": "rings", "title": "Rings", "image": "./posters/Horror2.png", "rating": 8.6 },
-            { "id": "the-conjuring", "title": "The Conjuring", "image": "./posters/poster8.png", "rating": 9.4 },
+            { "id": "the-conjuring", "title": "The Conjuring", "image": "./posters/poster8.png", "rating": 9.9 },
             { "id": "haunting-of-the-bly-manor", "title": "Haunting of The Bly Manor", "image": "./posters/Horror4.png", "rating": 9.9 }
 
             ],
@@ -1213,9 +1213,9 @@
                 { "title": "A magical journey", "author": "FrozenFan", "rating": 8.6, "content": "Captivating visuals and a powerful story about love and self-acceptance." }
             ],
             "recommendations": [
-                { "id": "toy-story", "title": "Toy Story", "image": "./posters/Disney2.png", "rating": 9.3 },
+                { "id": "toy-story", "title": "Toy Story", "image": "./posters/Disney2.png", "rating": 9.9 },
                 { "id": "the-lion-king", "title": "The Lion King", "image": "./posters/Disney3.png", "rating": 8.1 },
-                { "id": "tangled", "title": "Tangled", "image": "./posters/Disney4.png", "rating": 9.7 },
+                { "id": "tangled", "title": "Tangled", "image": "./posters/Disney4.png", "rating": 9.9 },
                 { "id": "wreck-it-ralph", "title": "Wreck It Ralph", "image": "./posters/Disney5.png", "rating": 8.4 }
 
             ],
@@ -1241,7 +1241,7 @@
             "year": "1995",
             "bannerImage": "banners/toy-story-banner.jpg",
             "posterImage": "posters/Disney2.png",
-            "rating": 9.3,
+            "rating": 9.9,
             "certificate": "G",
             "runtime": "1h 21m",
             "genres": ["Animation", "Adventure", "Comedy"],
@@ -1263,7 +1263,7 @@
             "recommendations": [
                 { "id": "frozen", "title": "Frozen", "image": "./posters/Disney1.png", "rating": 8.5 },
                 { "id": "the-lion-king", "title": "The Lion King", "image": "./posters/Disney3.png", "rating": 8.1 },
-                { "id": "tangled", "title": "Tangled", "image": "./posters/Disney4.png", "rating": 9.7 },
+                { "id": "tangled", "title": "Tangled", "image": "./posters/Disney4.png", "rating": 9.9 },
                 { "id": "wreck-it-ralph", "title": "Wreck It Ralph", "image": "./posters/Disney5.png", "rating": 8.4 }
 
             ],
@@ -1310,8 +1310,8 @@
             ],
             "recommendations": [
                 { "id": "frozen", "title": "Frozen", "image": "./posters/Disney1.png", "rating": 8.5 },
-                { "id": "toy-story", "title": "Toy Story", "image": "./posters/Disney2.png", "rating": 9.3 },
-                { "id": "tangled", "title": "Tangled", "image": "./posters/Disney4.png", "rating": 9.7 },
+                { "id": "toy-story", "title": "Toy Story", "image": "./posters/Disney2.png", "rating": 9.9 },
+                { "id": "tangled", "title": "Tangled", "image": "./posters/Disney4.png", "rating": 9.9 },
                 { "id": "wreck-it-ralph", "title": "Wreck It Ralph", "image": "./posters/Disney5.png", "rating": 8.4 }
 
             ],
@@ -1358,9 +1358,9 @@
             ],
             "recommendations": [
                 { "id": "frozen", "title": "Frozen", "image": "./posters/Disney1.png", "rating": 8.5 },
-                { "id": "toy-story", "title": "Toy Story", "image": "./posters/Disney2.png", "rating": 9.3 },
+                { "id": "toy-story", "title": "Toy Story", "image": "./posters/Disney2.png", "rating": 9.9 },
                 { "id": "the-lion-king", "title": "The Lion King", "image": "./posters/Disney3.png", "rating": 8.1 },
-                { "id": "tangled", "title": "Tangled", "image": "./posters/Disney4.png", "rating": 9.7 }
+                { "id": "tangled", "title": "Tangled", "image": "./posters/Disney4.png", "rating": 9.9 }
 
             ],
             "isPremium": false,
@@ -1587,7 +1587,7 @@
                 { "title": "Captivating world-building", "author": "Potterhead", "rating": 7.5, "content": "Sets up the world wonderfully and introduces us to characters we'll grow to love." }
             ],
             "recommendations": [
-                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 7.4 },
+                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.9 },
                 { "id": "mandalorian", "title": "The Mandalorian", "image": "./posters/poster2.png", "rating": 7.4 },
                 { "id": "the-great-gatsby", "title": "The Great Gatsby", "image": "./posters/poster5.png", "rating": 7.4 },
                 { "id": "inception", "title": "Inception", "image": "./posters/poster3.png", "rating": 7.4 }
@@ -1637,7 +1637,7 @@
                 { "title": "A bit style over substance", "author": "LitCritic", "rating": 6.9, "content": "While it's faithful in tone, the excessive style can at times overshadow the emotional depth of the story." }
             ],
             "recommendations": [
-                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 7.4 },
+                { "id": "avengers-endgame", "title": "Avengers Endgame", "image": "./posters/poster1.png", "rating": 9.9 },
                 { "id": "mandalorian", "title": "The Mandalorian", "image": "./posters/poster2.png", "rating": 7.4 },
                 { "id": "harry-potter", "title": "Harry Potter and the Sorcerer's Stone", "image": "./posters/poster4.png", "rating": 7.4 },
                 { "id": "inception", "title": "Inception", "image": "./posters/poster3.png", "rating": 7.4 }
@@ -1658,25 +1658,5 @@
                 }
             ]
         }
-
-
-
-
-
-
-
-
-
-
-          
-          
-          
-           
-          
-          
-          
-          
-        
-
     ]
 }
