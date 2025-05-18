@@ -101,3 +101,9 @@ function showHamMenu() {
 function hideHamMenu() {
   document.querySelector('.Hammenu').classList.remove('show');
 }
+function topFunction() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}     
