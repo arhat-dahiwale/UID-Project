@@ -895,3 +895,15 @@ form button:hover {
     color: #e50914;
     font-weight: bold;
 }
+.btt {
+    background-color: #EEEEEE;
+    text-align: center;
+    padding : 5px;
+}
+.btt a {
+    text-decoration: none;
+    color : #D84040;
+}
+.btt a:hover {
+    cursor: pointer;
+}
