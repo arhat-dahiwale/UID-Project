@@ -1009,4 +1009,15 @@ function showUpgradeModal() {
   };
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+    // Simulating user object; replace this with your actual user data
+    
+    // Set username and role dynamically
+    const usernameElement = document.getElementById('nav-username');
+    const roleElement = document.getElementById('nav-role');
 
+    if (usernameElement && roleElement) {
+        usernameElement.firstChild.textContent = user.username + ' ';
+        roleElement.textContent = user.role.replace(/([a-z])([A-Z])/g, '$1 $2');
+    }
+});
