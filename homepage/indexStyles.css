@@ -603,14 +603,14 @@ form button:hover {
 }
 
 .footer {
-    background-color: #E5383B;
-    color: white;
+    background-color: darkred;
+    color: #EEEEEE;
     padding: 20px 0;
     text-align: center;
     font-family: "Funnel Display", sans-serif;
 }
 .footer a {
-    color: white;
+    color: #EEEEEE;
     text-decoration: none;
     font-size: 14px;
     font-family: "Funnel Sans", sans-serif;
@@ -637,7 +637,7 @@ form button:hover {
     margin-top: 20px;
 }
 .footer-bottom {
-    background-color: #8E1616;
+    background-color: #540202;
     padding: 10px;
     font-size: 12px;
 }
@@ -646,7 +646,7 @@ form button:hover {
     justify-content: center;
     flex-wrap: wrap;
     padding: 20px 0;
-    background-color: #8E1616;
+    background-color: #540202;
 }
 .footer-links a{
     font-family: "Funnel Display", sans-serif; 
@@ -894,4 +894,16 @@ form button:hover {
     left: 0;
     color: #e50914;
     font-weight: bold;
+}
+.btt {
+    background-color: #EEEEEE;
+    text-align: center;
+    padding : 5px;
+}
+.btt a {
+    text-decoration: none;
+    color : #D84040;
+}
+.btt a:hover {
+    cursor: pointer;
 }
