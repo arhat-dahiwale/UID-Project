@@ -37,46 +37,46 @@ const movieSelect = document.getElementById("movieSelect");
 
 const moviesByGenre = {
     Disney: [
-        { img: '', title:'Frozen', rating:8.5, lang:'EN', isPremium:false, link:'./MD/frozen.html', genre: 'Animation, Musical', year: 2013 },
-        { img: './posters/Disney2.png', title:'Toy Story', rating:9.3, lang:'EN', isPremium:true, link:'./MD/toyStory.html', genre: 'Animation, Adventure', year: 1995 },
-        { img: './posters/Disney3.png', title:'The Lion King', rating:8.1, lang:'EN', isPremium:true, link:'./MD/TlKing.html', genre: 'Animation, Drama', year: 1994 },
-        { img: './posters/Disney4.png', title:'Tangled', rating:9.7, lang:'EN', isPremium:true, link:'./MD/tangled.html', genre: 'Animation, Adventure', year: 2010 },
-        { img: './posters/Disney5.png', title:'Wreck It Ralph', rating:8.4, lang:'EN', isPremium:false, link:'./MD/wItRal.html', genre: 'Animation, Comedy', year: 2012 }     
+        { img: '../posters/Disney1.png', title:'Frozen', rating:8.5, lang:'EN', isPremium:false, link:'./MD/frozen.html', genre: 'Animation, Musical', year: 2013 },
+        { img: '../posters/Disney2.png', title:'Toy Story', rating:9.3, lang:'EN', isPremium:true, link:'./MD/toyStory.html', genre: 'Animation, Adventure', year: 1995 },
+        { img: '../posters/Disney3.png', title:'The Lion King', rating:8.1, lang:'EN', isPremium:true, link:'./MD/TlKing.html', genre: 'Animation, Drama', year: 1994 },
+        { img: '../posters/Disney4.png', title:'Tangled', rating:9.7, lang:'EN', isPremium:true, link:'./MD/tangled.html', genre: 'Animation, Adventure', year: 2010 },
+        { img: '../posters/Disney5.png', title:'Wreck It Ralph', rating:8.4, lang:'EN', isPremium:false, link:'./MD/wItRal.html', genre: 'Animation, Comedy', year: 2012 }     
     ],
     Anime: [
-        { img: './posters/Anime1.png', title:'Tokyo Ghoul', rating:8.8, lang:'JP', isPremium:true, link:'./MD/tGhoul.html', genre: 'Animation, Horror', year: 2014 },
-        { img: './posters/Anime2.png', title:'Mobile Suit Gundame', rating:7.75, lang:'IND', isPremium:false, link:'./MD/MSG.html', genre: 'Animation, Sci-Fi', year: 1979 },
-        { img: './posters/Anime3.png', title:'Horimiya', rating:8.0, lang:'JP', isPremium:false, link:'./MD/hori.html', genre: 'Animation, Romance', year: 2021 },
-        { img: './posters/Anime4.png', title:'Neon Genesis Evangelion', rating:9.6, lang:'JP', isPremium:true, link:'./MD/NeonGE.html', genre: 'Animation, Sci-Fi', year: 1995 },
-        { img: './posters/Anime5.png', title:'Berserk', rating:9.9, lang:'JP', isPremium:true, link:'./MD/berserk.html', genre: 'Animation, Dark Fantasy', year: 1997 },
+        { img: '../posters/Anime1.png', title:'Tokyo Ghoul', rating:8.8, lang:'JP', isPremium:true, link:'./MD/tGhoul.html', genre: 'Animation, Horror', year: 2014 },
+        { img: '../posters/Anime2.png', title:'Mobile Suit Gundame', rating:7.75, lang:'IND', isPremium:false, link:'./MD/MSG.html', genre: 'Animation, Sci-Fi', year: 1979 },
+        { img: '../posters/Anime3.png', title:'Horimiya', rating:8.0, lang:'JP', isPremium:false, link:'./MD/hori.html', genre: 'Animation, Romance', year: 2021 },
+        { img: '../posters/Anime4.png', title:'Neon Genesis Evangelion', rating:9.6, lang:'JP', isPremium:true, link:'./MD/NeonGE.html', genre: 'Animation, Sci-Fi', year: 1995 },
+        { img: '../posters/Anime5.png', title:'Berserk', rating:9.9, lang:'JP', isPremium:true, link:'./MD/berserk.html', genre: 'Animation, Dark Fantasy', year: 1997 },
     ],
     Action: [
-        { img: './posters/Action1.png', title:'The Batman', rating:9.5, lang:'EN', isPremium:true, link:'./MD/batman.html', genre: 'Action, Crime', year: 2022 },
-        { img: './posters/Action2.png', title:'John Wick 2', rating:8.3, lang:'EN', isPremium:false, link:'./MD/JW2.html', genre: 'Action, Thriller', year: 2017 },
-        { img: './posters/poster1.png', title:'Avengers Endgame', rating:9.5, lang:'EN', isPremium:true, link:'./MD/AEndG.html', genre: 'Action, Adventure', year: 2019 },
-        { img: './posters/Action4.png', title:'X-Men', rating:8.7, lang:'EN', isPremium:true, link:'./MD/XMen.html', genre: 'Action, Sci-Fi', year: 2000 },
-        { img: './posters/Action5.png', title:'Spider-Man', rating:7.3, lang:'EN', isPremium:false, link:'./MD/SPDM.html', genre: 'Action, Adventure', year: 2002 }
+        { img: '../posters/Action1.png', title:'The Batman', rating:9.5, lang:'EN', isPremium:true, link:'./MD/batman.html', genre: 'Action, Crime', year: 2022 },
+        { img: '../posters/Action2.png', title:'John Wick 2', rating:8.3, lang:'EN', isPremium:false, link:'./MD/JW2.html', genre: 'Action, Thriller', year: 2017 },
+        { img: '../posters/poster1.png', title:'Avengers Endgame', rating:9.5, lang:'EN', isPremium:true, link:'./MD/AEndG.html', genre: 'Action, Adventure', year: 2019 },
+        { img: '../posters/Action4.png', title:'X-Men', rating:8.7, lang:'EN', isPremium:true, link:'./MD/XMen.html', genre: 'Action, Sci-Fi', year: 2000 },
+        { img: '../posters/Action5.png', title:'Spider-Man', rating:7.3, lang:'EN', isPremium:false, link:'./MD/SPDM.html', genre: 'Action, Adventure', year: 2002 }
     ],
     Horror: [
-        { img: './posters/Horror1.png', title:'Annabelle', rating:7.3, lang:'EN', isPremium:true, link:'./MD/Anna.html', genre: 'Horror, Mystery', year: 2014 },
-        { img: './posters/Horror2.png', title:'Rings', rating:8.6, lang:'EN', isPremium:false, link:'./MD/rings.html', genre: 'Horror, Thriller', year: 2017 },
-        { img: './posters/poster8.png', title:'The Conjuring', rating:9.4, lang:'EN', isPremium:true, link:'./MD/TCjuring.html', genre: 'Horror, Mystery', year: 2013 },
-        { img: './posters/Horror4.png', title:'Haunting of The Bly Manor', rating:9.9, lang:'EN', isPremium:true, link:'./MD/blyManor.html', genre: 'Horror, Drama', year: 2020 },
-        { img: './posters/Horror5.png', title:'The Grudge', rating:9.1, lang:'JP', isPremium:false, link:'./MD/TGrudge.html', genre: 'Horror, Supernatural', year: 2004 }
+        { img: '../posters/Horror1.png', title:'Annabelle', rating:7.3, lang:'EN', isPremium:true, link:'./MD/Anna.html', genre: 'Horror, Mystery', year: 2014 },
+        { img: '../posters/Horror2.png', title:'Rings', rating:8.6, lang:'EN', isPremium:false, link:'./MD/rings.html', genre: 'Horror, Thriller', year: 2017 },
+        { img: '../posters/poster8.png', title:'The Conjuring', rating:9.4, lang:'EN', isPremium:true, link:'./MD/TCjuring.html', genre: 'Horror, Mystery', year: 2013 },
+        { img: '../posters/Horror4.png', title:'Haunting of The Bly Manor', rating:9.9, lang:'EN', isPremium:true, link:'./MD/blyManor.html', genre: 'Horror, Drama', year: 2020 },
+        { img: '../posters/Horror5.png', title:'The Grudge', rating:9.1, lang:'JP', isPremium:false, link:'./MD/TGrudge.html', genre: 'Horror, Supernatural', year: 2004 }
     ],
     Sitcom: [
-        { img: './posters/Sitcom1.png', title:'Friends', rating:9.6, lang:'EN', isPremium:true, link:'./MD/friends.html', genre: 'Comedy, Romance', year: 1994 },
-        { img: './posters/Sitcom2.png', title:'The Big Bang Theory', rating:8.7, lang:'EN', isPremium:false, link:'./MD/bbt.html', genre: 'Comedy, Romance', year: 2007 },
-        { img: './posters/Sitcom3.png', title:'The Modern Family', rating:9.7, lang:'EN', isPremium:true, link:'./MD/TMF.html', genre: 'Comedy, Family', year: 2009 },
-        { img: './posters/Sitcom4.png', title:'How I Met Your Mother', rating:8.8, lang:'EN', isPremium:false, link:'./MD/HIMYM.html', genre: 'Comedy, Romance', year: 2005 },
-        { img: './posters/Sitcom5.png', title:'Brooklyn 99', rating:9.1, lang:'EN', isPremium:true, link:'./MD/B99.html', genre: 'Comedy, Crime', year: 2013 }
+        { img: '../posters/Sitcom1.png', title:'Friends', rating:9.6, lang:'EN', isPremium:true, link:'./MD/friends.html', genre: 'Comedy, Romance', year: 1994 },
+        { img: '../posters/Sitcom2.png', title:'The Big Bang Theory', rating:8.7, lang:'EN', isPremium:false, link:'./MD/bbt.html', genre: 'Comedy, Romance', year: 2007 },
+        { img: '../posters/Sitcom3.png', title:'The Modern Family', rating:9.7, lang:'EN', isPremium:true, link:'./MD/TMF.html', genre: 'Comedy, Family', year: 2009 },
+        { img: '../posters/Sitcom4.png', title:'How I Met Your Mother', rating:8.8, lang:'EN', isPremium:false, link:'./MD/HIMYM.html', genre: 'Comedy, Romance', year: 2005 },
+        { img: '../posters/Sitcom5.png', title:'Brooklyn 99', rating:9.1, lang:'EN', isPremium:true, link:'./MD/B99.html', genre: 'Comedy, Crime', year: 2013 }
     ],
     Documentary: [
-        { img: './posters/Documentary1.png', title:'Cunk On Earth', rating:7.5, lang:'EN', isPremium:true, link:'./MD/COEar.html', genre: 'Documentary, Comedy', year: 2022 },
-        { img: './posters/Documentary2.png', title:'Facing Ali', rating:8.2, lang:'EN', isPremium:true, link:'./MD/FAli.html', genre: 'Documentary, Sports', year: 2009 },
-        { img: './posters/Documentary3.png', title:'How To Rob A Bank', rating:9.2, lang:'EN', isPremium:false, link:'./MD/HTRAB.html', genre: 'Documentary, Crime', year: 2024 },
-        { img: './posters/Documentary4.png', title:'House Of Secrets', rating:8.8, lang:'EN', isPremium:true, link:'./MD/houseOS.html', genre: 'Documentary, Crime', year: 2021 },
-        { img: './posters/Documentary5.png', title:'Curry & Cyanide', rating:7.4, lang:'EN', isPremium:false, link:'./MD/cAndCya.html', genre: 'Documentary, Crime', year: 2023 }
+        { img: '../posters/Documentary1.png', title:'Cunk On Earth', rating:7.5, lang:'EN', isPremium:true, link:'./MD/COEar.html', genre: 'Documentary, Comedy', year: 2022 },
+        { img: '../posters/Documentary2.png', title:'Facing Ali', rating:8.2, lang:'EN', isPremium:true, link:'./MD/FAli.html', genre: 'Documentary, Sports', year: 2009 },
+        { img: '../posters/Documentary3.png', title:'How To Rob A Bank', rating:9.2, lang:'EN', isPremium:false, link:'./MD/HTRAB.html', genre: 'Documentary, Crime', year: 2024 },
+        { img: '../posters/Documentary4.png', title:'House Of Secrets', rating:8.8, lang:'EN', isPremium:true, link:'./MD/houseOS.html', genre: 'Documentary, Crime', year: 2021 },
+        { img: '../posters/Documentary5.png', title:'Curry & Cyanide', rating:7.4, lang:'EN', isPremium:false, link:'./MD/cAndCya.html', genre: 'Documentary, Crime', year: 2023 }
     ]
 };
 
@@ -278,7 +278,6 @@ function renderMovie(movie) {
             <p><strong>Year:</strong> ${movie.year}</p>
         </div>
         <div class="movie-actions">
-            <button class="btn-play" onclick="playMovie('${movie.title}')">Read</button>
             <button class="btn-remove" onclick="removeMovie(this)">Remove</button>
             <button class="btn-fav" onclick="addToFavorites('${movie.title}')">Favorite</button>
         </div>
