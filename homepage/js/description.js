@@ -248,11 +248,9 @@ function renderMoviePage(movie) {
                 <h3 class="fw-bold border-bottom pb-2 mb-4">You Might Also Like</h3>
                 <div class="row">
                     ${movie.recommendations.map(rec => `
-                        <div class="col-6 col-md-3 mb-3">
+                        <div class="col-6 col-md-3 mb-3 rec-card" data-movie-id="${rec.id}">
                             <div class="card h-100">
-                                <a href="description.html" onclick="localStorage.setItem('selectedMovie', '${rec.id}')">
-                                    <img src="${rec.image}" class="card-img-top" alt="${rec.title}">
-                                </a>
+                                <img src="${rec.image}" class="card-img-top" alt="${rec.title}">
                                 <div class="card-body">
                                     <h6 class="card-title">${rec.title}</h6>
                                     <div class="star-rating small">
@@ -269,6 +267,35 @@ function renderMoviePage(movie) {
     
     // Combine all sections
     movieContent.innerHTML = breadcrumb + banner + mainContent;
+
+    
+
+
+    // -------------------------------------------------
+// after movieContent.innerHTML = … 
+document.querySelectorAll('.rec-card').forEach(card => {
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', () => {
+    const id = card.dataset.movieId;
+
+    // look up the full movie record by id (this WILL have isPremium)
+    const full = findMovieById(id);
+    if (!full) return console.warn('No such movie:', id);
+
+    // freemium gate
+    const user = JSON.parse(localStorage.getItem('user')) || {};
+    if (user.role === 'FreemiumUser' && full.isPremium) {
+      return showUpgradeModal();
+    }
+
+    // otherwise: save + redirect
+    localStorage.setItem('selectedMovie', id);
+    window.location.href = 'description.html';
+  });
+});
+
+
+
     
     const editBtn = document.getElementById('editMovieBtn');
     if (editBtn) {
@@ -822,6 +849,16 @@ const moviesByGenre = {
     ]
 };
 
+// same findMovieById you use in mainScript.js:
+function findMovieById(id) {
+  for (const arr of Object.values(moviesByGenre)) {
+    const m = arr.find(x => x.id === id);
+    if (m) return m;
+  }
+  return null;
+}
+
+
 function getAgeCategory(age) {
     if (age < 13)      return 'kid';
     if (age < 40)      return 'adult';
@@ -845,12 +882,32 @@ else if (user.role === 'PremiumUser' || user.role === 'FreemiumUser') {
 }
 
 // (assumes moviesByGenre & genresToShow are already in scope)
-const siteSearch   = document.getElementById('siteSearch');
-const dropdown     = document.getElementById('searchDropdown');
+// … your existing code above …
 
+// 2) helper to flatten all movies into one array
+// flatten & reuse your genresToShow + moviesByGenre from mainScript…
 const allMovies = Object.entries(moviesByGenre).flatMap(([genre, arr]) =>
   arr.map(m => ({ ...m, genre }))
 );
+
+const siteSearch = document.getElementById('siteSearch');
+const dropdown   = document.getElementById('searchDropdown');
+
+// helper to handle navigation (with Freemium gate)
+function viewMovie(id) {
+  const rec = allMovies.find(m => m.id === id);
+  if (!rec) return;
+
+  const user = JSON.parse(localStorage.getItem('user'));
+  // freemium‑only locking
+  if (user.role === 'FreemiumUser' && rec.isPremium) {
+    return showUpgradeModal();
+  }
+
+  // otherwise go to description
+  localStorage.setItem('selectedMovie', id);
+  window.location.href = 'description.html';
+}
 
 siteSearch.addEventListener('input', () => {
   const q = siteSearch.value.trim().toLowerCase();
@@ -871,25 +928,85 @@ siteSearch.addEventListener('input', () => {
   dropdown.innerHTML = matches.map(m => `
     <li data-link="${m.id}">
       <img src="${m.img}" alt="${m.title}">
-      <span class="title">${m.title}</span>
+      <span>${m.title}</span>
     </li>
   `).join('');
 
   dropdown.classList.toggle('hidden', matches.length === 0);
 });
 
+// -- Here’s the fix: stopPropagation on the click so the “outside click” handler doesn’t hide it first.
 dropdown.addEventListener('click', e => {
+  e.stopPropagation();
   const li = e.target.closest('li');
   if (!li) return;
-  const movieId = li.dataset.link;
-  viewMovie(movieId);
+  viewMovie(li.dataset.link);
 });
 
+// close if you click _anywhere_ outside
 document.addEventListener('click', e => {
   if (!siteSearch.contains(e.target) && !dropdown.contains(e.target)) {
     dropdown.classList.add('hidden');
+    siteSearch.value = '';
   }
 });
 
 
 console.log(user); console.log(moviesByGenre); console.log(genresToShow);
+
+// after you inject the "You Might Also Like" HTML:
+// gate freemium → premium in your recommendations
+document.querySelectorAll('.rec-card').forEach(card => {
+  card.style.cursor = 'pointer';
+  card.addEventListener('click', () => {
+    const movieId = card.dataset.movieId;
+    const movie   = allMovies.find(m => m.id === movieId);
+    if (!movie) return console.warn('Unknown recommended movie:', movieId);
+
+    // if they’re freemium and it’s premium content, block
+    if (user.role === 'FreemiumUser' && movie.isPremium) {
+      return showUpgradeModal();
+    }
+
+    // otherwise, go
+    localStorage.setItem('selectedMovie', movieId);
+    window.location.href = 'description.html';
+  });
+});
+
+
+/**
+ * showUpgradeModal — for description.html
+ * Injects a lightbox style pop‑out asking the user to upgrade.
+ */
+function showUpgradeModal() {
+  // Remove any existing modal
+  const prev = document.getElementById('upgradeModal');
+  if (prev) prev.remove();
+
+  // Insert the modal markup
+  document.body.insertAdjacentHTML('beforeend', `
+    <div class="modal" id="upgradeModal">
+      <div class="modal-content">
+        <span class="modal-close" id="upgradeClose">&times;</span>
+        <h3>Premium Content Locked</h3>
+        <p>Sorry, it looks like you don’t have access to our best content.</p>
+        <p>You can upgrade to Premium at any time!</p>
+        <label>
+          <button id="goPremiumBtn">Go Premium</button>
+          <button id="cancelUpgrade">Maybe Later</button>
+        </label>
+      </div>
+    </div>
+  `);
+
+  // Wire up the buttons
+  const modal = document.getElementById('upgradeModal');
+  document.getElementById('upgradeClose').onclick = () => modal.remove();
+  document.getElementById('cancelUpgrade').onclick = () => modal.remove();
+  document.getElementById('goPremiumBtn').onclick = () => {
+    window.location.href = './payment.html';
+  };
+}
+
+

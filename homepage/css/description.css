@@ -495,3 +495,39 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
+
+
+  /* overlay backdrop */
+.modal {
+    position: fixed;
+    top: 0; left: 0; width:100%; height:100%;
+    background: rgba(0,0,0,0.6);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 2000;
+}
+.modal.hidden { display: none; }
+.modal-content {
+    background: #EEEEEE; padding: 40px; border-radius: 20px; width: 90%; max-width: 400px;
+    position: relative; font-family: 'Poppins';
+}
+.modal-close {
+    position: absolute; top: 10px; right: 20px; cursor: pointer; font-size: 1.8rem;
+}
+.modal-content input, .modal-content label {
+    display: block; width: 100%; margin: 8px 0;
+    font-family: 'Poppins';
+    font-size: large;
+}
+.modal-content button {
+    margin-top: 12px; width:100px; border-radius: 45px; background-color: #D84040; border-style: none;
+}
+.pop-out-checkbox {
+    height : 20px;
+}
+#goPremiumBtn, #cancelUpgrade {
+    font-family: 'Poppins';
+}
+
+#cancelUpgrade{
+    margin-left: 100px;
+}

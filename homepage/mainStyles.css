@@ -1049,6 +1049,7 @@ body, html {
   }
   
   #goPremiumBtn, #cancelUpgrade {
+    font-size: large;
     margin : 15px 60px;
     font-family: 'Poppins';
   }
