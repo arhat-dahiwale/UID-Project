@@ -424,10 +424,10 @@ function showUpgradeModal() {
   }
   
 
-  // navbar
-// … your existing code above …
+  
 
-// 2) helper to flatten all movies into one array
+
+//helper to flatten all movies into one array
 const allMovies = Object.entries(moviesByGenre).flatMap(([genre, arr]) =>
   arr.map(m => ({ ...m, genre }))
 );
