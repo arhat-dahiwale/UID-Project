@@ -288,7 +288,10 @@ genresToShow.forEach(genre=>{
         Rating:<input type="number" id="m_rating" min="0" max="10" step="0.1" required>
         <span id="rating-error" style="color:red; font-size:0.9em; display:none;">Rating must be between 0 and 10</span>
       </label>
-      <label class="add-pop pop-out-label">Language:<input type="text" id="m_lang" required></label>
+      <label class="add-pop pop-out-label">
+        Language:<input type="text" id="m_lang" required>
+        <span id="lang-error" style="color:red; font-size:0.9em; display:none;">Language must be exactly 2 uppercase letters</span>
+      </label>
       <label class="add-pop pop-out-label">Premium?<input type="checkbox" id="m_prem" class="pop-out-checkbox"></label>
       <button id="saveMovie">Save</button>
     `;
@@ -297,8 +300,6 @@ genresToShow.forEach(genre=>{
   
     const ratingInput = document.getElementById('m_rating');
     const ratingError = document.getElementById('rating-error');
-  
-    
     ratingInput.addEventListener('input', () => {
       const ratingVal = parseFloat(ratingInput.value);
       if (isNaN(ratingVal) || ratingVal < 0 || ratingVal > 10) {
@@ -307,6 +308,18 @@ genresToShow.forEach(genre=>{
       } else {
         ratingError.style.display = 'none';
         ratingInput.style.borderColor = '';
+      }
+    });
+
+    const langInput = document.getElementById('m_lang');
+    const langError = document.getElementById('lang-error');
+    langInput.addEventListener('input', () => {
+      if (/^[A-Z]{2}$/.test(langInput.value)) {
+        langError.style.display = 'none';
+        langInput.style.borderColor = '';
+      } else {
+        langError.style.display = 'inline';
+        langInput.style.borderColor = 'red';
       }
     });
   
@@ -325,6 +338,11 @@ genresToShow.forEach(genre=>{
       if (ratingVal < 0 || ratingVal > 10) {
         ratingError.style.display = 'inline';
         ratingInput.style.borderColor = 'red';
+        return;
+      }
+      if (!/^[A-Z]{2}$/.test(lang)) {
+        langError.style.display = 'inline';
+        langInput.style.borderColor = 'red';
         return;
       }
   
