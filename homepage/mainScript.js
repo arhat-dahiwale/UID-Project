@@ -282,7 +282,10 @@ genresToShow.forEach(genre=>{
   
     body.innerHTML = `
       <h3 class="pop-out-heading add-pop">Add to ${genre}</h3>
-      <label class="add-pop pop-out-label">Poster URL:<input type="text" id="m_img" required></label>
+      <label class="add-pop pop-out-label">
+        Poster URL:<input type="text" id="m_img" required>
+        <span id="img-error" style="color:red; font-size:0.9em; display:none;">Enter valid URL</span>
+      </label>
       <label class="add-pop pop-out-label">Title:<input type="text" id="m_title" required></label>
       <label class="add-pop pop-out-label">
         Rating:<input type="number" id="m_rating" min="0" max="10" step="0.1" required>
@@ -322,6 +325,20 @@ genresToShow.forEach(genre=>{
         langInput.style.borderColor = 'red';
       }
     });
+
+    const imgInput = document.getElementById('m_img');
+    const imgError = document.getElementById('img-error');
+    imgInput.addEventListener('input', () => {
+    const v = imgInput.value.trim();
+    const pattern = /^(?:https?:\/\/\S+\.(?:png|jpe?g|gif|svg))(?:\?.*)?$|^(?:\.\/|\.\.\/|\/)?\S+\.(?:png|jpe?g|gif|svg)$/i;
+    if (pattern.test(v)) {
+      imgError.style.display = 'none';
+      imgInput.style.borderColor = '';
+    } else {
+      imgError.style.display = 'inline';
+      imgInput.style.borderColor = 'red';
+    }
+  });
   
     document.getElementById('saveMovie').onclick = () => {
       const img = document.getElementById('m_img').value.trim();
@@ -345,6 +362,12 @@ genresToShow.forEach(genre=>{
         langInput.style.borderColor = 'red';
         return;
       }
+      const pattern = /^(?:https?:\/\/\S+\.(?:png|jpe?g|gif|svg))(?:\?.*)?$|^(?:\.\/|\.\.\/|\/)?\S+\.(?:png|jpe?g|gif|svg)$/i;
+      if (!pattern.test(imgInput.value.trim())) {
+      imgError.style.display = 'inline';
+      imgInput.style.borderColor = 'red';
+      return;
+    }
   
       const arr = moviesByGenre[genre];
       arr.push({ img, title, rating: ratingVal, lang, isPremium: prem, link: '' });
