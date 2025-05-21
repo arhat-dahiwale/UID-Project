@@ -12,9 +12,9 @@ const user = JSON.parse(localStorage.getItem("user")) || {
   listsCount: 0
 };
 
-// Function to update UI based on user role
+
 function updateUIForUserRole() {
-  // Common elements that might exist
+
   const userStatus = document.getElementById('userStatus');
   const starRating = document.getElementById('starRating');
   const joined = document.getElementById('joined');
@@ -53,13 +53,49 @@ function updateUIForUserRole() {
       if (starRating) starRating.innerHTML = "";
       break;
       
-    case "Admin":
-    case "AdminUser":
+      case "Admin":
+  case "AdminUser":
+
+case "Admin":
+case "AdminUser":
+
+
+ 
+  const dropdownWatchHourLink = document.getElementById('dropdownWatchHourLink');
+  if (dropdownWatchHourLink) {
+    dropdownWatchHourLink.href = "../watch hours/index.html"; // Update path here
+    const dropdownText = dropdownWatchHourLink.querySelector('#logoWatchlist');
+    if (dropdownText) {
+      dropdownText.textContent = "Watch Hour";
+    }
+  }
+
+ 
+
+    // Admin-specific changes
+    if (userStatus) userStatus.innerText = "Admin";
+    
+    // Update watch hour link specifically
+    const watchHourLink = document.getElementById('watchHourLink');
+    if (watchHourLink) {
+      watchHourLink.href = "../watch-hours/index.html";
+      const textElement = watchHourLink.querySelector('p') || watchHourLink;
+      textElement.textContent = "Watch Hour";
+    }
+
+    // Update other watchlist references
+    const watchlistElements = document.querySelectorAll('[id*="watchlist"], [id*="Watchlist"]');
+    watchlistElements.forEach(el => {
+      if (el.textContent.toLowerCase().includes('watchlist')) {
+        el.textContent = el.textContent.replace('Watchlist', 'Watch Hour');
+      }
+    });
+
       // Admin-specific changes
       if (userStatus) userStatus.innerText = "Admin";
       if (joined) joined.innerText = "";
       
-      // Update all watchlist text to "Watch Hours"
+     
       const watchhourElements = document.querySelectorAll('[id*="watch"], [id*="Watch"], .watch-nav a');
       watchhourElements.forEach(element => {
         if (element.textContent.toLowerCase().includes('watchlist')) {
@@ -354,6 +390,8 @@ function toggleSideCard() {
     `;
   }
 }
+
+
 
 function updateDarkModeElements(isDark) {
   const sections = document.querySelectorAll('.section');

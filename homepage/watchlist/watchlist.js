@@ -32,6 +32,14 @@ document.addEventListener("DOMContentLoaded", () => {
     initSearch();
 });
 
+// Set profile pictures
+  const defaultProfilePic = "https://i.pinimg.com/736x/65/74/9e/65749e1d2b9201b7a299b4370b3d01ca.jpg";
+  const mainpic = document.getElementById("mainpic");
+  const navProfilePic = document.querySelector(".profile img");
+  
+  if (mainpic) mainpic.src = user.profileImage || defaultProfilePic;
+  if (navProfilePic) navProfilePic.src = user.profileImage || defaultProfilePic;
+
 const watchlist = document.getElementById("watchlist");
 const movieSelect = document.getElementById("movieSelect");
 
@@ -242,7 +250,6 @@ function initSearch() {
     }
 }
 
-// Update the addRandomMovie function to respect age restrictions
 function addRandomMovie() {
     const ageGroup = getAgeCategory(user.age);
     const allowedGenres = ageMapping[ageGroup] || [];
@@ -252,20 +259,46 @@ function addRandomMovie() {
         return;
     }
     
-    const genre = allowedGenres[Math.floor(Math.random() * allowedGenres.length)];
-    const genreMovies = moviesByGenre[genre];
-    const randomMovie = genreMovies[Math.floor(Math.random() * genreMovies.length)];
+    // Get all current movies in watchlist
+    const currentMovies = Array.from(watchlist.querySelectorAll('.movie-title'))
+        .map(el => el.textContent);
     
+    // Filter out movies already in watchlist
+    const availableMovies = [];
+    allowedGenres.forEach(genre => {
+        const genreMovies = moviesByGenre[genre] || [];
+        genreMovies.forEach(movie => {
+            if (!currentMovies.includes(movie.title)) {
+                availableMovies.push(movie);
+            }
+        });
+    });
+    
+    if (availableMovies.length === 0) {
+        showToast("All available movies are already in your watchlist!");
+        return;
+    }
+    
+    // Select random movie from available ones
+    const randomMovie = availableMovies[Math.floor(Math.random() * availableMovies.length)];
     renderMovie(randomMovie);
 }
 
 
-
 function renderMovie(movie) {
+    // Check if movie already exists in watchlist
+    const existingMovies = Array.from(watchlist.querySelectorAll('.movie-title'))
+        .map(el => el.textContent);
+    
+    if (existingMovies.includes(movie.title)) {
+        showToast(`${movie.title} is already in your watchlist!`);
+        return;
+    }
+
     const card = document.createElement("div");
     card.className = "movie-card";
 
-    const starCount = Math.round(parseFloat(movie.rating) / 2); // Convert rating to 5-star scale
+    const starCount = Math.round(parseFloat(movie.rating) / 2);
     const starsHTML = '<span class="stars">' + "★".repeat(starCount) + "</span>";
 
     card.innerHTML = `
@@ -284,8 +317,8 @@ function renderMovie(movie) {
     </div>
     `;
     watchlist.appendChild(card);
+    showToast(`${movie.title} added to watchlist!`);
 }
-
 function addToFavorites(movieTitle) {
     const movie = allMovies.find(m => m.title === movieTitle);
     if (!movie) return;

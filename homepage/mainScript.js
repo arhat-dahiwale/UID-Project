@@ -303,6 +303,8 @@ genresToShow.forEach(genre=>{
   
     const ratingInput = document.getElementById('m_rating');
     const ratingError = document.getElementById('rating-error');
+  
+    
     ratingInput.addEventListener('input', () => {
       const ratingVal = parseFloat(ratingInput.value);
       if (isNaN(ratingVal) || ratingVal < 0 || ratingVal > 10) {
@@ -367,7 +369,7 @@ genresToShow.forEach(genre=>{
       imgError.style.display = 'inline';
       imgInput.style.borderColor = 'red';
       return;
-    }
+      }
   
       const arr = moviesByGenre[genre];
       arr.push({ img, title, rating: ratingVal, lang, isPremium: prem, link: '' });
@@ -605,3 +607,59 @@ function hideHamMenu() {
 localStorage.setItem('user',JSON.stringify(user));
 localStorage.setItem('genresToShow', JSON.stringify(genresToShow));
 localStorage.setItem('moviesByGenre', JSON.stringify(moviesByGenre));
+
+
+// Update profile menu based on user role
+function updateProfileMenu() {
+  const user = JSON.parse(localStorage.getItem('user')) || {
+    username: 'Demo', 
+    password: 'admin123', 
+    role: 'Admin', 
+    age: 25, 
+    upiID: 'demo@ybl'
+  };
+  
+  const isAdmin = user.role === 'Admin';
+  
+  // Toggle visibility of menu items based on admin status
+  document.querySelectorAll('.ratings-item').forEach(el => {
+    el.style.display = isAdmin ? 'none' : 'block';
+  });
+  
+  document.querySelectorAll('.watchlist-item').forEach(el => {
+    el.style.display = isAdmin ? 'none' : 'block';
+  });
+  
+  document.querySelectorAll('.watchhours-item').forEach(el => {
+    el.style.display = isAdmin ? 'block' : 'none';
+  });
+}
+
+// Call this function when the page loads and when user changes
+document.addEventListener('DOMContentLoaded', function() {
+  updateProfileMenu();
+  
+  // Also update username and role display
+  const usernameElement = document.getElementById('nav-username');
+  const roleElement = document.getElementById('nav-role');
+  const user = JSON.parse(localStorage.getItem('user')) || {
+    username: 'Demo', 
+    password: 'admin123', 
+    role: 'Admin', 
+    age: 25, 
+    upiID: 'demo@ybl'
+  };
+
+  if (usernameElement && roleElement) {
+    usernameElement.firstChild.textContent = user.username + ' ';
+    roleElement.textContent = user.role.replace(/([a-z])([A-Z])/g, '$1 $2');
+  }
+});
+
+// Set profile pictures
+  const defaultProfilePic = "https://i.pinimg.com/736x/65/74/9e/65749e1d2b9201b7a299b4370b3d01ca.jpg";
+  const mainpic = document.getElementById("mainpic");
+  const navProfilePic = document.querySelector(".profile img");
+  
+  if (mainpic) mainpic.src = user.profileImage || defaultProfilePic;
+  if (navProfilePic) navProfilePic.src = user.profileImage || defaultProfilePic;

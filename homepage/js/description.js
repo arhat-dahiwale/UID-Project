@@ -38,6 +38,14 @@ document.addEventListener('DOMContentLoaded', function() {
     fetchMovieData(movieId);
 });
 
+// Set profile pictures
+  const defaultProfilePic = "https://i.pinimg.com/736x/65/74/9e/65749e1d2b9201b7a299b4370b3d01ca.jpg";
+  const mainpic = document.getElementById("mainpic");
+  const navProfilePic = document.querySelector(".profile img");
+  
+  if (mainpic) mainpic.src = user.profileImage || defaultProfilePic;
+  if (navProfilePic) navProfilePic.src = user.profileImage || defaultProfilePic;
+
 function fetchMovieData(movieId) {
     fetch('data/movies.json')
         .then(response => response.json())
@@ -986,8 +994,8 @@ function showUpgradeModal() {
 
   // Insert the modal markup
   document.body.insertAdjacentHTML('beforeend', `
-    <div class="modal" id="upgradeModal">
-      <div class="modal-content">
+    <div class="upgrade-modal-overlay" id="upgradeModal">
+      <div class="upgrade-modal-content">
         <span class="modal-close" id="upgradeClose">&times;</span>
         <h3>Premium Content Locked</h3>
         <p>Sorry, it looks like you don’t have access to our best content.</p>
@@ -1021,3 +1029,59 @@ document.addEventListener('DOMContentLoaded', function () {
         roleElement.textContent = user.role.replace(/([a-z])([A-Z])/g, '$1 $2');
     }
 });
+
+
+
+// Update profile menu based on user role
+function updateProfileMenu() {
+  const user = JSON.parse(localStorage.getItem('user')) || {
+    username: 'Demo', 
+    password: 'admin123', 
+    role: 'Admin', 
+    age: 25, 
+    upiID: 'demo@ybl'
+  };
+  
+  const isAdmin = user.role === 'Admin';
+  
+  // Toggle visibility of menu items based on admin status
+  document.querySelectorAll('.ratings-item').forEach(el => {
+    el.style.display = isAdmin ? 'none' : 'block';
+  });
+  
+  document.querySelectorAll('.watchlist-item').forEach(el => {
+    el.style.display = isAdmin ? 'none' : 'block';
+  });
+  
+  document.querySelectorAll('.watchhours-item').forEach(el => {
+    el.style.display = isAdmin ? 'block' : 'none';
+  });
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  updateProfileMenu();
+
+  const usernameElement = document.getElementById('nav-username');
+  const roleElement = document.getElementById('nav-role');
+  const user = JSON.parse(localStorage.getItem('user')) || {
+    username: 'Demo', 
+    password: 'admin123', 
+    role: 'Admin', 
+    age: 25, 
+    upiID: 'demo@ybl'
+  };
+
+  if (usernameElement && roleElement) {
+    usernameElement.firstChild.textContent = user.username + ' ';
+    roleElement.textContent = user.role.replace(/([a-z])([A-Z])/g, '$1 $2');
+  }
+});
+
+
+  const defaultProfilePic1 = "https://i.pinimg.com/736x/65/74/9e/65749e1d2b9201b7a299b4370b3d01ca.jpg";
+  const mainpic1 = document.getElementById("mainpic");
+  const navProfilePic1 = document.querySelector(".profile img");
+  
+  if (mainpic1) mainpic1.src = user.profileImage || defaultProfilePic1;
+  if (navProfilePic1) navProfilePic1.src = user.profileImage || defaultProfilePic1;

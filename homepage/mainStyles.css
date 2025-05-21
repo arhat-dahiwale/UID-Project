@@ -1053,3 +1053,14 @@ body, html {
     margin : 15px 60px;
     font-family: 'Poppins';
   }
+
+
+  .profile-item {
+  transition: all 0.3s ease;
+}
+
+.menu ul li {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}

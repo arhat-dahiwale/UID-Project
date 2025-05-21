@@ -31,22 +31,22 @@ body::before {
   width: 80px;
   height: auto;
   border-radius: 8px;
-  border: 2px solid var(--primary); /* Added your red border */
+  border: 2px solid var(--primary); 
 }
 
 .btn-default {
-  border: 1px solid rgba(216, 64, 64, 0.1); /* Changed to red tint */
+  border: 1px solid rgba(216, 64, 64, 0.1); 
   background: none;
-  color: var(--secondary); /* Changed to your white */
+  color: var(--secondary); 
 }
 
 
 
 
 .btn-outline-primary {
-  border: 1.5px solid var(--primary); /* Your red */
+  border: 1.5px solid var(--primary); 
   background-color: transparent;
-  color: var(--primary); /* Your red */
+  color: var(--primary); 
   padding: 20px 30px;
   font-size: 16px;
   border-radius: 8px;
@@ -58,8 +58,8 @@ body::before {
 }
 
 .btn-outline-primary:hover {
-  background-color: var(--primary); /* Changed */
-  color: var(--secondary); /* Changed */
+  background-color: var(--primary); 
+  color: var(--secondary); 
 }
 
 
@@ -68,7 +68,7 @@ body::before {
 
 }
 .mr-2:hover {
-  background-color: var(--primary); /* Your red */
+  background-color: var(--primary); 
 }
 .file-input {
   position: absolute;
@@ -88,8 +88,8 @@ body::before {
 }
 
 .settings-menu .list-group-item.active {
-   background-color: var(--primary); /* Changed */
-  color: var(--secondary); /* Changed */
+   background-color: var(--primary); 
+  color: var(--secondary);
   border-color: var(--primary); 
   font-weight: bold;
   
@@ -411,7 +411,7 @@ background-color: #D84040;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-/* Profile image upload fixes */
+
 .file-input-container {
   position: relative;
   overflow: hidden;
@@ -430,7 +430,7 @@ background-color: #D84040;
 
 @keyframes gentleDrop {
   from {
-    transform: translateY(-30px) translateX(-50%); /* Shorter drop distance */
+    transform: translateY(-30px) translateX(-50%); 
     opacity: 0;
   }
   to {
@@ -439,11 +439,11 @@ background-color: #D84040;
   }
 }
 
-/* Header protection */
+
 header, .page-header {
   position: relative;
-  z-index: 1100; /* Ensures header stays above toasts */
-  padding-top: 10px; /* Adds breathing room */
+  z-index: 1100; 
+  padding-top: 10px; 
 }
 
 
@@ -469,9 +469,7 @@ header, .page-header {
 
 
 
-/* Add these to your existing CSS */
 
-/* Password strength indicator */
 .strength-weak {
   color: #dc3545;
 }

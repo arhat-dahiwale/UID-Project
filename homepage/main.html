@@ -9,58 +9,57 @@
 </head>
 <body>
     <nav class="navbar">
-                <div class = "navleft">
-                    <div class="logo">
-                        <a href = "./index.html">
-                            <img src = "Logo/cinesphere-high-resolution-logo-transparent_updated.png" alt = "cinesphere-high-resolution-logo-transparent">
-                        </a>
-                </div>
+        <div class = "navleft">
+            <div class="logo">
+                <a href = "./index.html">
+                    <img src = "Logo/cinesphere-high-resolution-logo-transparent_updated.png" alt = "cinesphere-high-resolution-logo-transparent">
+                </a>
+            </div>
                     <!-- Navigation Links -->
-                    <ul class="nav-links">
-                        <li class = "hideOnMobile"><a href="./index.html#about">About Us </a></li>
-                        <li class = "hideOnMobile"><a href="./index.html#contact">Contact Us</a></li>
-                        <li style = "display:none" class = "hideOnDesktop" onclick = "showHamMenu()"><a href = "#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -980 960 960" width="40px" fill="#232423"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a> </li>
-                    </ul>
+            <ul class="nav-links">
+                <li class = "hideOnMobile"><a href="./index.html#about">About Us </a></li>
+                <li class = "hideOnMobile"><a href="./index.html#contact">Contact Us</a></li>
+                <li style = "display:none" class = "hideOnDesktop" onclick = "showHamMenu()"><a href = "#"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -980 960 960" width="40px" fill="#232423"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a> </li>
+            </ul>
                     <!--Hamburger Menu-->
-                    <ul class = "Hammenu">
-                        <li style = "padding:30px 0 0 0 ;"><a href="#" onclick="hideHamMenu()"><svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#232423"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
-                        <li>
-                        <div class="logo">
+            <ul class = "Hammenu">
+                <li style = "padding:30px 0 0 0 ;"><a href="#" onclick="hideHamMenu()"><svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#232423"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li>
+                    <div class="logo">
                         <a href = "#">
                             <img src = "Logo/cinesphere-high-resolution-logo-transparent_updated.png" alt = "cinesphere-high-resolution-logo-transparent" width="700px">
                         </a>
-                        </div>
-                        </li>
-                        <li><a href="#about">About Us </a></li>
-                        <li><a href="#contact">Contact Us</a></li>
-                    </ul>
+                    </div>
+                </li>
+                <li><a href="#about">About Us </a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
 
-            </div>
-    <div style = "display:flex;" >
-        <div class="search-box" style="display:flex; position: relative; margin:0px 10px 0px 0px;">
-            <img src="Logo/Search_logo_light_mode.svg" style="margin: 0px 5px 0px 0px;">
-            <input id="siteSearch" type="search" placeholder="Search for movies, genres, or actors...">
+        </div>
+        <div style = "display:flex;" >
+            <div class="search-box" style="display:flex; position: relative; margin:0px 10px 0px 0px;">
+                <img src="Logo/Search_logo_light_mode.svg" style="margin: 0px 5px 0px 0px;">
+                <input id="siteSearch" type="search" placeholder="Search for movies or genres">
             <!-- dropdown container -->
-            <ul id="searchDropdown" class="search-dropdown hidden"></ul>
-          </div>          
+                <ul id="searchDropdown" class="search-dropdown hidden"></ul>
+            </div>          
         <!--Profile Icon-->
         <div class="action" id="profileAction" style = "align-items: center;">
             <div class="profile" id="profileBtn" onclick="menuToggle()">
-              <img src="../homepage/profile/images/Rowan Atkinson.jpeg" alt="Profile Image">
+              <img src="https://i.pinimg.com/736x/65/74/9e/65749e1d2b9201b7a299b4370b3d01ca.jpg" alt="Profile Image">
             </div>
-            <div class="menu" id="profileMenu">
-              <h3 id="nav-username">Username <br><span id="nav-role">Student</span></h3>
-              <ul>
-                <li><img src="./Logo/user.png" alt="User Icon"><a href="../homepage/userprofile/userprofile.html">My profile</a></li>
-                <li><img src="./Logo/edit.png" alt="Edit Icon"><a href="../homepage/profile/index.html">Edit profile</a></li>
-                <li><img src="./Logo/star.png" alt="Your rating"><a href="#"> Your rating</a></li>
-                <li><img src="./Logo/bookmark.png" alt="Your watchlist"><a href="./watchlist/watchList.html">Your watchlist</a></li>
-                <li><img src="./Logo/settings.png" alt="Settings Icon"><a href="../homepage/profile/index.html">Settings</a></li>
-                <li><img src="./Logo/question.png" alt="Help Icon"><a href="#">Help</a></li>
-                <li><img src="./Logo/log-out.png" alt="Logout Icon"><a href="#">Logout</a></li>
-              </ul>
-            </div>
-          </div>
+           <div class="menu" id="profileMenu">
+                <h3 id="nav-username">Username <br><span id="nav-role">Student</span></h3>
+                    <ul>
+                    <li class="profile-item"><img src="./Logo/user.png" alt="User Icon"><a href="../homepage/userprofile/userprofile.html">My profile</a></li>
+                    <li class="profile-item"><img src="./Logo/edit.png" alt="Edit Icon"><a href="../homepage/profile/index.html">Edit profile</a></li>
+                    <li class="profile-item ratings-item"><img src="./Logo/star.png" alt="Your rating"><a href="./yourrating.html"> Your rating</a></li>
+                    <li class="profile-item watchlist-item"><img src="./Logo/bookmark.png" alt="Your watchlist"><a href="./watchlist/watchList.html">Your watchlist</a></li>
+                    <li class="profile-item watchhours-item" style="display:none"><img src="../homepage/Logo/clock.png" alt="Watch hours"><a href="./watch hours/index.html">Watch hours</a></li>
+                    <li class="profile-item"><img src="./Logo/settings.png" alt="Settings Icon"><a href="../homepage/profile/index.html">Settings</a></li>
+                    <li class="profile-item"><img src="./Logo/question.png" alt="Help Icon"><a href="./index.html#contact">Help</a></li>
+                    <li class="profile-item"><img src="./Logo/log-out.png" alt="Logout Icon"><a href="./login.html">Logout</a></li>
+                    </ul>
         </div>
     </nav>
     <!-- carousel -->

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +9,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Font Awesome for crown icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/description.css">
+    <link rel="shortcut icon" href="../homepage/main logo favicon img/logo main.png" type="image/x-icon">
 </head>
 <body>
     <!-- Header/Navbar -->
-    <nav class="navbar" style="padding-bottom: 15px;padding-top: 15px;border-bottom-width: 0px;height: 70px;">
+    <nav class="navbar">
         <div class="nav-container">
             <div class="nav-left">
                 <div class="logo">
@@ -32,83 +36,83 @@
                     <input id="siteSearch" type="search" placeholder="Search for movies or genres...">
                     <ul id="searchDropdown" class="search-dropdown hidden"></ul>
                 </div>
-                <div class="action" id="profileAction">
-                    <div class="profile" id="profileBtn">
-                        <img src="../homepage/profile/images/Rowan Atkinson.jpeg" alt="Profile Image">
-                    </div>
-                    <div class="menu" id="profileMenu">
-                        <h3 id="nav-username">Username <br><span id="nav-role">Student</span></h3>
-                        <ul>
-                            <li><img src="./Logo/user.png" alt="User Icon"><a href="../homepage/userprofile/userprofile.html">My profile</a></li>
-                            <li><img src="./Logo/edit.png" alt="Edit Icon"><a href="../homepage/profile/index.html">Edit profile</a></li>
-                            <li><img src="./Logo/star.png" alt="Your rating"><a href="#">Your rating</a></li>
-                            <li><img src="./Logo/bookmark.png" alt="Your watchlist"><a href="./watchlist/watchList.html">Your watchlist</a></li>
-                            <li><img src="./Logo/settings.png" alt="Settings Icon"><a href="../homepage/profile/index.html">Settings</a></li>
-                            <li><img src="./Logo/question.png" alt="Help Icon"><a href="#">Help</a></li>
-                            <li><img src="./Logo/log-out.png" alt="Logout Icon"><a href="#">Logout</a></li>
-                        </ul>
-                    </div>
+                <!--Profile Icon-->
+        <div class="action" id="profileAction" style = "align-items: center;">
+            <div class="profile" id="profileBtn" onclick="menuToggle()">
+              <img src="https://i.pinimg.com/736x/65/74/9e/65749e1d2b9201b7a299b4370b3d01ca.jpg" alt="Profile Image">
+            </div>
+           <div class="menu" id="profileMenu">
+  <h3 id="nav-username">Username <br><span id="nav-role">Student</span></h3>
+  <ul>
+    <li class="profile-item"><img src="./Logo/user.png" alt="User Icon"><a href="../homepage/userprofile/userprofile.html">My profile</a></li>
+    <li class="profile-item"><img src="./Logo/edit.png" alt="Edit Icon"><a href="../homepage/profile/index.html">Edit profile</a></li>
+    <li class="profile-item ratings-item"><img src="./Logo/star.png" alt="Your rating"><a href="./yourrating.html"> Your rating</a></li>
+    <li class="profile-item watchlist-item"><img src="./Logo/bookmark.png" alt="Your watchlist"><a href="./watchlist/watchList.html">Your watchlist</a></li>
+    <li class="profile-item watchhours-item" style="display:none"><img src="../homepage/Logo/clock.png" alt="Watch hours"><a href="./watch hours/index.html">Watch hours</a></li>
+    <li class="profile-item"><img src="./Logo/settings.png" alt="Settings Icon"><a href="../homepage/profile/index.html">Settings</a></li>
+    <li class="profile-item"><img src="./Logo/question.png" alt="Help Icon"><a href="./index.html#contact">Help</a></li>
+    <li class="profile-item"><img src="./Logo/log-out.png" alt="Logout Icon"><a href="./login.html">Logout</a></li>
+  </ul>
+</div>
                 </div>
             </div>
         </div>
     </nav>
-
-    <!-- Dynamic Content Will Be Inserted Here -->
+    
     <div id="movie-content"></div>
 
     <!-- Footer -->
     <footer class="footer">
-                <div class="footer-container">
-                    <div class="footer-column">
-                        <h4>Get to Know Us</h4>
-                        <a href="./index.html#about">About CineSphere</a><br>
-
-                    </div>
-                    <div class="footer-column">
-                        <h4>Connect with Us</h4>
-                        <a href="https://www.x.com">Twitter</a><br>
-                        <a href="https://www.instagram.com">Instagram</a>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Watch with Us</h4>
-                        <a href="./index.html#tr">Latest Releases</a><br>
-                        <a href="./index.html#plan-selection">Subscription Plans</a><br>
-                    </div>
-                    <div class="footer-column">
-                        <h4>Need Help?</h4>
-                        <a href="../homepage/userprofile/userprofile.html">Your Account</a><br>
-                        <a href="./index.html#ContactUsForm">Contact Us</a><br>
-                    </div>
-                </div>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h4>Get to Know Us</h4>
+                <a href="./index.html#about">About CineSphere</a><br>
+            </div>
+            <div class="footer-column">
+                <h4>Connect with Us</h4>
+                <a href="https://www.x.com">Twitter</a><br>
+                <a href="https://www.instagram.com">Instagram</a>
+            </div>
+            <div class="footer-column">
+                <h4>Watch with Us</h4>
+                <a href="./index.html#tr">Latest Releases</a><br>
+                <a href="./index.html#plan-selection">Subscription Plans</a><br>
+            </div>
+            <div class="footer-column">
+                <h4>Need Help?</h4>
+                <a href="../homepage/userprofile/userprofile.html">Your Account</a><br>
+                <a href="./index.html#ContactUsForm">Contact Us</a><br>
+            </div>
+        </div>
+        
+        <div class="footer-links">
+            <div>
+                <strong><a href="https://www.imdb.com/" alt="imdb.com">IMDb</a></strong><br>
+                Movies, TV & Celebrities
+            </div>
             
-                <div class="footer-links">
-                    <div>
-                        <strong><a href = "https://www.imdb.com/" alt = "imdb.com">IMDb</a></strong><br>
-                        Movies, TV & Celebrities
-                    </div>
-                    
-                    <div>
-                        <strong><a href = "./main.html#dynamicCarousels" alt = "Streaming Now">Streaming Now</a></strong><br>
-                        Latest Blockbusters & Series
-                    </div>
-                    <div>
-                        <strong><a href="https://www.themoviedb.org/">TMdB</a></strong><br>
-                        Our API Service
-                    </div>
-                    <div>
-                        <strong><a href = "./index.html#tr" alt = "Movie Reviews">Upcoming Releases</a></strong><br>
-                        Stay Updated with New Films
-                    </div>
-                </div>
-            
-                <div class="footer-bottom">
-                    <div class="legal-links">
-                        <a href="#">Terms of Service</a> |
-                        <a href="#">Privacy Policy</a>
-                    </div>
-                    <p>&copy; 2025, CineSphere. All rights reserved.</p>
-                </div>
-            </footer>
+            <div>
+                <strong><a href="./main.html#dynamicCarousels" alt="Streaming Now">Streaming Now</a></strong><br>
+                Latest Blockbusters & Series
+            </div>
+            <div>
+                <strong><a href="https://www.themoviedb.org/">TMdB</a></strong><br>
+                Our API Service
+            </div>
+            <div>
+                <strong><a href="./index.html#tr" alt="Movie Reviews">Upcoming Releases</a></strong><br>
+                Stay Updated with New Films
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="legal-links">
+                <a href="#">Terms of Service</a> |
+                <a href="#">Privacy Policy</a>
+            </div>
+            <p>&copy; 2025, CineSphere. All rights reserved.</p>
+        </div>
+    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

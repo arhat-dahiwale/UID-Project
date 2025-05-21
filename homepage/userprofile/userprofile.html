@@ -8,18 +8,18 @@
   <link rel="stylesheet" href="userprofile.css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/your-code.js" crossorigin="anonymous"></script>
+<link rel="shortcut icon" href="../main logo favicon img/logo main.png" type="image/x-icon">
 </head>
 
 <body>
 <header>
   <div class="logo-container">
     <div class="logo">
-      <!-- <a href="../index.html">CineSphere</a> -->
       <a href="../main.html"><img src="../Logo/cinesphere-high-resolution-logo-nobg_updated.png" alt=""></a>
     </div>
   </div>
   <div class="nav-links">
-    <span class="watch-nav"><a href="../watchlist/watchList.html" id="adminwhlink"><p id="adminwh" >Watchlist</p></a></span>
+    <span class="watch-nav"><a href="../watchlist/watchList.html" id="adminwhlink"><p id="adminwh">Watchlist</p></a></span>
     <div class="action">
       <div class="profile" onclick="menuToggle()">
         <img src="" alt="Profile Image">
@@ -30,7 +30,12 @@
           <li><img src="../Logo/user.png"><a href="#">My profile</a></li>
           <li><img src="../Logo/edit.png"><a href="../profile/index.html">Edit profile</a></li>
           <div id="rating"><li><img src="../Logo/star.png" class="yourrating"><a href="../yourrating.html" class="yourrating"><p class="yourrating">Your rating</p></a></li></div>
-          <li><img src="../Logo/bookmark.png"><a href="../watchlist/watchList.html" id="linkwatchhour"  ><p id="logoWatchlist">Your watchlist</p></a></li>
+<li>
+  <img src="../Logo/bookmark.png">
+  <a href="../watchlist/watchList.html" id="dropdownWatchHourLink">
+    <p id="logoWatchlist">Your watchlist</p>
+  </a>
+</li>
           <li><img src="../Logo/settings.png"><a href="../profile/index.html">Settings</a></li>
           <li><img src="../Logo/question.png"><a href="../index.html#contact">Help</a></li>
           <li><img src="../Logo/log-out.png"><a href="../login.html">Logout</a></li>
@@ -95,8 +100,9 @@
 
 <div class="section">
   <div class="text">
-    <h2  id="ratingsStatus">Ratings</h2>
-    <span id="ratingsStatus">Your ratings are public. <a href="#" class="edit" onclick="openModal('ratingsModal')">Edit</a></span>
+    <h2>Ratings</h2>
+    <span class="status-text">Your ratings are public.</span>
+    <a href="#" class="edit-link" onclick="openModal('ratingsModal')">Edit</a>
     <a href="../main.html" class="btn">Browse popular movies</a>
   </div>
   <div class="count" id="count2">0</div>
@@ -105,9 +111,9 @@
 <div class="section">
   <div class="text">
     <h2  id="wh" class="color">Watchlist</h2>
-    <span id="watchlistStatus" class="color">Your Watchlist is public. <a href="#" class="edit" onclick="openModal('watchlistModal')">Edit</a></span>
-    <div id="addlink"></div> 
+   <span id="watchlistStatus" class="color">Your Watchlist is public. <a href="#" class="edit" onclick="openModal('watchlistModal')">Edit</a></span>
 
+    <div id="addlink"></div>
   </div>
   <div class="count" id="count">0</div>
 </div>
@@ -152,6 +158,7 @@
     </div>
   </div>
 </div>
+
 <div id="ratingsModal" class="privacy-modal">
   <div class="modal-content">
     <h3>Change Ratings Visibility</h3><br>
