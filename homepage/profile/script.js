@@ -379,8 +379,18 @@ dateInput.addEventListener('change', function() {
     
     // Special validation for phone
     if (inputId === 'phoneInput') {
+      if (!/^\d*$/.test(newValue)) {
+        messageElement.textContent = 'Phone number must contain only digits';
+        messageElement.style.color = 'red';
+        return false;
+      }
       if (newValue.length < 10) {
         messageElement.textContent = 'Phone number must be at least 10 digits';
+        messageElement.style.color = 'red';
+        return false;
+      }
+      if (newValue.length >10) {
+        messageElement.textContent = 'Phone number cannot be more than 10 digits';
         messageElement.style.color = 'red';
         return false;
       }
