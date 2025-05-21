@@ -1064,3 +1064,11 @@ body, html {
   align-items: center;
   padding: 10px 0;
 }
+
+@media (max-width: 460px) {
+  .trending .item .avatar {
+    /* limit the width to 80% of the card, centered */
+    width: 80%;
+    margin: 0 auto;
+  }
+}
