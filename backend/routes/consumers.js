@@ -3,8 +3,11 @@ const express = require('express');
 const router = express.Router();
 const db = require('../db');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const { authMiddleware } = require('../middleware/auth');
+const crypto = require('crypto');
 
-// register consumer
+// --- Registration ---
 router.post('/register', async (req, res) => {
   const { email, password, dob, isPremium } = req.body;
 
@@ -13,34 +16,47 @@ router.post('/register', async (req, res) => {
   }
 
   try {
-    // hash the password
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    // insert into DB
     const [result] = await db.query(
       'INSERT INTO Consumers (Email_ID, Password, DOB, isPremium) VALUES (?, ?, ?, ?)',
-      [email, hashedPassword, dob || null, isPremium || 0]
+      [email, hashedPassword, dob || null, 0] // always register as non-premium initially
     );
 
+    const consumerId = result.insertId;
+
+    if (isPremium) {
+      // Create a dummy payment intent immediately
+      const paymentId = crypto.randomBytes(8).toString('hex');
+      // Store payment info in-memory or DB for verification
+      paymentsStore[paymentId] = { consumerId, planType: 'premium', status: 'pending' };
+
+      return res.status(201).json({
+        message: 'Consumer registered. Premium payment required',
+        consumerId,
+        payment: {
+          paymentId,
+          amount: 499,
+          currency: 'INR'
+        }
+      });
+    }
+
     res.status(201).json({
-      message: 'consumer registered',
-      consumerId: result.insertId
+      message: 'Consumer registered as freemium',
+      consumerId
     });
+
   } catch (err) {
     console.error(err);
-
     if (err.code === 'ER_DUP_ENTRY') {
       return res.status(400).json({ error: 'Email already registered' });
     }
-
     res.status(500).json({ error: 'Database error' });
   }
 });
 
-
-// LOGIN consumer
-const jwt = require('jsonwebtoken');
-
+// --- Login ---
 router.post('/login', async (req, res) => {
   const { email, password } = req.body;
 
@@ -49,29 +65,21 @@ router.post('/login', async (req, res) => {
   }
 
   try {
-    const [rows] = await db.query(
-      'SELECT * FROM Consumers WHERE Email_ID = ?',
-      [email]
-    );
+    const [rows] = await db.query('SELECT * FROM Consumers WHERE Email_ID = ?', [email]);
 
-    if (rows.length === 0) {
-      return res.status(404).json({ error: 'Consumer not found' });
-    }
+    if (rows.length === 0) return res.status(404).json({ error: 'Consumer not found' });
 
     const consumer = rows[0];
     const isMatch = await bcrypt.compare(password, consumer.Password);
-    if (!isMatch) {
-      return res.status(401).json({ error: 'Invalid credentials' });
-    }
+    if (!isMatch) return res.status(401).json({ error: 'Invalid credentials' });
 
-    
     const token = jwt.sign(
-      { consumerId: consumer.Consumer_ID, role: 'consumer' }, // payload
-      process.env.JWT_SECRET,                        // secret key
-      { expiresIn: process.env.JWT_EXPIRES_IN }      // expiry
+      { consumerId: consumer.Consumer_ID, role: 'consumer' },
+      process.env.JWT_SECRET,
+      { expiresIn: process.env.JWT_EXPIRES_IN }
     );
 
-    // calculate age if DOB exists
+    // calculate age
     let age = null;
     if (consumer.DOB) {
       const dob = new Date(consumer.DOB);
@@ -81,34 +89,32 @@ router.post('/login', async (req, res) => {
 
     res.json({
       message: 'Login successful',
-      token, 
+      token,
       consumer: {
         consumerId: consumer.Consumer_ID,
         email: consumer.Email_ID,
-        isPremium: consumer.isPremium,
+        isPremium: !!consumer.isPremium,
         age
       }
     });
+
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: 'Database error' });
   }
 });
 
-// Protected route example
-const {authMiddleware} = require('../middleware/auth');     
+// --- Protected profile route ---
+router.get('/profile', authMiddleware, async (req, res) => {
+  const consumerId = req.user.consumerId;
 
-// GET consumer profile (protected)
-router.get('/profile', authMiddleware, async (req, res) => {  
   try {
     const [rows] = await db.query(
       'SELECT Consumer_ID, Email_ID, DOB, isPremium FROM Consumers WHERE Consumer_ID = ?',
-      [req.user.consumerId]
-    );      
+      [consumerId]
+    );
 
-    if (rows.length === 0) {
-      return res.status(404).json({ error: 'Consumer not found' });
-    }
+    if (rows.length === 0) return res.status(404).json({ error: 'Consumer not found' });
 
     res.json(rows[0]);
   } catch (err) {
@@ -116,7 +122,5 @@ router.get('/profile', authMiddleware, async (req, res) => {
     res.status(500).json({ error: 'Database error' });
   }
 });
-
-
 
 module.exports = router;

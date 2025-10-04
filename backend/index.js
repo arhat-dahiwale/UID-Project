@@ -6,6 +6,9 @@ const moviesRoutes = require('./routes/movies');
 const consumersRoutes = require('./routes/consumers');
 const adminRoutes = require('./routes/admin');
 const adminMoviesRoutes = require('./routes/admin/movies');
+const paymentsRoutes = require('./routes/payments');
+
+
 
 
 
@@ -21,6 +24,7 @@ app.use('/api/movies', moviesRoutes);
 app.use('/api/consumers', consumersRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/admin/movies', adminMoviesRoutes);
+app.use('/api/payments', paymentsRoutes);
 
 
 
