@@ -4,9 +4,9 @@ const router = express.Router();
 const db = require('../db');
 const { authMiddleware } = require('../middleware/auth');
 const crypto = require('crypto');
+const { paymentsStore } = require('../paymentsStore');
+const jwt = require('jsonwebtoken');
 
-// Dummy in-memory payment store for verification
-const paymentsStore = {}; // { paymentId: { consumerId, planType, status } }
 
 /**
  * POST /payments/create
@@ -100,5 +100,37 @@ router.get('/status', authMiddleware, async (req, res) => {
         res.status(500).json({ error: 'Database error' });
     }
 });
+
+// POST /api/payments/upgrade
+router.post('/upgrade', authMiddleware, async (req, res) => {
+    const consumerId = req.user.consumerId;
+
+    try {
+        // 1️⃣ Update the consumer's isPremium flag in DB
+        const [result] = await db.query(
+            'UPDATE Consumers SET isPremium = 1 WHERE Consumer_ID = ?',
+            [consumerId]
+        );
+
+        if (result.affectedRows === 0) {
+            return res.status(404).json({ error: 'Consumer not found' });
+        }
+
+        // 2️⃣ Issue new JWT reflecting the premium status
+        const updatedToken = jwt.sign(
+            { consumerId, role: 'consumer', isPremium: true },
+            process.env.JWT_SECRET,
+            { expiresIn: process.env.JWT_EXPIRES_IN }
+        );
+
+        // 3️⃣ Return success with updated token
+        res.json({ message: 'Upgrade successful', token: updatedToken });
+
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Database error during upgrade' });
+    }
+});
+
 
 module.exports = router;

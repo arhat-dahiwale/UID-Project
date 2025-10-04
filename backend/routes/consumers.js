@@ -6,6 +6,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { authMiddleware } = require('../middleware/auth');
 const crypto = require('crypto');
+const { paymentsStore } = require('../paymentsStore'); 
 
 // --- Registration ---
 router.post('/register', async (req, res) => {
@@ -18,17 +19,19 @@ router.post('/register', async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    // Always register as freemium initially
     const [result] = await db.query(
       'INSERT INTO Consumers (Email_ID, Password, DOB, isPremium) VALUES (?, ?, ?, ?)',
-      [email, hashedPassword, dob || null, 0] // always register as non-premium initially
+      [email, hashedPassword, dob || null, 0]
     );
 
     const consumerId = result.insertId;
 
+    // Handle immediate premium registration
     if (isPremium) {
-      // Create a dummy payment intent immediately
       const paymentId = crypto.randomBytes(8).toString('hex');
-      // Store payment info in-memory or DB for verification
+
+      // Store payment info in memory
       paymentsStore[paymentId] = { consumerId, planType: 'premium', status: 'pending' };
 
       return res.status(201).json({
@@ -36,7 +39,7 @@ router.post('/register', async (req, res) => {
         consumerId,
         payment: {
           paymentId,
-          amount: 499,
+          amount: 499, // example amount
           currency: 'INR'
         }
       });
@@ -74,7 +77,7 @@ router.post('/login', async (req, res) => {
     if (!isMatch) return res.status(401).json({ error: 'Invalid credentials' });
 
     const token = jwt.sign(
-      { consumerId: consumer.Consumer_ID, role: 'consumer' },
+      { consumerId: consumer.Consumer_ID, role: 'consumer', isPremium: !!consumer.isPremium },
       process.env.JWT_SECRET,
       { expiresIn: process.env.JWT_EXPIRES_IN }
     );
